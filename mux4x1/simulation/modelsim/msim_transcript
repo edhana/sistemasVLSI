@@ -1,0 +1,325 @@
+# Reading C:/Modeltech_pe_edu_10.1d/tcl/vsim/pref.tcl 
+# do MUX4X1_run_msim_gate_vhdl.do 
+# if ![file isdirectory vhdl_libs] {
+# 	file mkdir vhdl_libs
+# }
+# 
+# vlib vhdl_libs/altera
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/altera".
+# 
+# vmap altera ./vhdl_libs/altera
+# Copying C:\Modeltech_pe_edu_10.1d\win32pe_edu/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\Modeltech_pe_edu_10.1d\win32pe_edu/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# vcom -93 -work altera {c:/developer-apps/altera/12.0sp2/quartus/eda/sim_lib/altera_syn_attributes.vhd}
+# Model Technology ModelSim PE Student Edition vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Compiling package altera_syn_attributes
+# vcom -93 -work altera {c:/developer-apps/altera/12.0sp2/quartus/eda/sim_lib/altera_standard_functions.vhd}
+# Model Technology ModelSim PE Student Edition vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Compiling package altera_standard_functions
+# -- Compiling package body altera_standard_functions
+# -- Loading package altera_standard_functions
+# vcom -93 -work altera {c:/developer-apps/altera/12.0sp2/quartus/eda/sim_lib/alt_dspbuilder_package.vhd}
+# Model Technology ModelSim PE Student Edition vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling package alt_dspbuilder_package
+# -- Compiling package body alt_dspbuilder_package
+# -- Loading package alt_dspbuilder_package
+# vcom -93 -work altera {c:/developer-apps/altera/12.0sp2/quartus/eda/sim_lib/altera_europa_support_lib.vhd}
+# Model Technology ModelSim PE Student Edition vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package altera_europa_support_lib
+# -- Compiling package body altera_europa_support_lib
+# -- Loading package altera_europa_support_lib
+# vcom -93 -work altera {c:/developer-apps/altera/12.0sp2/quartus/eda/sim_lib/altera_primitives_components.vhd}
+# Model Technology ModelSim PE Student Edition vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package dffeas_pack
+# -- Loading package dffeas_pack
+# -- Compiling package altera_primitives_components
+# vcom -93 -work altera {c:/developer-apps/altera/12.0sp2/quartus/eda/sim_lib/altera_primitives.vhd}
+# Model Technology ModelSim PE Student Edition vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GLOBAL
+# -- Compiling architecture BEHAVIOR of GLOBAL
+# -- Compiling entity CARRY
+# -- Compiling architecture BEHAVIOR of CARRY
+# -- Compiling entity CASCADE
+# -- Compiling architecture BEHAVIOR of CASCADE
+# -- Compiling entity CARRY_SUM
+# -- Compiling architecture BEHAVIOR of CARRY_SUM
+# -- Compiling entity EXP
+# -- Compiling architecture BEHAVIOR of EXP
+# -- Compiling entity SOFT
+# -- Compiling architecture BEHAVIOR of SOFT
+# -- Compiling entity OPNDRN
+# -- Compiling architecture BEHAVIOR of OPNDRN
+# -- Compiling entity ROW_GLOBAL
+# -- Compiling architecture BEHAVIOR of ROW_GLOBAL
+# -- Compiling entity TRI
+# -- Compiling architecture BEHAVIOR of TRI
+# -- Compiling entity LUT_INPUT
+# -- Compiling architecture BEHAVIOR of LUT_INPUT
+# -- Compiling entity LUT_OUTPUT
+# -- Compiling architecture BEHAVIOR of LUT_OUTPUT
+# -- Compiling entity latch
+# -- Compiling architecture BEHAVIOR of latch
+# -- Compiling entity dlatch
+# -- Compiling architecture BEHAVIOR of dlatch
+# -- Compiling entity PRIM_GDFF
+# -- Compiling architecture BEHAVIOR of PRIM_GDFF
+# -- Loading entity PRIM_GDFF
+# -- Compiling entity DFF
+# -- Compiling architecture BEHAVIOR of DFF
+# -- Compiling entity DFFE
+# -- Compiling architecture BEHAVIOR of DFFE
+# -- Compiling entity DFFEA
+# -- Compiling architecture BEHAVIOR of DFFEA
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Compiling entity DFFEAS
+# -- Compiling architecture vital_dffeas of dffeas
+# -- Compiling entity PRIM_GTFF
+# -- Compiling architecture BEHAVIOR of PRIM_GTFF
+# -- Loading entity PRIM_GTFF
+# -- Compiling entity TFF
+# -- Compiling architecture BEHAVIOR of TFF
+# -- Compiling entity TFFE
+# -- Compiling architecture BEHAVIOR of TFFE
+# -- Compiling entity PRIM_GJKFF
+# -- Compiling architecture BEHAVIOR of PRIM_GJKFF
+# -- Loading entity PRIM_GJKFF
+# -- Compiling entity JKFF
+# -- Compiling architecture BEHAVIOR of JKFF
+# -- Compiling entity JKFFE
+# -- Compiling architecture BEHAVIOR of JKFFE
+# -- Compiling entity PRIM_GSRFF
+# -- Compiling architecture BEHAVIOR of PRIM_GSRFF
+# -- Loading entity PRIM_GSRFF
+# -- Compiling entity SRFF
+# -- Compiling architecture BEHAVIOR of SRFF
+# -- Compiling entity SRFFE
+# -- Compiling architecture BEHAVIOR of SRFFE
+# -- Compiling entity clklock
+# -- Compiling architecture behavior of clklock
+# -- Compiling entity alt_inbuf
+# -- Compiling architecture BEHAVIOR of alt_inbuf
+# -- Compiling entity alt_outbuf
+# -- Compiling architecture BEHAVIOR of alt_outbuf
+# -- Compiling entity alt_outbuf_tri
+# -- Compiling architecture BEHAVIOR of alt_outbuf_tri
+# -- Compiling entity alt_iobuf
+# -- Compiling architecture BEHAVIOR of alt_iobuf
+# -- Compiling entity alt_inbuf_diff
+# -- Compiling architecture BEHAVIOR of alt_inbuf_diff
+# -- Compiling entity alt_outbuf_diff
+# -- Compiling architecture BEHAVIOR of alt_outbuf_diff
+# -- Compiling entity alt_outbuf_tri_diff
+# -- Compiling architecture BEHAVIOR of alt_outbuf_tri_diff
+# -- Compiling entity alt_iobuf_diff
+# -- Compiling architecture BEHAVIOR of alt_iobuf_diff
+# -- Compiling entity alt_bidir_diff
+# -- Compiling architecture BEHAVIOR of alt_bidir_diff
+# -- Compiling entity alt_bidir_buf
+# -- Compiling architecture BEHAVIOR of alt_bidir_buf
+# 
+# vlib vhdl_libs/cycloneiii
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/cycloneiii".
+# 
+# vmap cycloneiii ./vhdl_libs/cycloneiii
+# Modifying modelsim.ini
+# vcom -93 -work cycloneiii {c:/developer-apps/altera/12.0sp2/quartus/eda/sim_lib/cycloneiii_atoms.vhd}
+# Model Technology ModelSim PE Student Edition vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package cycloneiii_atom_pack
+# -- Compiling package body cycloneiii_atom_pack
+# -- Loading package cycloneiii_atom_pack
+# -- Compiling package cycloneiii_pllpack
+# -- Compiling package body cycloneiii_pllpack
+# -- Loading package cycloneiii_pllpack
+# -- Loading package cycloneiii_atom_pack
+# -- Compiling entity cycloneiii_dffe
+# -- Compiling architecture behave of cycloneiii_dffe
+# -- Compiling entity cycloneiii_mux21
+# -- Compiling architecture AltVITAL of cycloneiii_mux21
+# -- Compiling entity cycloneiii_mux41
+# -- Compiling architecture AltVITAL of cycloneiii_mux41
+# -- Compiling entity cycloneiii_and1
+# -- Compiling architecture AltVITAL of cycloneiii_and1
+# -- Compiling entity cycloneiii_lcell_comb
+# -- Compiling architecture vital_lcell_comb of cycloneiii_lcell_comb
+# -- Compiling entity cycloneiii_routing_wire
+# ** Warning: [6] c:/developer-apps/altera/12.0sp2/quartus/eda/sim_lib/cycloneiii_atoms.vhd(1639): (vcom-1288) VITAL timing generic "tpd_datainglitch_dataout" port specification "datainglitch" does not denote a port.
+# 
+# (1076.4 section 4.3.2.1.3)
+# 
+# -- Compiling architecture behave of cycloneiii_routing_wire
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity cycloneiii_mn_cntr
+# -- Compiling architecture behave of cycloneiii_mn_cntr
+# -- Compiling entity cycloneiii_scale_cntr
+# -- Compiling architecture behave of cycloneiii_scale_cntr
+# -- Compiling entity cycloneiii_pll_reg
+# -- Compiling architecture behave of cycloneiii_pll_reg
+# -- Loading package cycloneiii_pllpack
+# -- Loading entity cycloneiii_mn_cntr
+# -- Loading entity cycloneiii_scale_cntr
+# -- Loading entity cycloneiii_dffe
+# -- Loading entity cycloneiii_pll_reg
+# -- Compiling entity cycloneiii_pll
+# -- Compiling architecture vital_pll of cycloneiii_pll
+# -- Loading entity cycloneiii_and1
+# -- Compiling entity cycloneiii_ff
+# -- Compiling architecture vital_lcell_ff of cycloneiii_ff
+# -- Compiling entity cycloneiii_ram_register
+# -- Compiling architecture reg_arch of cycloneiii_ram_register
+# -- Compiling entity cycloneiii_ram_pulse_generator
+# -- Compiling architecture pgen_arch of cycloneiii_ram_pulse_generator
+# -- Loading entity cycloneiii_ram_register
+# -- Loading entity cycloneiii_ram_pulse_generator
+# -- Compiling entity cycloneiii_ram_block
+# -- Compiling architecture block_arch of cycloneiii_ram_block
+# -- Compiling entity cycloneiii_mac_data_reg
+# -- Compiling architecture vital_cycloneiii_mac_data_reg of cycloneiii_mac_data_reg
+# -- Compiling entity cycloneiii_mac_sign_reg
+# -- Compiling architecture cycloneiii_mac_sign_reg of cycloneiii_mac_sign_reg
+# -- Compiling entity cycloneiii_mac_mult_internal
+# -- Compiling architecture vital_cycloneiii_mac_mult_internal of cycloneiii_mac_mult_internal
+# -- Loading entity cycloneiii_mac_data_reg
+# -- Loading entity cycloneiii_mac_sign_reg
+# -- Loading entity cycloneiii_mac_mult_internal
+# -- Compiling entity cycloneiii_mac_mult
+# -- Compiling architecture vital_cycloneiii_mac_mult of cycloneiii_mac_mult
+# -- Compiling entity cycloneiii_mac_out
+# -- Compiling architecture vital_cycloneiii_mac_out of cycloneiii_mac_out
+# -- Compiling entity cycloneiii_io_ibuf
+# -- Compiling architecture arch of cycloneiii_io_ibuf
+# -- Compiling entity cycloneiii_io_obuf
+# -- Compiling architecture arch of cycloneiii_io_obuf
+# -- Compiling entity cycloneiii_ddio_oe
+# -- Compiling architecture arch of cycloneiii_ddio_oe
+# -- Compiling entity cycloneiii_latch
+# -- Compiling architecture vital_latch of cycloneiii_latch
+# -- Compiling entity cycloneiii_ddio_out
+# -- Compiling architecture arch of cycloneiii_ddio_out
+# -- Compiling entity cycloneiii_pseudo_diff_out
+# -- Compiling architecture arch of cycloneiii_pseudo_diff_out
+# -- Compiling entity cycloneiii_io_pad
+# -- Compiling architecture arch of cycloneiii_io_pad
+# -- Compiling entity cycloneiii_ena_reg
+# -- Compiling architecture behave of cycloneiii_ena_reg
+# -- Loading entity cycloneiii_ena_reg
+# -- Compiling entity cycloneiii_clkctrl
+# -- Compiling architecture vital_clkctrl of cycloneiii_clkctrl
+# -- Compiling entity cycloneiii_rublock
+# -- Compiling architecture architecture_rublock of cycloneiii_rublock
+# -- Compiling entity cycloneiii_apfcontroller
+# -- Compiling architecture architecture_apfcontroller of cycloneiii_apfcontroller
+# -- Compiling entity cycloneiii_termination
+# -- Compiling architecture cycloneiii_termination_arch of cycloneiii_termination
+# -- Compiling entity cycloneiii_jtag
+# -- Compiling architecture architecture_jtag of cycloneiii_jtag
+# -- Compiling entity cycloneiii_crcblock
+# -- Compiling architecture architecture_crcblock of cycloneiii_crcblock
+# -- Compiling entity cycloneiii_oscillator
+# -- Compiling architecture architecture_oscillator of cycloneiii_oscillator
+# vcom -93 -work cycloneiii {c:/developer-apps/altera/12.0sp2/quartus/eda/sim_lib/cycloneiii_components.vhd}
+# Model Technology ModelSim PE Student Edition vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneiii_atom_pack
+# -- Compiling package cycloneiii_components
+# 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {MUX4X1.vho}
+# Model Technology ModelSim PE Student Edition vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneiii_atom_pack
+# -- Loading package cycloneiii_components
+# -- Compiling entity MUX4X1
+# -- Compiling architecture structure of MUX4X1
+# 
+# vcom -93 -work work {C:/workspace/sistemasVLSI/Exercicio0/simulation/modelsim/MUX4X1.vht}
+# Model Technology ModelSim PE Student Edition vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX4X1_vhd_tst
+# -- Compiling architecture MUX4X1_arch of MUX4X1_vhd_tst
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /NA=MUX4X1_vhd.sdo -L altera -L cycloneiii -L gate_work -L work -voptargs="+acc"  MUX4X1
+# //  ModelSim PE Student Edition 10.1d Nov  2 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# // NOT FOR CORPORATE OR PRODUCTION USE.
+# // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
+# // FOR HIGHER EDUCATION PURPOSES ONLY
+# //
+# vsim +transport_int_delays +transport_path_delays -L altera -L cycloneiii -L gate_work -L work -voptargs=\"+acc\" -sdftyp /NA=MUX4X1_vhd.sdo -t 1ps MUX4X1 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneiii.cycloneiii_atom_pack(body)
+# Loading cycloneiii.cycloneiii_components
+# Loading work.mux4x1(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading cycloneiii.cycloneiii_io_ibuf(arch)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiii.cycloneiii_io_obuf(arch)
+# Loading cycloneiii.cycloneiii_lcell_comb(vital_lcell_comb)
+# Loading instances from MUX4X1_vhd.sdo
+# ** Error: (vsim-SDF-3250) MUX4X1_vhd.sdo(0): Failed to find INSTANCE '/NA'.
+# 
+# ** Error: (vsim-SDF-3894) : Errors occured in reading and resolving instances from compiled SDF file(s).
+# 
+# ** Error: (vsim-SDF-3250) MUX4X1_vhd.sdo(0): Failed to find INSTANCE '/NA'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./MUX4X1_run_msim_gate_vhdl.do PAUSED at line 30

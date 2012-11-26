@@ -1,0 +1,322 @@
+TimeQuest Timing Analyzer report for comp4bits
+Sun Nov 25 20:49:58 2012
+Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Clocks
+  4. Slow Model Fmax Summary
+  5. Slow Model Setup Summary
+  6. Slow Model Hold Summary
+  7. Slow Model Recovery Summary
+  8. Slow Model Removal Summary
+  9. Slow Model Minimum Pulse Width Summary
+ 10. Propagation Delay
+ 11. Minimum Propagation Delay
+ 12. Fast Model Setup Summary
+ 13. Fast Model Hold Summary
+ 14. Fast Model Recovery Summary
+ 15. Fast Model Removal Summary
+ 16. Fast Model Minimum Pulse Width Summary
+ 17. Propagation Delay
+ 18. Minimum Propagation Delay
+ 19. Multicorner Timing Analysis Summary
+ 20. Progagation Delay
+ 21. Minimum Progagation Delay
+ 22. Clock Transfers
+ 23. Report TCCS
+ 24. Report RSKM
+ 25. Unconstrained Paths
+ 26. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                    ;
++--------------------+-----------------------------------------------------------------+
+; Quartus II Version ; Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; comp4bits                                                       ;
+; Device Family      ; Cyclone II                                                      ;
+; Device Name        ; EP2C5T144C6                                                     ;
+; Timing Models      ; Final                                                           ;
+; Delay Model        ; Combined                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                     ;
++--------------------+-----------------------------------------------------------------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; x[0]       ; sinalSaida  ; 10.563 ; 10.563 ; 10.563 ; 10.563 ;
+; x[1]       ; sinalSaida  ; 9.782  ; 9.782  ; 9.782  ; 9.782  ;
+; x[2]       ; sinalSaida  ; 6.104  ; 6.104  ; 6.104  ; 6.104  ;
+; x[3]       ; sinalSaida  ; 6.131  ; 6.131  ; 6.131  ; 6.131  ;
+; y[0]       ; sinalSaida  ; 6.380  ; 6.380  ; 6.380  ; 6.380  ;
+; y[1]       ; sinalSaida  ; 9.976  ; 9.976  ; 9.976  ; 9.976  ;
+; y[2]       ; sinalSaida  ; 9.726  ; 9.726  ; 9.726  ; 9.726  ;
+; y[3]       ; sinalSaida  ; 5.861  ; 5.861  ; 5.861  ; 5.861  ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; x[0]       ; sinalSaida  ; 10.563 ; 10.563 ; 10.563 ; 10.563 ;
+; x[1]       ; sinalSaida  ; 9.782  ; 9.782  ; 9.782  ; 9.782  ;
+; x[2]       ; sinalSaida  ; 6.104  ; 6.104  ; 6.104  ; 6.104  ;
+; x[3]       ; sinalSaida  ; 6.131  ; 6.131  ; 6.131  ; 6.131  ;
+; y[0]       ; sinalSaida  ; 6.380  ; 6.380  ; 6.380  ; 6.380  ;
+; y[1]       ; sinalSaida  ; 9.976  ; 9.976  ; 9.976  ; 9.976  ;
+; y[2]       ; sinalSaida  ; 9.726  ; 9.726  ; 9.726  ; 9.726  ;
+; y[3]       ; sinalSaida  ; 5.861  ; 5.861  ; 5.861  ; 5.861  ;
++------------+-------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; x[0]       ; sinalSaida  ; 5.792 ; 5.792 ; 5.792 ; 5.792 ;
+; x[1]       ; sinalSaida  ; 5.423 ; 5.423 ; 5.423 ; 5.423 ;
+; x[2]       ; sinalSaida  ; 3.138 ; 3.138 ; 3.138 ; 3.138 ;
+; x[3]       ; sinalSaida  ; 3.166 ; 3.166 ; 3.166 ; 3.166 ;
+; y[0]       ; sinalSaida  ; 3.289 ; 3.289 ; 3.289 ; 3.289 ;
+; y[1]       ; sinalSaida  ; 5.478 ; 5.478 ; 5.478 ; 5.478 ;
+; y[2]       ; sinalSaida  ; 5.353 ; 5.353 ; 5.353 ; 5.353 ;
+; y[3]       ; sinalSaida  ; 3.036 ; 3.036 ; 3.036 ; 3.036 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; x[0]       ; sinalSaida  ; 5.792 ; 5.792 ; 5.792 ; 5.792 ;
+; x[1]       ; sinalSaida  ; 5.423 ; 5.423 ; 5.423 ; 5.423 ;
+; x[2]       ; sinalSaida  ; 3.138 ; 3.138 ; 3.138 ; 3.138 ;
+; x[3]       ; sinalSaida  ; 3.166 ; 3.166 ; 3.166 ; 3.166 ;
+; y[0]       ; sinalSaida  ; 3.289 ; 3.289 ; 3.289 ; 3.289 ;
+; y[1]       ; sinalSaida  ; 5.478 ; 5.478 ; 5.478 ; 5.478 ;
+; y[2]       ; sinalSaida  ; 5.353 ; 5.353 ; 5.353 ; 5.353 ;
+; y[3]       ; sinalSaida  ; 3.036 ; 3.036 ; 3.036 ; 3.036 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; x[0]       ; sinalSaida  ; 10.563 ; 10.563 ; 10.563 ; 10.563 ;
+; x[1]       ; sinalSaida  ; 9.782  ; 9.782  ; 9.782  ; 9.782  ;
+; x[2]       ; sinalSaida  ; 6.104  ; 6.104  ; 6.104  ; 6.104  ;
+; x[3]       ; sinalSaida  ; 6.131  ; 6.131  ; 6.131  ; 6.131  ;
+; y[0]       ; sinalSaida  ; 6.380  ; 6.380  ; 6.380  ; 6.380  ;
+; y[1]       ; sinalSaida  ; 9.976  ; 9.976  ; 9.976  ; 9.976  ;
+; y[2]       ; sinalSaida  ; 9.726  ; 9.726  ; 9.726  ; 9.726  ;
+; y[3]       ; sinalSaida  ; 5.861  ; 5.861  ; 5.861  ; 5.861  ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; x[0]       ; sinalSaida  ; 5.792 ; 5.792 ; 5.792 ; 5.792 ;
+; x[1]       ; sinalSaida  ; 5.423 ; 5.423 ; 5.423 ; 5.423 ;
+; x[2]       ; sinalSaida  ; 3.138 ; 3.138 ; 3.138 ; 3.138 ;
+; x[3]       ; sinalSaida  ; 3.166 ; 3.166 ; 3.166 ; 3.166 ;
+; y[0]       ; sinalSaida  ; 3.289 ; 3.289 ; 3.289 ; 3.289 ;
+; y[1]       ; sinalSaida  ; 5.478 ; 5.478 ; 5.478 ; 5.478 ;
+; y[2]       ; sinalSaida  ; 5.353 ; 5.353 ; 5.353 ; 5.353 ;
+; y[3]       ; sinalSaida  ; 3.036 ; 3.036 ; 3.036 ; 3.036 ;
++------------+-------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 8     ; 8    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Nov 25 20:49:53 2012
+Info: Command: quartus_sta comp4bits -c comp4bits
+Info: qsta_default_script.tcl version: #2
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'comp4bits.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 269 megabytes
+    Info: Processing ended: Sun Nov 25 20:49:58 2012
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:02
+
+

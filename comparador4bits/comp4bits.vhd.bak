@@ -1,0 +1,12 @@
+library IEEE;
+library IEEE.STD_LOGIN_1164.ALL;
+
+-- Definicao da entidade do comparador
+entity com4bits is
+	port (
+		x, y: in std_logic_vector(3 downto 0);
+		sinalSainda: out std_logic
+	);
+end com4bits;
+
+-- Arquitetura de funcionamento da entidade

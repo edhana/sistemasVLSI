@@ -18,36 +18,47 @@ ARCHITECTURE comp4bits_tb_arch OF comp4bits_tb IS
 
   COMPONENT comp4bits
     PORT (
-    sinalSaida : OUT STD_LOGIC;
-    x : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    y : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
+      sinalSaida : OUT STD_LOGIC;
+      x : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      y : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
   END COMPONENT;
 
   BEGIN
     i1 : comp4bits
     PORT MAP (
-  -- list connections between master ports and signals
-    sinalSaida => sinalSaida,
-    x => x,
-    y => y
+      -- list connections between master ports and signals
+      sinalSaida => sinalSaida,
+      x => x,
+      y => y
     );
-  init : PROCESS                                               
-  -- variable declarations                                     
-  BEGIN                                                        
-    -- code that executes only once                      
-    x <= "0";
-    y <= "0";    
-  WAIT;                                                       
-  END PROCESS init;      
 
-  always : PROCESS                                              
-  -- optional sensitivity list                                  
-  -- (        )                                                 
-  -- variable declarations                                      
-  BEGIN                                                         
-    -- code executes for every event on sensitivity list  
+    init : PROCESS                                               
+    BEGIN                                                        
+      -- code that executes only once                      
+      x <= "0000";
+      y <= "0000";    
+    WAIT;                                                       
+    END PROCESS init;      
 
-  WAIT;                                                        
-  END PROCESS always;                                          
+    always : PROCESS                                                                                   
+    BEGIN        
+      FOR i IN 0 TO 3 LOOP      
+        CASE i IS
+          WHEN 0 =>
+            x <= "0000";
+            y <= "0000";
+          WHEN 1 =>
+            x <= "0000";
+            y <= "1111";
+          WHEN 2 =>
+            x <= "1111";
+            y <= "0000";
+          WHEN 3 =>
+            x <= "1111";
+            y <= "1111";
+        END CASE;
+        WAIT FOR 20 ns; -- WAIT TO CHANGE VALUE AGAIN               
+      END LOOP;
+    END PROCESS always;                                          
 END comp4bits_tb_arch;

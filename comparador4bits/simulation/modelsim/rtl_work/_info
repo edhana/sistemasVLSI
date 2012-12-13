@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\workspace\mestrado\sistemasVLSI\comparador4bits\simulation\modelsim
+Ecomp4bits
+Z1 w1354019847
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dZ:\workspace\mestrado\sistemasVLSI\comparador4bits\simulation\modelsim
+Z5 8Z:/workspace/mestrado/sistemasVLSI/comparador4bits/comp4bits.vhd
+Z6 FZ:/workspace/mestrado/sistemasVLSI/comparador4bits/comp4bits.vhd
+l0
+L8
+VRfQM=h09f_JPlDMXEPJ5G2
+Z7 OV;C;10.1b;51
+31
+Z8 !s108 1354025353.907000
+Z9 !s90 -reportprogress|300|-93|-work|work|-O0|Z:/workspace/mestrado/sistemasVLSI/comparador4bits/comp4bits.vhd|
+Z10 !s107 Z:/workspace/mestrado/sistemasVLSI/comparador4bits/comp4bits.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 ALN9JMDVaBnR^l=E4kmzf2
+!i10b 1
+Acomportamental
+R2
+R3
+DEx4 work 9 comp4bits 0 22 RfQM=h09f_JPlDMXEPJ5G2
+l17
+L16
+Vz2T?Hji9CFk4=>d2>F_PC3
+!s100 ADEdWA;BS^[9hAJ5]kM>L0
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+Ecomp4bits_tb
+Z13 w1354025341
+R2
+R3
+R4
+Z14 8Z:/workspace/mestrado/sistemasVLSI/comparador4bits/comp4bits_tb.vhd
+Z15 FZ:/workspace/mestrado/sistemasVLSI/comparador4bits/comp4bits_tb.vhd
+l0
+L9
+VWOo^^7_Z=AzjW4j@;8dj=3
+!s100 E1^Xa`kHGeYl`CE?Mc5IK3
+R7
+31
+!i10b 1
+Z16 !s108 1354025354.157000
+Z17 !s90 -reportprogress|300|-93|-work|work|-O0|Z:/workspace/mestrado/sistemasVLSI/comparador4bits/comp4bits_tb.vhd|
+Z18 !s107 Z:/workspace/mestrado/sistemasVLSI/comparador4bits/comp4bits_tb.vhd|
+R11
+R12
+Acomp4bits_tb_arch
+R2
+R3
+Z19 DEx4 work 12 comp4bits_tb 0 22 WOo^^7_Z=AzjW4j@;8dj=3
+l27
+L12
+Z20 VHFBaJVW1h1FP9?AVWgAHn0
+Z21 !s100 FZGiLe2z>PzLgPGd80IP[1
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12

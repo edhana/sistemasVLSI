@@ -1,0 +1,30 @@
+-- Exercicio do Laboratorio 1 Experimento 2
+-- Eduardo Marques
+-- TODO: Simular o circuito atraves do waveform editor. Proponha uma sequencia de teste e simule.
+-- TODO: Atribuir as entradas e saidas do multiplexador as chaves e leds, programar o FPGA e testar. Mudar entradas para 
+-- 2 bits para caber nas chaves da placa
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity mux5x1 is
+  port (
+      a, b, c, d, e: in std_logic_vector(2 downto 0);
+      sel: in std_logic_vector(2 downto 0);
+      sai: out std_logic_vector(2 downto 0)
+    );
+end mux5x1;
+
+architecture behaviour of mux5x1 is
+  signal tmp: std_logic_vector(2 downto 0);
+begin
+  mux_result: tmp <= 
+    a when sel = "000" else
+    b when sel = "001" else
+    c when sel = "010" else
+    d when sel = "011" else
+    e;
+
+  sai <= tmp;
+      
+end behaviour;

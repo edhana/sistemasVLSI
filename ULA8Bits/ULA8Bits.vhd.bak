@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY ULA8Bits IS
+  PORT(
+    A, B: IN STD_LOGIC_VECTOR(3 downto 0);
+    OP: IN STD_LOGIC_VECTOR(3 downto 0);
+    ZERO: OUT STD_LOGIC
+    );
+end ULA8Bits;
+
+ARCHITECTURE ULABehaviour of ULA8Bits IS
+end ULABehaviour;

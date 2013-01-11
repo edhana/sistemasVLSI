@@ -60,8 +60,11 @@ begin
       when 2 =>
         sel <= "010";
         i := 3;
+		when 3 => 
+			sel <= "011";
+			i := 4;
       when others => 
-        sel <= "011";
+        sel <= "100";
         i := 0;
     end case;
     wait for 50ns;

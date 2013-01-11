@@ -120,3 +120,64 @@ do mux5x1_run_msim_rtl_vhdl.do
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# A time value could not be extracted from the current line
+vcom -reportprogress 300 -work work Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_2/simulation/modelsim/mux5x1_fast.vho
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity mux5x1
+# -- Compiling architecture structure of mux5x1
+do mux5x1_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_2/mux5x1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux5x1
+# -- Compiling architecture behaviour of mux5x1
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_2/mux5x1_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux5x1_tb
+# -- Compiling architecture mux5x1_tb_arch of mux5x1_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_2/mux5x1_tb.vhd(70): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  mux5x1_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mux5x1_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux5x1_tb(mux5x1_tb_arch)
+# Loading work.mux5x1(behaviour)
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Administrador  Hostname: EDUARDOMARQ8CC2  ProcessID: 3396
+# 
+#           Attempting to use alternate WLF file "./wlftz3f64y".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftz3f64y
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Can't move the Now cursor.

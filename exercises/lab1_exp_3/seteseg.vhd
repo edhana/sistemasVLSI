@@ -17,12 +17,13 @@ use ieee.std_logic_1164.all;
 entity seteseg is
   port(
       codigo : in std_logic_vector(2 downto 0);
-      segs : out std_logic_vector(6 downto 0)
+      segs : out std_logic_vector(6 downto 0)      
     );
 end seteseg;
 
 architecture behaviour of seteseg is
   signal seg_tmp : std_logic_vector(6 downto 0);
+  signal code_select : std_logic_vector(2 downto 0);
 begin
   seteseg_selection: with codigo select
   seg_tmp <= "1110001" when "000", -- F

@@ -1,0 +1,8 @@
+<sld_project_info>
+  <file_info>
+    <file checksum="0x006045D0" device="EP2C70F896C6" path="seteseg.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x187E3548" device="EPCS16" path="seteseg.pof" usercode="0x00000000"/>
+  </file_info>
+  <hub_info ir_width="0" node_count="0"/>
+  <node_info/>
+</sld_project_info>

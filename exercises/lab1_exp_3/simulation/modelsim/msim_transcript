@@ -1,0 +1,132 @@
+# Reading C:/developer-apps/altera/modelsim_ase/tcl/vsim/pref.tcl 
+# do seteseg_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\developer-apps\altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\developer-apps\altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seteseg
+# -- Compiling architecture behaviour of seteseg
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seteseg_tb
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(11): near "for": expecting OF
+# ** Error: C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./seteseg_run_msim_rtl_vhdl.do line 10
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd}"
+do seteseg_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seteseg
+# -- Compiling architecture behaviour of seteseg
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seteseg_tb
+# -- Compiling architecture seteseg_tb_arch of seteseg_tb
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(34): (vcom-1136) Unknown identifier "i".
+# 
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(35): Integer literal 0 is not of type (error).
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(37): (vcom-1136) Unknown identifier "i".
+# 
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(37): Target type (error) in variable assignment is different from expression type Integer.
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(37): (vcom-1136) Unknown identifier "i".
+# 
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(38): Integer literal 1 is not of type (error).
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(40): (vcom-1136) Unknown identifier "i".
+# 
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(40): Target type (error) in variable assignment is different from expression type Integer.
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(40): (vcom-1136) Unknown identifier "i".
+# 
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(41): Integer literal 2 is not of type (error).
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(43): (vcom-1136) Unknown identifier "i".
+# 
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(43): Target type (error) in variable assignment is different from expression type Integer.
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(43): (vcom-1136) Unknown identifier "i".
+# 
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(44): Integer literal 3 is not of type (error).
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(46): (vcom-1136) Unknown identifier "i".
+# 
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(46): Target type (error) in variable assignment is different from expression type Integer.
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(46): (vcom-1136) Unknown identifier "i".
+# 
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(49): (vcom-1136) Unknown identifier "i".
+# 
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(49): Target type (error) in variable assignment is different from expression type Integer.
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(49): (vcom-1136) Unknown identifier "i".
+# 
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(51): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(53): VHDL Compiler exiting
+# ** Error: C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./seteseg_run_msim_rtl_vhdl.do line 10
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd}"
+do seteseg_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seteseg
+# -- Compiling architecture behaviour of seteseg
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seteseg_tb
+# -- Compiling architecture seteseg_tb_arch of seteseg_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/exercises/lab1_exp_3/seteseg_tb.vhd(52): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  seteseg_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps seteseg_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.seteseg_tb(seteseg_tb_arch)
+# Loading work.seteseg(behaviour)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 500 ns

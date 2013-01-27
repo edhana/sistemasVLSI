@@ -5,10 +5,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity timer_ctl_tb is
-end timer_ctl_tb;
+entity timer_clt_tb is
+end entity;
 
-architecture timer_ctl_tb_arch of timer_ctl_tb is
+architecture timer_clt_tb_arch of timer_clt_tb is
   -- inputs
   signal timer_start    : std_logic;
   signal timer_reset    : std_logic;
@@ -42,6 +42,6 @@ begin
   begin
     clk_tmp := not clk_tmp;
     clock <= clk_tmp;
-  wait for (20ns);
+  wait for 20ns;
   end process always;
-end timer_ctl_tb_arch;
+end timer_clt_tb_arch;

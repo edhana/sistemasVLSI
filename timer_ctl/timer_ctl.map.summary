@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Jan 27 16:33:47 2013
+Analysis & Synthesis Status : Successful - Sun Jan 27 18:01:02 2013
 Quartus II 32-bit Version : 12.0 Build 263 08/02/2012 SP 2 SJ Web Edition
 Revision Name : timer_ctl
 Top-level Entity Name : timer_ctl
 Family : Cyclone IV E
-Total logic elements : 75
-    Total combinational functions : 75
+Total logic elements : 0
+    Total combinational functions : 0
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 5

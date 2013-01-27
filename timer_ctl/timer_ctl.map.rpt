@@ -1,5 +1,5 @@
 Analysis & Synthesis report for timer_ctl
-Sun Jan 27 16:33:48 2013
+Sun Jan 27 18:01:02 2013
 Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
 
 
@@ -12,11 +12,12 @@ Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Editio
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. User-Specified and Inferred Latches
-  8. General Register Statistics
-  9. Port Connectivity Checks: "clk_converter_60hz:clk_portmap"
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  7. Registers Removed During Synthesis
+  8. Removed Registers Triggering Further Register Optimizations
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "clk_converter_60hz:clk_converter_ports"
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,13 +43,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan 27 16:33:47 2013         ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 27 18:01:02 2013         ;
 ; Quartus II 32-bit Version          ; 12.0 Build 263 08/02/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; timer_ctl                                     ;
 ; Top-level Entity Name              ; timer_ctl                                     ;
 ; Family                             ; Cyclone IV E                                  ;
-; Total logic elements               ; 75                                            ;
-;     Total combinational functions  ; 75                                            ;
+; Total logic elements               ; 0                                             ;
+;     Total combinational functions  ; 0                                             ;
 ;     Dedicated logic registers      ; 0                                             ;
 ; Total registers                    ; 0                                             ;
 ; Total pins                         ; 5                                             ;
@@ -155,33 +156,32 @@ applicable agreement for further details.
 +----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 75                ;
-;                                             ;                   ;
-; Total combinational functions               ; 75                ;
-; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 41                ;
-;     -- 3 input functions                    ; 4                 ;
-;     -- <=2 input functions                  ; 30                ;
-;                                             ;                   ;
-; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 45                ;
-;     -- arithmetic mode                      ; 30                ;
-;                                             ;                   ;
-; Total registers                             ; 0                 ;
-;     -- Dedicated logic registers            ; 0                 ;
-;     -- I/O registers                        ; 0                 ;
-;                                             ;                   ;
-; I/O pins                                    ; 5                 ;
-; Maximum fan-out node                        ; timer_start~input ;
-; Maximum fan-out                             ; 33                ;
-; Total fan-out                               ; 241               ;
-; Average fan-out                             ; 2.84              ;
-+---------------------------------------------+-------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+;                                             ;             ;
+; Total combinational functions               ; 0           ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 0           ;
+;     -- 3 input functions                    ; 0           ;
+;     -- <=2 input functions                  ; 0           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 0           ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 5           ;
+; Maximum fan-out node                        ; timer_start ;
+; Maximum fan-out                             ; 1           ;
+; Total fan-out                               ; 5           ;
+; Average fan-out                             ; 0.50        ;
++---------------------------------------------+-------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -189,52 +189,32 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |timer_ctl                 ; 75 (75)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |timer_ctl          ;              ;
+; |timer_ctl                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |timer_ctl          ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; short_interval_tmp                                  ; short_interval_tmp  ; yes                    ;
-; internal_counter[4]                                 ; timer_start         ; yes                    ;
-; internal_counter[3]                                 ; timer_start         ; yes                    ;
-; internal_counter[2]                                 ; timer_start         ; yes                    ;
-; internal_counter[1]                                 ; timer_start         ; yes                    ;
-; internal_counter[0]                                 ; timer_start         ; yes                    ;
-; internal_counter[6]                                 ; timer_start         ; yes                    ;
-; internal_counter[7]                                 ; timer_start         ; yes                    ;
-; internal_counter[8]                                 ; timer_start         ; yes                    ;
-; internal_counter[9]                                 ; timer_start         ; yes                    ;
-; internal_counter[10]                                ; timer_start         ; yes                    ;
-; internal_counter[11]                                ; timer_start         ; yes                    ;
-; internal_counter[12]                                ; timer_start         ; yes                    ;
-; internal_counter[13]                                ; timer_start         ; yes                    ;
-; internal_counter[14]                                ; timer_start         ; yes                    ;
-; internal_counter[15]                                ; timer_start         ; yes                    ;
-; internal_counter[16]                                ; timer_start         ; yes                    ;
-; internal_counter[17]                                ; timer_start         ; yes                    ;
-; internal_counter[18]                                ; timer_start         ; yes                    ;
-; internal_counter[19]                                ; timer_start         ; yes                    ;
-; internal_counter[20]                                ; timer_start         ; yes                    ;
-; internal_counter[21]                                ; timer_start         ; yes                    ;
-; internal_counter[22]                                ; timer_start         ; yes                    ;
-; internal_counter[23]                                ; timer_start         ; yes                    ;
-; internal_counter[24]                                ; timer_start         ; yes                    ;
-; internal_counter[25]                                ; timer_start         ; yes                    ;
-; internal_counter[26]                                ; timer_start         ; yes                    ;
-; internal_counter[27]                                ; timer_start         ; yes                    ;
-; internal_counter[28]                                ; timer_start         ; yes                    ;
-; internal_counter[29]                                ; timer_start         ; yes                    ;
-; internal_counter[30]                                ; timer_start         ; yes                    ;
-; internal_counter[31]                                ; timer_start         ; yes                    ;
-; internal_counter[5]                                 ; timer_start         ; yes                    ;
-; Number of user-specified and inferred latches = 33  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; internal_counter[1..31]                ; Merged with internal_counter[0]             ;
+; internal_counter[0]                    ; Stuck at GND due to stuck port data_in      ;
+; long_interval_tmp                      ; Stuck at GND due to stuck port clock_enable ;
+; short_interval_tmp                     ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 34 ;                                             ;
++----------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                              ;
++---------------------+---------------------------+----------------------------------------+
+; Register name       ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------------+---------------------------+----------------------------------------+
+; internal_counter[0] ; Stuck at GND              ; long_interval_tmp, short_interval_tmp  ;
+;                     ; due to stuck port data_in ;                                        ;
++---------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -252,13 +232,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "clk_converter_60hz:clk_portmap"                                                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; clk_60hz ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "clk_converter_60hz:clk_converter_ports" ;
++-------+-------+----------+-----------------------------------------+
+; Port  ; Type  ; Severity ; Details                                 ;
++-------+-------+----------+-----------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                            ;
++-------+-------+----------+-----------------------------------------+
 
 
 +-------------------------------+
@@ -266,7 +246,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -276,83 +256,43 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Jan 27 16:33:41 2013
+    Info: Processing started: Sun Jan 27 18:00:56 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off timer_ctl -c timer_ctl
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file timer_ctl.vhd
     Info (12022): Found design unit 1: timer_ctl-timer_behaviour
     Info (12023): Found entity 1: timer_ctl
 Info (12127): Elaborating entity "timer_ctl" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at timer_ctl.vhd(25): used implicit default value for signal "clk" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at timer_ctl.vhd(25): object "clk_60Hz" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at timer_ctl.vhd(25): used implicit default value for signal "reset" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at timer_ctl.vhd(73): signal "internal_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at timer_ctl.vhd(75): signal "internal_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at timer_ctl.vhd(78): signal "internal_counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at timer_ctl.vhd(82): signal "short_interval_tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at timer_ctl.vhd(83): signal "long_interval_tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at timer_ctl.vhd(60): inferring latch(es) for signal or variable "short_interval_tmp", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at timer_ctl.vhd(60): inferring latch(es) for signal or variable "long_interval_tmp", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at timer_ctl.vhd(60): inferring latch(es) for signal or variable "internal_counter", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at timer_ctl.vhd(88): signal "short_interval_tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at timer_ctl.vhd(89): signal "long_interval_tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at timer_ctl.vhd(60): inferring latch(es) for signal or variable "start", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at timer_ctl.vhd(60): inferring latch(es) for signal or variable "reset", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "reset" at timer_ctl.vhd(60)
 Info (10041): Inferred latch for "start" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[0]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[1]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[2]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[3]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[4]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[5]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[6]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[7]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[8]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[9]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[10]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[11]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[12]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[13]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[14]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[15]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[16]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[17]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[18]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[19]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[20]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[21]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[22]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[23]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[24]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[25]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[26]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[27]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[28]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[29]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[30]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "internal_counter[31]" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "long_interval_tmp" at timer_ctl.vhd(60)
-Info (10041): Inferred latch for "short_interval_tmp" at timer_ctl.vhd(60)
 Warning (12125): Using design file clk_converter_60hz.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: clk_converter_60hz-behaviour_clk_converter
     Info (12023): Found entity 1: clk_converter_60hz
-Info (12128): Elaborating entity "clk_converter_60hz" for hierarchy "clk_converter_60hz:clk_portmap"
+Info (12128): Elaborating entity "clk_converter_60hz" for hierarchy "clk_converter_60hz:clk_converter_ports"
 Warning (10492): VHDL Process Statement warning at clk_converter_60hz.vhd(29): signal "clock_tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at clk_converter_60hz.vhd(38): signal "clock_tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at clk_converter_60hz.vhd(22): inferring latch(es) for signal or variable "clock_tmp", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "clock_tmp" at clk_converter_60hz.vhd(22)
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "short_interval" is stuck at GND
     Warning (13410): Pin "long_interval" is stuck at GND
-Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock"
-Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "timer_start"
+    Warning (15610): No output dependent on input pin "timer_reset"
+    Warning (15610): No output dependent on input pin "clk"
+Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 75 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 318 megabytes
-    Info: Processing ended: Sun Jan 27 16:33:48 2013
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 326 megabytes
+    Info: Processing ended: Sun Jan 27 18:01:02 2013
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 

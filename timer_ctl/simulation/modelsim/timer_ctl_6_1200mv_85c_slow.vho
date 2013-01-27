@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition"
 
--- DATE "01/27/2013 16:34:28"
+-- DATE "01/27/2013 17:18:09"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256

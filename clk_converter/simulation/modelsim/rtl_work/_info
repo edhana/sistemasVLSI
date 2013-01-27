@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\workspace\mestrado\sistemasVLSI\clk_converter\simulation\modelsim
+Eclk_converter_60hz
+Z1 w1359072779
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dZ:\workspace\mestrado\sistemasVLSI\clk_converter\simulation\modelsim
+Z6 8Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd
+Z7 FZ:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd
+l0
+L10
+VO_U;6CNeUD:4XM;]j7:Jb0
+Z8 OV;C;10.1b;51
+31
+Z9 !s108 1359072946.591000
+Z10 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd|
+Z11 !s107 Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 LVf<N08L1M7eb5=<M@mhf2
+!i10b 1
+Abehaviour_clk_converter
+R2
+R3
+R4
+DEx4 work 18 clk_converter_60hz 0 22 O_U;6CNeUD:4XM;]j7:Jb0
+l21
+L19
+V;G8W=5UFG]A=9A7RF0JcM0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 `^QAdlRWlSODhYTi;V[V`1
+!i10b 1
+Eclk_converter_60hz_tb
+Z14 w1359072852
+R3
+R4
+R5
+Z15 8Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd
+Z16 FZ:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd
+l0
+L8
+Vo8=g9GmC1^l?YihXeUV172
+!s100 8?Sd2DM0LOeZ>jaYd6MkL3
+R8
+31
+!i10b 1
+Z17 !s108 1359072946.841000
+Z18 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd|
+Z19 !s107 Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd|
+R12
+R13
+Aclk_converter_60hz_tb_arch
+R3
+R4
+DEx4 work 21 clk_converter_60hz_tb 0 22 o8=g9GmC1^l?YihXeUV172
+l27
+L11
+VOl`6a^@_lE^TiE?4SedC52
+!s100 nXON^7M_jIcXfViZC:=m23
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

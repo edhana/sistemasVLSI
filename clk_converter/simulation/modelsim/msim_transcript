@@ -1,0 +1,337 @@
+# Reading C:/developer-apps/altera/modelsim_ase/tcl/vsim/pref.tcl 
+# do clk_converter_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\developer-apps\altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\developer-apps\altera\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clk_converter_60hz_tb
+# -- Compiling architecture clk_converter_60hz_tb_arch of clk_converter_60hz_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd(52): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  clk_converter_60hz_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps clk_converter_60hz_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clk_converter_60hz_tb(clk_converter_60hz_tb_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ms
+do clk_converter_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clk_converter_60hz_tb
+# -- Compiling architecture clk_converter_60hz_tb_arch of clk_converter_60hz_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd(52): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  clk_converter_60hz_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps clk_converter_60hz_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clk_converter_60hz_tb(clk_converter_60hz_tb_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ms
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+do clk_converter_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clk_converter_60hz_tb
+# -- Compiling architecture clk_converter_60hz_tb_arch of clk_converter_60hz_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd(52): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  clk_converter_60hz_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps clk_converter_60hz_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clk_converter_60hz_tb(clk_converter_60hz_tb_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ms
+do clk_converter_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clk_converter_60hz_tb
+# -- Compiling architecture clk_converter_60hz_tb_arch of clk_converter_60hz_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd(52): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  clk_converter_60hz_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps clk_converter_60hz_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clk_converter_60hz_tb(clk_converter_60hz_tb_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ms
+do clk_converter_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clk_converter_60hz_tb
+# -- Compiling architecture clk_converter_60hz_tb_arch of clk_converter_60hz_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  clk_converter_60hz_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps clk_converter_60hz_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clk_converter_60hz_tb(clk_converter_60hz_tb_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ms
+do clk_converter_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clk_converter_60hz_tb
+# -- Compiling architecture clk_converter_60hz_tb_arch of clk_converter_60hz_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  clk_converter_60hz_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps clk_converter_60hz_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clk_converter_60hz_tb(clk_converter_60hz_tb_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ms
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+do clk_converter_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clk_converter_60hz_tb
+# -- Compiling architecture clk_converter_60hz_tb_arch of clk_converter_60hz_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  clk_converter_60hz_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps clk_converter_60hz_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clk_converter_60hz_tb(clk_converter_60hz_tb_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ms
+do clk_converter_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clk_converter_60hz_tb
+# -- Compiling architecture clk_converter_60hz_tb_arch of clk_converter_60hz_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz_tb.vhd(50): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  clk_converter_60hz_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps clk_converter_60hz_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.clk_converter_60hz_tb(clk_converter_60hz_tb_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 100 ms

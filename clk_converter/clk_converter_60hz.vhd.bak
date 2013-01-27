@@ -1,0 +1,6 @@
+-- clk converter file
+-- Eduardo Marques
+-- 22/01/2012
+
+entity clk_converter_60hz is
+end clk_converter_60hz;

@@ -1,0 +1,8 @@
+|clk_converter_60hz
+start => ~NO_FANOUT~
+pause => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+clk_60Hz <= clock_tmp.DB_MAX_OUTPUT_PORT_TYPE
+
+

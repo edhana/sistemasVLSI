@@ -1,0 +1,18 @@
+-- FSM Semaphor Model
+-- Eduardo marques
+-- 22/01/2013
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity semaphore is
+  port(
+    clk            : in std_logic;
+    reset          : in std_logic;
+    traffic_sensor : in std_logic;
+    short_interval : in std_logic;
+    long_interval  : in std_logic;    
+    timer_starter  : out std_logic;
+    trafic_light_ctl : out std_logic_vector(5 downto 0)   
+  );
+end semaphore;

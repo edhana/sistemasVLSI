@@ -1,0 +1,606 @@
+TimeQuest Timing Analyzer report for clk_converter
+Thu Jan 24 19:22:10 2013
+Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Clocks
+  4. Slow 1200mV 85C Model Fmax Summary
+  5. Slow 1200mV 85C Model Setup Summary
+  6. Slow 1200mV 85C Model Hold Summary
+  7. Slow 1200mV 85C Model Recovery Summary
+  8. Slow 1200mV 85C Model Removal Summary
+  9. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 10. Slow 1200mV 85C Model Datasheet Report
+ 11. Slow 1200mV 85C Model Metastability Report
+ 12. Slow 1200mV 0C Model Fmax Summary
+ 13. Slow 1200mV 0C Model Setup Summary
+ 14. Slow 1200mV 0C Model Hold Summary
+ 15. Slow 1200mV 0C Model Recovery Summary
+ 16. Slow 1200mV 0C Model Removal Summary
+ 17. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 18. Slow 1200mV 0C Model Datasheet Report
+ 19. Slow 1200mV 0C Model Metastability Report
+ 20. Fast 1200mV 0C Model Setup Summary
+ 21. Fast 1200mV 0C Model Hold Summary
+ 22. Fast 1200mV 0C Model Recovery Summary
+ 23. Fast 1200mV 0C Model Removal Summary
+ 24. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 25. Fast 1200mV 0C Model Datasheet Report
+ 26. Fast 1200mV 0C Model Metastability Report
+ 27. Multicorner Timing Analysis Summary
+ 28. Board Trace Model Assignments
+ 29. Input Transition Times
+ 30. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 31. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 32. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 33. Clock Transfers
+ 34. Report TCCS
+ 35. Report RSKM
+ 36. Unconstrained Paths
+ 37. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                    ;
++--------------------+-----------------------------------------------------------------+
+; Quartus II Version ; Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; clk_converter                                                   ;
+; Device Family      ; Cyclone IV E                                                    ;
+; Device Name        ; EP4CE22F17C6                                                    ;
+; Timing Models      ; Final                                                           ;
+; Delay Model        ; Combined                                                        ;
+; Rise/Fall Delays   ; Enabled                                                         ;
++--------------------+-----------------------------------------------------------------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Fmax Summary ;
+--------------------------------------
+No paths to report.
+
+
+---------------------------------------
+; Slow 1200mV 85C Model Setup Summary ;
+---------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Hold Summary ;
+--------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
+-----------------------------------------------------
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
+-----------------------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Datasheet Report ;
+------------------------------------------
+Nothing to report.
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Fmax Summary ;
+-------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
+----------------------------------------------------
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
+----------------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Datasheet Report ;
+-----------------------------------------
+Nothing to report.
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
+--------------------------------------
+; Fast 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Fast 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
+----------------------------------------------------
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
+----------------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Datasheet Report ;
+-----------------------------------------
+Nothing to report.
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; clk_60Hz      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; start                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; pause                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; clk_60Hz      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.45e-09 V                   ; 2.38 V              ; -0.0609 V           ; 0.148 V                              ; 0.095 V                              ; 2.82e-10 s                  ; 2.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.45e-09 V                  ; 2.38 V             ; -0.0609 V          ; 0.148 V                             ; 0.095 V                             ; 2.82e-10 s                 ; 2.59e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.61e-09 V                   ; 2.38 V              ; -0.00274 V          ; 0.141 V                              ; 0.006 V                              ; 4.7e-10 s                   ; 6.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.61e-09 V                  ; 2.38 V             ; -0.00274 V         ; 0.141 V                             ; 0.006 V                             ; 4.7e-10 s                  ; 6.02e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; clk_60Hz      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.74e-07 V                   ; 2.36 V              ; -0.0201 V           ; 0.072 V                              ; 0.033 V                              ; 4.04e-10 s                  ; 3.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.74e-07 V                  ; 2.36 V             ; -0.0201 V          ; 0.072 V                             ; 0.033 V                             ; 4.04e-10 s                 ; 3.29e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.45e-07 V                   ; 2.35 V              ; -0.00643 V          ; 0.081 V                              ; 0.031 V                              ; 5.31e-10 s                  ; 7.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.45e-07 V                  ; 2.35 V             ; -0.00643 V         ; 0.081 V                             ; 0.031 V                             ; 5.31e-10 s                 ; 7.59e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; clk_60Hz      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Jan 24 19:21:59 2013
+Info: Command: quartus_sta clk_converter -c clk_converter
+Info: qsta_default_script.tcl version: #2
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'clk_converter.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "clock_tmp~0|datad"
+    Warning (332126): Node "clock_tmp~0|combout"
+Warning (332125): Found combinational loop of 216 nodes
+    Warning (332126): Node "Add0~1|datab"
+    Warning (332126): Node "Add0~1|cout"
+    Warning (332126): Node "Add0~3|cin"
+    Warning (332126): Node "Add0~3|cout"
+    Warning (332126): Node "Add0~5|cin"
+    Warning (332126): Node "Add0~5|combout"
+    Warning (332126): Node "Equal0~10|dataa"
+    Warning (332126): Node "Equal0~10|combout"
+    Warning (332126): Node "Equal0~0|dataa"
+    Warning (332126): Node "Equal0~0|combout"
+    Warning (332126): Node "Equal0~4|dataa"
+    Warning (332126): Node "Equal0~4|combout"
+    Warning (332126): Node "Equal0~10|datab"
+    Warning (332126): Node "\counter_clk:counter[31]~1|datad"
+    Warning (332126): Node "\counter_clk:counter[31]~1|combout"
+    Warning (332126): Node "Add0~61|datad"
+    Warning (332126): Node "Add0~61|combout"
+    Warning (332126): Node "\counter_clk:counter[31]~1|datac"
+    Warning (332126): Node "Equal0~0|datab"
+    Warning (332126): Node "Add0~59|dataa"
+    Warning (332126): Node "Add0~59|cout"
+    Warning (332126): Node "Add0~61|cin"
+    Warning (332126): Node "Add0~59|combout"
+    Warning (332126): Node "Add0~59|datab"
+    Warning (332126): Node "Equal0~1|dataa"
+    Warning (332126): Node "Equal0~1|combout"
+    Warning (332126): Node "Equal0~4|datab"
+    Warning (332126): Node "Equal0~1|datab"
+    Warning (332126): Node "Add0~57|dataa"
+    Warning (332126): Node "Add0~57|cout"
+    Warning (332126): Node "Add0~59|cin"
+    Warning (332126): Node "Add0~57|combout"
+    Warning (332126): Node "Add0~57|datab"
+    Warning (332126): Node "Equal0~1|datac"
+    Warning (332126): Node "Add0~55|dataa"
+    Warning (332126): Node "Add0~55|cout"
+    Warning (332126): Node "Add0~57|cin"
+    Warning (332126): Node "Add0~55|combout"
+    Warning (332126): Node "Add0~55|datab"
+    Warning (332126): Node "Equal0~1|datad"
+    Warning (332126): Node "Add0~53|dataa"
+    Warning (332126): Node "Add0~53|cout"
+    Warning (332126): Node "Add0~55|cin"
+    Warning (332126): Node "Add0~53|combout"
+    Warning (332126): Node "Add0~53|datab"
+    Warning (332126): Node "Equal0~2|datab"
+    Warning (332126): Node "Equal0~2|combout"
+    Warning (332126): Node "Equal0~4|datac"
+    Warning (332126): Node "Add0~51|dataa"
+    Warning (332126): Node "Add0~51|cout"
+    Warning (332126): Node "Add0~53|cin"
+    Warning (332126): Node "Add0~51|combout"
+    Warning (332126): Node "Add0~51|datab"
+    Warning (332126): Node "Equal0~2|datac"
+    Warning (332126): Node "Add0~49|dataa"
+    Warning (332126): Node "Add0~49|cout"
+    Warning (332126): Node "Add0~51|cin"
+    Warning (332126): Node "Add0~49|combout"
+    Warning (332126): Node "Add0~49|datab"
+    Warning (332126): Node "Equal0~2|datad"
+    Warning (332126): Node "Add0~47|datab"
+    Warning (332126): Node "Add0~47|combout"
+    Warning (332126): Node "Equal0~2|dataa"
+    Warning (332126): Node "Add0~47|dataa"
+    Warning (332126): Node "Add0~47|cout"
+    Warning (332126): Node "Add0~49|cin"
+    Warning (332126): Node "Add0~45|datab"
+    Warning (332126): Node "Add0~45|cout"
+    Warning (332126): Node "Add0~47|cin"
+    Warning (332126): Node "Add0~45|combout"
+    Warning (332126): Node "Add0~45|dataa"
+    Warning (332126): Node "Equal0~3|datad"
+    Warning (332126): Node "Equal0~3|combout"
+    Warning (332126): Node "Equal0~4|datad"
+    Warning (332126): Node "Add0~43|datab"
+    Warning (332126): Node "Add0~43|combout"
+    Warning (332126): Node "Equal0~3|datab"
+    Warning (332126): Node "Add0~43|dataa"
+    Warning (332126): Node "Add0~43|cout"
+    Warning (332126): Node "Add0~45|cin"
+    Warning (332126): Node "Add0~41|datab"
+    Warning (332126): Node "Add0~41|combout"
+    Warning (332126): Node "Equal0~3|dataa"
+    Warning (332126): Node "Add0~41|dataa"
+    Warning (332126): Node "Add0~41|cout"
+    Warning (332126): Node "Add0~43|cin"
+    Warning (332126): Node "Add0~39|datab"
+    Warning (332126): Node "Add0~39|combout"
+    Warning (332126): Node "Equal0~3|datac"
+    Warning (332126): Node "Add0~39|dataa"
+    Warning (332126): Node "Add0~39|cout"
+    Warning (332126): Node "Add0~41|cin"
+    Warning (332126): Node "Add0~37|datab"
+    Warning (332126): Node "Add0~37|cout"
+    Warning (332126): Node "Add0~39|cin"
+    Warning (332126): Node "Add0~37|combout"
+    Warning (332126): Node "Add0~37|dataa"
+    Warning (332126): Node "Equal0~5|datab"
+    Warning (332126): Node "Equal0~5|combout"
+    Warning (332126): Node "Equal0~9|datab"
+    Warning (332126): Node "Equal0~9|combout"
+    Warning (332126): Node "Equal0~10|datac"
+    Warning (332126): Node "Add0~35|dataa"
+    Warning (332126): Node "Add0~35|cout"
+    Warning (332126): Node "Add0~37|cin"
+    Warning (332126): Node "Add0~35|combout"
+    Warning (332126): Node "Equal0~5|dataa"
+    Warning (332126): Node "Add0~35|datab"
+    Warning (332126): Node "Add0~33|dataa"
+    Warning (332126): Node "Add0~33|cout"
+    Warning (332126): Node "Add0~35|cin"
+    Warning (332126): Node "Add0~33|combout"
+    Warning (332126): Node "Add0~33|datab"
+    Warning (332126): Node "Equal0~5|datad"
+    Warning (332126): Node "Add0~31|datab"
+    Warning (332126): Node "Add0~31|combout"
+    Warning (332126): Node "Equal0~5|datac"
+    Warning (332126): Node "Add0~31|dataa"
+    Warning (332126): Node "Add0~31|cout"
+    Warning (332126): Node "Add0~33|cin"
+    Warning (332126): Node "Add0~29|datab"
+    Warning (332126): Node "Add0~29|cout"
+    Warning (332126): Node "Add0~31|cin"
+    Warning (332126): Node "Add0~29|combout"
+    Warning (332126): Node "Add0~29|dataa"
+    Warning (332126): Node "Equal0~6|datac"
+    Warning (332126): Node "Equal0~6|combout"
+    Warning (332126): Node "Equal0~9|datac"
+    Warning (332126): Node "Add0~27|datab"
+    Warning (332126): Node "Add0~27|cout"
+    Warning (332126): Node "Add0~29|cin"
+    Warning (332126): Node "Add0~27|combout"
+    Warning (332126): Node "Add0~27|dataa"
+    Warning (332126): Node "Equal0~6|datad"
+    Warning (332126): Node "Add0~25|datab"
+    Warning (332126): Node "Add0~25|combout"
+    Warning (332126): Node "Equal0~6|dataa"
+    Warning (332126): Node "Add0~25|dataa"
+    Warning (332126): Node "Add0~25|cout"
+    Warning (332126): Node "Add0~27|cin"
+    Warning (332126): Node "Add0~23|dataa"
+    Warning (332126): Node "Add0~23|cout"
+    Warning (332126): Node "Add0~25|cin"
+    Warning (332126): Node "Add0~23|combout"
+    Warning (332126): Node "Equal0~6|datab"
+    Warning (332126): Node "Add0~23|datab"
+    Warning (332126): Node "Add0~21|datab"
+    Warning (332126): Node "Add0~21|cout"
+    Warning (332126): Node "Add0~23|cin"
+    Warning (332126): Node "Add0~21|combout"
+    Warning (332126): Node "Add0~21|dataa"
+    Warning (332126): Node "Equal0~7|datac"
+    Warning (332126): Node "Equal0~7|combout"
+    Warning (332126): Node "Equal0~9|datad"
+    Warning (332126): Node "Add0~19|dataa"
+    Warning (332126): Node "Add0~19|cout"
+    Warning (332126): Node "Add0~21|cin"
+    Warning (332126): Node "Add0~19|combout"
+    Warning (332126): Node "Equal0~7|dataa"
+    Warning (332126): Node "Add0~19|datab"
+    Warning (332126): Node "Add0~17|dataa"
+    Warning (332126): Node "Add0~17|cout"
+    Warning (332126): Node "Add0~19|cin"
+    Warning (332126): Node "Add0~17|combout"
+    Warning (332126): Node "Add0~17|datab"
+    Warning (332126): Node "Equal0~7|datad"
+    Warning (332126): Node "Add0~15|dataa"
+    Warning (332126): Node "Add0~15|cout"
+    Warning (332126): Node "Add0~17|cin"
+    Warning (332126): Node "Add0~15|combout"
+    Warning (332126): Node "Equal0~7|datab"
+    Warning (332126): Node "Add0~15|datab"
+    Warning (332126): Node "Add0~13|dataa"
+    Warning (332126): Node "Add0~13|cout"
+    Warning (332126): Node "Add0~15|cin"
+    Warning (332126): Node "Add0~13|combout"
+    Warning (332126): Node "Equal0~8|datad"
+    Warning (332126): Node "Equal0~8|combout"
+    Warning (332126): Node "Equal0~9|dataa"
+    Warning (332126): Node "Add0~13|datab"
+    Warning (332126): Node "Add0~11|dataa"
+    Warning (332126): Node "Add0~11|cout"
+    Warning (332126): Node "Add0~13|cin"
+    Warning (332126): Node "Add0~11|combout"
+    Warning (332126): Node "Equal0~8|datab"
+    Warning (332126): Node "Add0~11|datab"
+    Warning (332126): Node "Add0~9|datab"
+    Warning (332126): Node "Add0~9|combout"
+    Warning (332126): Node "Equal0~8|datac"
+    Warning (332126): Node "Add0~9|dataa"
+    Warning (332126): Node "Add0~9|cout"
+    Warning (332126): Node "Add0~11|cin"
+    Warning (332126): Node "Add0~7|dataa"
+    Warning (332126): Node "Add0~7|cout"
+    Warning (332126): Node "Add0~9|cin"
+    Warning (332126): Node "Add0~7|combout"
+    Warning (332126): Node "Equal0~8|dataa"
+    Warning (332126): Node "Add0~7|datab"
+    Warning (332126): Node "Add0~5|datab"
+    Warning (332126): Node "Add0~5|cout"
+    Warning (332126): Node "Add0~7|cin"
+    Warning (332126): Node "Add0~3|datab"
+    Warning (332126): Node "Add0~3|combout"
+    Warning (332126): Node "Add0~3|dataa"
+    Warning (332126): Node "Equal0~10|datad"
+    Warning (332126): Node "\counter_clk:counter[0]~1|dataa"
+    Warning (332126): Node "\counter_clk:counter[0]~1|combout"
+    Warning (332126): Node "Equal0~0|datac"
+    Warning (332126): Node "\counter_clk:counter[0]~1|datac"
+    Warning (332126): Node "Add0~1|dataa"
+    Warning (332126): Node "Add0~1|combout"
+    Warning (332126): Node "Equal0~0|datad"
+    Warning (332126): Node "\counter_clk:counter[1]~1|datad"
+    Warning (332126): Node "\counter_clk:counter[1]~1|combout"
+    Warning (332126): Node "\counter_clk:counter[1]~1|dataa"
+    Warning (332126): Node "Add0~5|dataa"
+Critical Warning (332081): Design contains combinational loop of 216 nodes. Estimating the delays through the loop.
+Warning (332068): No clocks defined in design.
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow 1200mV 85C Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info: Analyzing Fast 1200mV 0C Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 226 warnings
+    Info: Peak virtual memory: 328 megabytes
+    Info: Processing ended: Thu Jan 24 19:22:10 2013
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:05
+
+

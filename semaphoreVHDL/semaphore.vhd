@@ -16,3 +16,11 @@ entity semaphore is
     trafic_light_ctl : out std_logic_vector(5 downto 0)   
   );
 end semaphore;
+
+architecture behaviour of semaphore is
+  -- signal
+  -- component  
+begin  
+  -- fsm 1
+  -- fsm 2
+end behaviour;

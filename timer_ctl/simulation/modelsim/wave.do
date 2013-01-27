@@ -1,25 +1,17 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /timer_ctl_tb/timer_start
-add wave -noupdate /timer_ctl_tb/timer_reset
-add wave -noupdate /timer_ctl_tb/short_interval
-add wave -noupdate /timer_ctl_tb/long_interval
-add wave -noupdate /timer_ctl_tb/timer_ctl_ports/timer_start
-add wave -noupdate /timer_ctl_tb/timer_ctl_ports/timer_reset
-add wave -noupdate /timer_ctl_tb/timer_ctl_ports/short_interval
-add wave -noupdate /timer_ctl_tb/timer_ctl_ports/long_interval
-add wave -noupdate /timer_ctl_tb/timer_ctl_ports/clk_60Hz
-add wave -noupdate /timer_ctl_tb/timer_ctl_ports/start
-add wave -noupdate /timer_ctl_tb/timer_ctl_ports/reset
-add wave -noupdate /timer_ctl_tb/timer_ctl_ports/internal_counter
-add wave -noupdate /timer_ctl_tb/timer_ctl_ports/clk_converter_ports/start
-add wave -noupdate /timer_ctl_tb/timer_ctl_ports/clk_converter_ports/reset
-add wave -noupdate /timer_ctl_tb/timer_ctl_ports/clk_converter_ports/clk_60Hz
+add wave -noupdate /clk_converter_60hz/start
+add wave -noupdate /clk_converter_60hz/reset
+add wave -noupdate /clk_converter_60hz/clk_60hz
+add wave -noupdate /timer_ctl/start
+add wave -noupdate /timer_ctl/reset
+add wave -noupdate /timer_ctl/short_interval
+add wave -noupdate /timer_ctl/long_interval
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {1350001080000 ps} 0}
-quietly wave cursor active 1
-configure wave -namecolwidth 349
-configure wave -valuecolwidth 119
+WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+quietly wave cursor active 0
+configure wave -namecolwidth 254
+configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -32,4 +24,17 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits sec
 update
-WaveRestoreZoom {1229301900 ns} {1470700260 ns}
+WaveRestoreZoom {0 ps} {892450879007 ps}
+view wave 
+wave clipboard store
+wave create -pattern none -portmode in -language vhdl /clk_converter_60hz/start 
+wave create -pattern none -portmode in -language vhdl /clk_converter_60hz/reset 
+wave create -pattern none -portmode in -language vhdl /clk_converter_60hz/clk 
+wave create -pattern none -portmode out -language vhdl /clk_converter_60hz/clk_60Hz 
+wave create -pattern none -portmode in -language vhdl /timer_ctl/start 
+wave create -pattern none -portmode in -language vhdl /timer_ctl/reset 
+wave create -pattern none -portmode in -language vhdl /timer_ctl/clk 
+wave create -pattern none -portmode out -language vhdl /timer_ctl/short_interval 
+wave create -pattern none -portmode out -language vhdl /timer_ctl/long_interval 
+WaveCollapseAll -1
+wave clipboard restore

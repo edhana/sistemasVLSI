@@ -10,9 +10,9 @@ end timer_ctl_tb;
 
 architecture timer_ctl_tb_arch of timer_ctl_tb is
   -- inputs
-  signal start    : std_logic;
-  signal reset    : std_logic;
-  signal clk            : std_logic;
+  signal start : std_logic;
+  signal reset : std_logic;
+  signal clk   : std_logic;
 
   -- outputs
   signal short_interval : std_logic;

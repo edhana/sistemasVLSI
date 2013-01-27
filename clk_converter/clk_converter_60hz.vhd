@@ -19,10 +19,13 @@ end clk_converter_60hz;
 architecture behaviour_clk_converter of clk_converter_60hz is
   signal clock_tmp : std_logic := '0';
 begin -- architecture begin
-  counter_clk : process(clk, start)
+  counter_clk : process(clk, reset)
     variable counter : integer := 0;
   begin
-    if(start = '1') then
+    if(reset'event and reset = '1') then
+      counter := 0;
+      clock_tmp <= '0';
+    elsif(clk'event and clk = '0') then
       -- 50Mhz to 60 Hz count until 833333
       if(counter = 833333) then
         counter := 0;
@@ -30,10 +33,6 @@ begin -- architecture begin
       else
         counter := counter + 1;
       end if;
-      -- clk_60Hz <= clock_tmp; -- sets the output clock at 60Hz
-    else
-      counter := 0;
-      clock_tmp <= '0';
     end if;
     clk_60Hz <= clock_tmp; -- sets the clock signal on zero
   end process counter_clk;

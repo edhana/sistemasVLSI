@@ -16,7 +16,7 @@ L10
 VO_U;6CNeUD:4XM;]j7:Jb0
 Z8 OV;C;10.1b;51
 31
-Z9 !s108 1359319210.111000
+Z9 !s108 1359322358.461000
 Z10 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/timer_ctl/clk_converter_60hz.vhd|
 Z11 !s107 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/clk_converter_60hz.vhd|
 Z12 o-93 -work work -O0
@@ -41,7 +41,7 @@ R13
 !s100 `^QAdlRWlSODhYTi;V[V`1
 !i10b 1
 Etimer_ctl
-Z14 w1359319075
+Z14 w1359321638
 Z15 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 Z16 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
 R3
@@ -54,7 +54,7 @@ L13
 V25<61YZJ6=gnU:HifaLg@0
 R8
 31
-Z19 !s108 1359319209.876000
+Z19 !s108 1359322358.211000
 Z20 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd|
 Z21 !s107 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd|
 R12
@@ -69,7 +69,7 @@ R4
 DEx4 work 9 timer_ctl 0 22 25<61YZJ6=gnU:HifaLg@0
 l44
 L23
-V`>5HoKZ]z9ONOKFYMTNjB1
+V:O?mnK@<OWCEg^K6co4ZG0
 R8
 31
 R19
@@ -77,10 +77,10 @@ R20
 R21
 R12
 R13
-!s100 B7Y0SoLcGW4;]boH10SEk3
+!s100 :IlQ2gTA=2i2=mlU_=GZ50
 !i10b 1
 Etimer_ctl_tb
-Z22 w1359319191
+Z22 w1359319505
 R3
 R4
 R5
@@ -93,7 +93,7 @@ VhOSk^h>[Ial?hmT48fDRY1
 R8
 31
 !i10b 1
-Z25 !s108 1359319210.345000
+Z25 !s108 1359322358.711000
 Z26 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl_tb.vhd|
 Z27 !s107 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl_tb.vhd|
 R12

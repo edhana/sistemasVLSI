@@ -51,27 +51,24 @@ begin
     );
 
   -- main process -- with counter
-  always : process(clk_60Hz)
+  always : process(reset, clk_60Hz)
     -- variable list
+    variable short_counter : integer := 300;
+    variable long_counter  : integer := 600;
   begin
-    if(clk_60Hz'event and clk_60Hz = '0') then -- clock rising
+    if(reset'event and reset = '1') then
+      internal_counter <= (others => '0');
+    elsif(clk_60Hz'event and clk_60Hz = '0') then -- clock rising
       internal_counter <= internal_counter + 1;
     end if;
+
+    if(internal_counter = conv_std_logic_vector(short_counter, 32)) then -- 300 cycles of 1 hz = 5 sec.
+      short_interval_tmp <= '1';
+    elsif (internal_counter = conv_std_logic_vector(long_counter, 32)) then -- 600 cycles of 1 hz = 10 sec.
+      long_interval_tmp <= '1';
+    end if;        
+
+    short_interval <= short_interval_tmp;
+    long_interval <= long_interval_tmp;
   end process always;
-
-  -- clk_60Hz_process : process(clk_60Hz)
-    -- if (clk_60Hz'event and clk_60Hz = '1') then
-        -- verify the counter ammount
-        -- if(internal_counter = conv_std_logic_vector(short_counter, 32)) then -- 300 cycles of 1 hz = 5 sec.
-        --   short_interval_tmp <= '1';
-        -- elsif (internal_counter = conv_std_logic_vector(long_counter, 32)) then -- 600 cycles of 1 hz = 10 sec.
-        --   long_interval_tmp <= '1';
-        -- end if;        
-
-        -- increase the counter
-  --       if(start = '1') then
-  --         internal_counter <= internal_counter + 1;
-  --       end if;
-  -- end process clk_60Hz_process;
-
 end timer_behaviour;

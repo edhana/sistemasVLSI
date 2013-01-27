@@ -17,19 +17,19 @@ entity clk_converter_60hz is
 end clk_converter_60hz;
 
 architecture behaviour_clk_converter of clk_converter_60hz is
-  signal clock_tmp : std_logic := '0';
 begin -- architecture begin
   counter_clk : process(clk, reset)
+    variable clock_tmp : std_logic := '0';
     variable counter : integer := 0;
   begin
-    if(reset'event and reset = '1') then
+    if(reset = '1') then
       counter := 0;
-      clock_tmp <= '0';
+      clock_tmp := '0';
     elsif(clk'event and clk = '0') then
       -- 50Mhz to 60 Hz count until 833333
       if(counter = 833333) then
         counter := 0;
-        clock_tmp <= not clock_tmp;
+        clock_tmp := not clock_tmp;
       else
         counter := counter + 1;
       end if;

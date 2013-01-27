@@ -24,12 +24,6 @@ architecture timer_behaviour of timer_ctl is
   -- input signal
   signal clk_60Hz : std_logic;
 
-  -- output signals
-  signal short_interval_tmp, long_interval_tmp : std_logic := '0';
-
-  -- other signals
-  signal internal_counter : std_logic_vector(31 downto 0) := (others => '0');
-
   -- components
   component clk_converter_60hz is
     port(
@@ -51,21 +45,24 @@ begin
     );
 
   -- main process -- with counter
-  always : process(reset, clk_60Hz)
+  always : process(clk_60Hz, reset)
     -- variable list
-    variable short_counter : integer := 300;
-    variable long_counter  : integer := 600;
+    variable short_interval_tmp : std_logic := '0';
+    variable long_interval_tmp : std_logic := '0';
+    variable internal_counter : std_logic_vector(31 downto 0) := (others => '0');
+    constant short_counter : integer := 300;
+    constant long_counter  : integer := 600;      
   begin
-    if(reset'event and reset = '1') then
-      internal_counter <= (others => '0');
+    if(reset = '1') then
+      internal_counter := (others => '0');
     elsif(clk_60Hz'event and clk_60Hz = '0') then -- clock rising
-      internal_counter <= internal_counter + 1;
+      internal_counter := internal_counter + 1;
     end if;
 
     if(internal_counter = conv_std_logic_vector(short_counter, 32)) then -- 300 cycles of 1 hz = 5 sec.
-      short_interval_tmp <= '1';
+      short_interval_tmp := '1';
     elsif (internal_counter = conv_std_logic_vector(long_counter, 32)) then -- 600 cycles of 1 hz = 10 sec.
-      long_interval_tmp <= '1';
+      long_interval_tmp := '1';
     end if;        
 
     short_interval <= short_interval_tmp;

@@ -19,7 +19,21 @@ end semaphore;
 
 architecture behaviour of semaphore is
   -- signal
+  signal start          : std_logic;
+  signal short_interval : std_logic;
+  signal long_interval  : std_logic;
+
   -- component  
+  component timer_ctl is
+    port(
+      start          : in std_logic;
+      reset          : in std_logic;
+      clk            : in std_logic;
+      short_interval : out std_logic;
+      long_interval  : out std_logic
+    );
+  end timer_ctl;
+
 begin  
   -- fsm 1
   -- fsm 2

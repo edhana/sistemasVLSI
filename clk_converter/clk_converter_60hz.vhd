@@ -28,6 +28,7 @@ begin -- architecture begin
     elsif(clk'event and clk = '0') then
       -- 50Mhz to 60 Hz count until 833333
       if(counter = 833333) then
+      -- if(counter = 100) then
         counter := 0;
         clock_tmp := not clock_tmp;
       else

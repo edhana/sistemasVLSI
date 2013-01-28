@@ -54,6 +54,4 @@
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 2 sec
-# Break key hit 
-# Break in Process always at Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl_tb.vhd line 56
+# run -all

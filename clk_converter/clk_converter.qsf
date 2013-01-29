@@ -62,3 +62,4 @@ set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 ms" -section_id clk_
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME clk_converter_60hz_tb -section_id clk_converter_60hz_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE clk_converter_60hz_tb.vhd -section_id clk_converter_60hz_tb
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"

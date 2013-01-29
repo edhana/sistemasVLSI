@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition"
 
--- DATE "01/27/2013 22:23:47"
+-- DATE "01/27/2013 22:46:09"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -43,15 +43,15 @@ ENTITY 	semaphore IS
 END semaphore;
 
 -- Design Ports Information
--- reset	=>  Location: PIN_E16,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- trafic_light_ctl[0]	=>  Location: PIN_F1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- trafic_light_ctl[1]	=>  Location: PIN_D1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- trafic_light_ctl[2]	=>  Location: PIN_F2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- trafic_light_ctl[3]	=>  Location: PIN_G1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- trafic_light_ctl[4]	=>  Location: PIN_G2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- trafic_light_ctl[5]	=>  Location: PIN_G5,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- clk	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- traffic_sensor	=>  Location: PIN_E15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- reset	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- trafic_light_ctl[0]	=>  Location: PIN_A15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- trafic_light_ctl[1]	=>  Location: PIN_A13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- trafic_light_ctl[2]	=>  Location: PIN_B13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- trafic_light_ctl[3]	=>  Location: PIN_F3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- trafic_light_ctl[4]	=>  Location: PIN_B1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- trafic_light_ctl[5]	=>  Location: PIN_L3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- clk	=>  Location: PIN_R4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- traffic_sensor	=>  Location: PIN_J15,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF semaphore IS
@@ -68,9 +68,7 @@ SIGNAL ww_clk : std_logic;
 SIGNAL ww_reset : std_logic;
 SIGNAL ww_traffic_sensor : std_logic;
 SIGNAL ww_trafic_light_ctl : std_logic_vector(5 DOWNTO 0);
-SIGNAL \clk~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \reset~input_o\ : std_logic;
-SIGNAL \traffic_sensor~input_o\ : std_logic;
 SIGNAL \trafic_light_ctl[0]~output_o\ : std_logic;
 SIGNAL \trafic_light_ctl[1]~output_o\ : std_logic;
 SIGNAL \trafic_light_ctl[2]~output_o\ : std_logic;
@@ -78,18 +76,18 @@ SIGNAL \trafic_light_ctl[3]~output_o\ : std_logic;
 SIGNAL \trafic_light_ctl[4]~output_o\ : std_logic;
 SIGNAL \trafic_light_ctl[5]~output_o\ : std_logic;
 SIGNAL \clk~input_o\ : std_logic;
-SIGNAL \clk~inputclkctrl_outclk\ : std_logic;
-SIGNAL \Mux4~0_combout\ : std_logic;
-SIGNAL \Mux4~1_combout\ : std_logic;
-SIGNAL \Mux5~0_combout\ : std_logic;
-SIGNAL \Mux5~1_combout\ : std_logic;
+SIGNAL \traffic_sensor~input_o\ : std_logic;
 SIGNAL \Mux3~0_combout\ : std_logic;
 SIGNAL \Mux3~1_combout\ : std_logic;
+SIGNAL \Mux4~0_combout\ : std_logic;
+SIGNAL \Mux4~1_combout\ : std_logic;
 SIGNAL \Mux6~0_combout\ : std_logic;
 SIGNAL \Mux2~0_combout\ : std_logic;
 SIGNAL \Mux6~1_combout\ : std_logic;
+SIGNAL \Mux5~0_combout\ : std_logic;
+SIGNAL \Mux5~1_combout\ : std_logic;
 SIGNAL state : std_logic_vector(5 DOWNTO 0);
-SIGNAL \ALT_INV_clk~inputclkctrl_outclk\ : std_logic;
+SIGNAL \ALT_INV_clk~input_o\ : std_logic;
 SIGNAL ALT_INV_state : std_logic_vector(3 DOWNTO 2);
 
 BEGIN
@@ -101,24 +99,11 @@ trafic_light_ctl <= ww_trafic_light_ctl;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-
-\clk~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \clk~input_o\);
-\ALT_INV_clk~inputclkctrl_outclk\ <= NOT \clk~inputclkctrl_outclk\;
+\ALT_INV_clk~input_o\ <= NOT \clk~input_o\;
 ALT_INV_state(3) <= NOT state(3);
 ALT_INV_state(2) <= NOT state(2);
 
--- Location: IOIBUF_X53_Y17_N1
-\traffic_sensor~input\ : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_traffic_sensor,
-	o => \traffic_sensor~input_o\);
-
--- Location: IOOBUF_X0_Y23_N2
+-- Location: IOOBUF_X38_Y34_N16
 \trafic_light_ctl[0]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -130,7 +115,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \trafic_light_ctl[0]~output_o\);
 
--- Location: IOOBUF_X0_Y25_N9
+-- Location: IOOBUF_X49_Y34_N2
 \trafic_light_ctl[1]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -142,7 +127,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \trafic_light_ctl[1]~output_o\);
 
--- Location: IOOBUF_X0_Y24_N23
+-- Location: IOOBUF_X49_Y34_N9
 \trafic_light_ctl[2]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -154,7 +139,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \trafic_light_ctl[2]~output_o\);
 
--- Location: IOOBUF_X0_Y23_N23
+-- Location: IOOBUF_X0_Y26_N16
 \trafic_light_ctl[3]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -166,7 +151,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \trafic_light_ctl[3]~output_o\);
 
--- Location: IOOBUF_X0_Y23_N16
+-- Location: IOOBUF_X0_Y28_N9
 \trafic_light_ctl[4]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -178,7 +163,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \trafic_light_ctl[4]~output_o\);
 
--- Location: IOOBUF_X0_Y24_N16
+-- Location: IOOBUF_X0_Y10_N23
 \trafic_light_ctl[5]~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -190,7 +175,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \trafic_light_ctl[5]~output_o\);
 
--- Location: IOIBUF_X0_Y16_N8
+-- Location: IOIBUF_X5_Y0_N22
 \clk~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -201,20 +186,66 @@ PORT MAP (
 	i => ww_clk,
 	o => \clk~input_o\);
 
--- Location: CLKCTRL_G2
-\clk~inputclkctrl\ : cycloneive_clkctrl
+-- Location: IOIBUF_X53_Y14_N1
+\traffic_sensor~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
-	clock_type => "global clock",
-	ena_register_mode => "none")
+	bus_hold => "false",
+	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	inclk => \clk~inputclkctrl_INCLK_bus\,
+	i => ww_traffic_sensor,
+	o => \traffic_sensor~input_o\);
+
+-- Location: LCCOMB_X6_Y14_N24
+\Mux3~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Mux3~0_combout\ = (state(0) & (((!state(4) & state(2))) # (!state(3)))) # (!state(0) & ((state(2) & (!state(3))) # (!state(2) & ((state(4))))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101110101110100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => state(3),
+	datab => state(0),
+	datac => state(4),
+	datad => state(2),
+	combout => \Mux3~0_combout\);
+
+-- Location: LCCOMB_X6_Y14_N22
+\Mux3~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Mux3~1_combout\ = (!state(1) & ((state(3) & ((\Mux3~0_combout\))) # (!state(3) & (!\traffic_sensor~input_o\ & !\Mux3~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000000000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => state(1),
+	datab => \traffic_sensor~input_o\,
+	datac => state(3),
+	datad => \Mux3~0_combout\,
+	combout => \Mux3~1_combout\);
+
+-- Location: FF_X6_Y14_N23
+\state[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \ALT_INV_clk~input_o\,
+	d => \Mux3~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	outclk => \clk~inputclkctrl_outclk\);
+	q => state(3));
 
--- Location: LCCOMB_X1_Y23_N18
+-- Location: LCCOMB_X6_Y14_N18
 \Mux4~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Mux4~0_combout\ = (!state(1) & ((state(0) & (!state(4) & state(2))) # (!state(0) & (state(4) & !state(2)))))
@@ -231,7 +262,7 @@ PORT MAP (
 	datad => state(2),
 	combout => \Mux4~0_combout\);
 
--- Location: LCCOMB_X1_Y23_N4
+-- Location: LCCOMB_X6_Y14_N8
 \Mux4~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Mux4~1_combout\ = (state(3) & \Mux4~0_combout\)
@@ -246,7 +277,7 @@ PORT MAP (
 	datad => \Mux4~0_combout\,
 	combout => \Mux4~1_combout\);
 
--- Location: FF_X1_Y23_N5
+-- Location: FF_X6_Y14_N9
 \state[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -254,13 +285,90 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \ALT_INV_clk~inputclkctrl_outclk\,
+	clk => \ALT_INV_clk~input_o\,
 	d => \Mux4~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => state(2));
 
--- Location: LCCOMB_X1_Y23_N12
+-- Location: LCCOMB_X6_Y14_N10
+\Mux6~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Mux6~0_combout\ = (!state(1) & (!state(2) & !state(0)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000000101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => state(1),
+	datac => state(2),
+	datad => state(0),
+	combout => \Mux6~0_combout\);
+
+-- Location: LCCOMB_X6_Y14_N4
+\Mux2~0\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Mux2~0_combout\ = (!state(3) & (!\traffic_sensor~input_o\ & (!state(4) & \Mux6~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => state(3),
+	datab => \traffic_sensor~input_o\,
+	datac => state(4),
+	datad => \Mux6~0_combout\,
+	combout => \Mux2~0_combout\);
+
+-- Location: FF_X6_Y14_N5
+\state[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \ALT_INV_clk~input_o\,
+	d => \Mux2~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => state(4));
+
+-- Location: LCCOMB_X6_Y14_N20
+\Mux6~1\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \Mux6~1_combout\ = (state(3) & (state(4) & \Mux6~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010000000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => state(3),
+	datac => state(4),
+	datad => \Mux6~0_combout\,
+	combout => \Mux6~1_combout\);
+
+-- Location: FF_X6_Y14_N21
+\state[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \ALT_INV_clk~input_o\,
+	d => \Mux6~1_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => state(0));
+
+-- Location: LCCOMB_X6_Y14_N28
 \Mux5~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Mux5~0_combout\ = (!state(1) & (!state(4) & (state(3) & state(0))))
@@ -277,7 +385,7 @@ PORT MAP (
 	datad => state(0),
 	combout => \Mux5~0_combout\);
 
--- Location: LCCOMB_X1_Y23_N6
+-- Location: LCCOMB_X6_Y14_N26
 \Mux5~1\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Mux5~1_combout\ = (state(2) & \Mux5~0_combout\)
@@ -292,7 +400,7 @@ PORT MAP (
 	datad => \Mux5~0_combout\,
 	combout => \Mux5~1_combout\);
 
--- Location: FF_X1_Y23_N7
+-- Location: FF_X6_Y14_N27
 \state[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -300,138 +408,13 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \ALT_INV_clk~inputclkctrl_outclk\,
+	clk => \ALT_INV_clk~input_o\,
 	d => \Mux5~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => state(1));
 
--- Location: LCCOMB_X1_Y23_N24
-\Mux3~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Mux3~0_combout\ = (state(2) & (((!state(4) & state(0))) # (!state(3)))) # (!state(2) & ((state(0) & (!state(3))) # (!state(0) & ((state(4))))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0111010101011100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => state(3),
-	datab => state(4),
-	datac => state(2),
-	datad => state(0),
-	combout => \Mux3~0_combout\);
-
--- Location: LCCOMB_X1_Y23_N22
-\Mux3~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \Mux3~1_combout\ = (!state(1) & ((state(3) & ((\Mux3~0_combout\))) # (!state(3) & (!\traffic_sensor~input_o\ & !\Mux3~0_combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0011000000000001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \traffic_sensor~input_o\,
-	datab => state(1),
-	datac => state(3),
-	datad => \Mux3~0_combout\,
-	combout => \Mux3~1_combout\);
-
--- Location: FF_X1_Y23_N23
-\state[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \ALT_INV_clk~inputclkctrl_outclk\,
-	d => \Mux3~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => state(3));
-
--- Location: LCCOMB_X1_Y23_N10
-\Mux6~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Mux6~0_combout\ = (!state(1) & (!state(2) & !state(0)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000000000101",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => state(1),
-	datac => state(2),
-	datad => state(0),
-	combout => \Mux6~0_combout\);
-
--- Location: LCCOMB_X1_Y23_N8
-\Mux2~0\ : cycloneive_lcell_comb
--- Equation(s):
--- \Mux2~0_combout\ = (!\traffic_sensor~input_o\ & (!state(3) & (!state(4) & \Mux6~0_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000000100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \traffic_sensor~input_o\,
-	datab => state(3),
-	datac => state(4),
-	datad => \Mux6~0_combout\,
-	combout => \Mux2~0_combout\);
-
--- Location: FF_X1_Y23_N9
-\state[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \ALT_INV_clk~inputclkctrl_outclk\,
-	d => \Mux2~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => state(4));
-
--- Location: LCCOMB_X1_Y23_N20
-\Mux6~1\ : cycloneive_lcell_comb
--- Equation(s):
--- \Mux6~1_combout\ = (state(4) & (state(3) & \Mux6~0_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1100000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => state(4),
-	datac => state(3),
-	datad => \Mux6~0_combout\,
-	combout => \Mux6~1_combout\);
-
--- Location: FF_X1_Y23_N21
-\state[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \ALT_INV_clk~inputclkctrl_outclk\,
-	d => \Mux6~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => state(0));
-
--- Location: IOIBUF_X53_Y17_N8
+-- Location: IOIBUF_X0_Y16_N8
 \reset~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (

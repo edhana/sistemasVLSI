@@ -63,3 +63,760 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+# Can't move the Now cursor.
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/simulation/modelsim/wave.do
+restart -f
+do semaphore_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore_tb
+# -- Compiling architecture semaphore_tb_arch of semaphore_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  semaphore_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+do wave.do
+do semaphore_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore_tb
+# -- Compiling architecture semaphore_tb_arch of semaphore_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  semaphore_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+do wave.do
+vsim work.semaphore
+# vsim work.semaphore 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+vsim work.semaphore_tb
+# vsim work.semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+add wave -position insertpoint sim:/semaphore_tb/*
+restart -f
+add wave -position insertpoint sim:/semaphore_tb/*
+add wave -position insertpoint sim:/semaphore_tb/semaphore_port/*
+add wave -position insertpoint sim:/semaphore_tb/semaphore_port/timer_ctl_ports/*
+add wave -position insertpoint sim:/semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/*
+add wave -position insertpoint sim:/semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/counter_clk/*
+run
+run -all
+vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+vsim work.semaphore_tb
+# vsim work.semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+run -all
+wave create -pattern none -portmode in -language vhdl /semaphore/clk
+# semaphore
+wave create -pattern none -portmode in -language vhdl /semaphore/reset
+# semaphore
+wave create -pattern none -portmode in -language vhdl /semaphore/traffic_sensor
+# semaphore
+wave create -pattern none -portmode out -language vhdl -range 5 0 /semaphore/trafic_light_ctl
+# semaphore
+run -all
+run
+do semaphore_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore_tb
+# -- Compiling architecture semaphore_tb_arch of semaphore_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  semaphore_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+vsim work.semaphore_tb
+# vsim work.semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint sim:/semaphore_tb/semaphore_port/*
+add wave -position insertpoint sim:/semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/*
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+vsim -voptargs=+acc work.semaphore_tb
+# vsim -voptargs=+acc work.semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+add wave -position insertpoint sim:/semaphore_tb/*
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint sim:/semaphore_tb/*
+add wave -position insertpoint sim:/semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/*
+run -all
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+run -all
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+restart -f
+# Loading work.timer_ctl(timer_behaviour)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+run -all
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+run -all
+restart -f
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+run -all
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(21): near ")": expecting FUNCTION or PROCEDURE or IMPURE or PURE
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(49): Cannot read output "clk_60Hz".
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(59): Cannot read output "clk_60Hz".
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(59): Cannot read output "clk_60Hz".
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(72): VHDL Compiler exiting
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(49): Cannot read output "clk_60Hz".
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(59): Cannot read output "clk_60Hz".
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(59): Cannot read output "clk_60Hz".
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(72): VHDL Compiler exiting
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(61): Cannot read output "clk_60Hz".
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(61): Cannot read output "clk_60Hz".
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(74): VHDL Compiler exiting
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+restart -f
+# Loading work.timer_ctl(timer_behaviour)
+run
+resttart -f
+# invalid command name "resttart"
+restart -f
+run 1000ns
+add wave -position insertpoint sim:/semaphore_tb/semaphore_port/timer_ctl_ports/*
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/simulation/modelsim/wave.do
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(53): near "clk_60Hz": expecting ',' or ')'
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(56): Statement cannot be labeled.
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(106): VHDL Compiler exiting
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(53): near "clk_60Hz": expecting ',' or ')'
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(56): Statement cannot be labeled.
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(106): VHDL Compiler exiting
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/simulation/modelsim/wave.do
+run 1000ns
+run 1000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+run 1000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# ** Error: (vcom-7) Failed to open design unit file "Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/timer_ctl.vhd" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(27): Integer literal 0 is not of type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(75): VHDL Compiler exiting
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+run 1000ns
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/simulation/modelsim/wave.do
+restart -f
+# Loading work.semaphore(behaviour)
+# Loading work.timer_ctl(timer_behaviour)
+run 1000ns
+wave create -pattern none -portmode in -language vhdl /timer_ctl/start
+# timer_ctl
+wave create -pattern none -portmode in -language vhdl /timer_ctl/reset
+# timer_ctl
+wave create -pattern none -portmode in -language vhdl /timer_ctl/clk
+# timer_ctl
+wave create -pattern none -portmode out -language vhdl /timer_ctl/short_interval
+# timer_ctl
+wave create -pattern none -portmode out -language vhdl /timer_ctl/long_interval
+# timer_ctl
+wave create -pattern none -portmode out -language vhdl /timer_ctl/clk_60Hz
+# timer_ctl
+restart -f
+run 1000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(62): near "=": expecting <= or :=
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(77): VHDL Compiler exiting
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+restart -f
+# Loading work.timer_ctl(timer_behaviour)
+run 1000ns
+restart -f
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(64): near "=": expecting <= or :=
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(82): VHDL Compiler exiting
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+restart -f
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+run 2000ns
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+restart -f
+# Loading work.semaphore(behaviour)
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+restart -f
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+restart -f
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore_tb
+# -- Compiling architecture semaphore_tb_arch of semaphore_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+restart -f
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# ** Warning: [9] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(24): (vcom-1013) Initial value of "light_tmp" depends on value of signal "state".
+# 
+restart -f
+# Loading work.semaphore(behaviour)
+run 2000ns
+add wave -r /*
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# ** Warning: [9] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(24): (vcom-1013) Initial value of "light_tmp" depends on value of signal "state".
+# 
+restart -f
+# Loading work.semaphore(behaviour)
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns
+add wave -r /*
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+restart -f
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns

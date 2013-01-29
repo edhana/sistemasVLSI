@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dZ:\workspace\mestrado\sistemasVLSI\semaphoreVHDL\simulation\modelsim
 Eclk_converter_60hz
-Z1 w1359332109
+Z1 w1359470639
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -16,8 +16,8 @@ L10
 VO_U;6CNeUD:4XM;]j7:Jb0
 Z8 OV;C;10.1b;51
 31
-Z9 !s108 1359332235.818000
-Z10 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd|
+Z9 !s108 1359472463.536000
+Z10 !s90 -reportprogress|300|-93|-work|work|-O0|Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd|
 Z11 !s107 Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd|
 Z12 o-93 -work work -O0
 Z13 tExplicit 1
@@ -28,9 +28,9 @@ R2
 R3
 R4
 DEx4 work 18 clk_converter_60hz 0 22 O_U;6CNeUD:4XM;]j7:Jb0
-l20
+l21
 L19
-V7BP4o2RRK=JXRCOWXT6T63
+V_M_S?ZIQTeldBlV[1ETJ43
 R8
 31
 R9
@@ -38,10 +38,10 @@ R10
 R11
 R12
 R13
-!s100 B:?5`J6k4L_YCX30@hTVO2
+!s100 8hJ8@oVkfC@GWb6e:a>kh1
 !i10b 1
 Esemaphore
-Z14 w1359331177
+Z14 w1359473865
 R3
 R4
 R5
@@ -52,8 +52,8 @@ L8
 VMFlURj8i5b9H4c=O<_]4T1
 R8
 31
-Z17 !s108 1359332235.271000
-Z18 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd|
+Z17 !s108 1359473891.583000
+Z18 !s90 -reportprogress|300|-93|-work|work|-O0|Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd|
 Z19 !s107 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd|
 R12
 R13
@@ -63,9 +63,9 @@ Abehaviour
 R3
 R4
 DEx4 work 9 semaphore 0 22 MFlURj8i5b9H4c=O<_]4T1
-l43
+l46
 L17
-VQmQOglOk=<7ICFiWZW^T23
+VI10nCSKkjMggV6h_2A:Hz0
 R8
 31
 R17
@@ -73,10 +73,10 @@ R18
 R19
 R12
 R13
-!s100 @QMAi1FLZCXi44:TDF_5E1
+!s100 Ck_EQz_V20@^^kVHgkRge0
 !i10b 1
 Esemaphore_tb
-Z20 w1359331514
+Z20 w1359472441
 R3
 R4
 R5
@@ -85,33 +85,33 @@ Z22 FZ:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd
 l0
 L8
 VgN<JMiHkAn=@mR<_fBP0B2
-!s100 6hA=TIO2MlO[ob5=BFG[30
 R8
 31
-!i10b 1
-Z23 !s108 1359332236.099000
-Z24 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd|
+Z23 !s108 1359472482.458000
+Z24 !s90 -reportprogress|300|-93|-work|work|-O0|Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd|
 Z25 !s107 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd|
 R12
 R13
+!s100 6hA=TIO2MlO[ob5=BFG[30
+!i10b 1
 Asemaphore_tb_arch
 R3
 R4
 DEx4 work 12 semaphore_tb 0 22 gN<JMiHkAn=@mR<_fBP0B2
 l24
 L11
-V4BXGmJlHVKMF;SfT<DTEN3
-!s100 @ckVEcoVXI2_X467n=9U32
+VJAY>Gmf[kJLASMhzN27GP0
 R8
 31
-!i10b 1
 R23
 R24
 R25
 R12
 R13
+!s100 nDYE1c]PClL^X3;FAB^oD0
+!i10b 1
 Etimer_ctl
-Z26 w1359332129
+Z26 w1359473962
 Z27 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 Z28 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
 R3
@@ -121,31 +121,31 @@ Z29 8Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
 Z30 FZ:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
 l0
 L13
-V25<61YZJ6=gnU:HifaLg@0
+V06>9Xf6?9CzGbdeI2<XVX0
+!s100 K[19=oG_ZIT8NQL[gT91d1
 R8
 31
-Z31 !s108 1359332235.521000
-Z32 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd|
+!i10b 1
+Z31 !s108 1359473982.208000
+Z32 !s90 -reportprogress|300|-93|-work|work|-O0|Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd|
 Z33 !s107 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd|
 R12
 R13
-!s100 @BM^OEB3ElldOl6z=?H4H2
-!i10b 1
 Atimer_behaviour
 R27
 R28
 R3
 R4
-DEx4 work 9 timer_ctl 0 22 25<61YZJ6=gnU:HifaLg@0
-l38
-L23
-V;hf?^amYJPI?7jf>e[OP73
+Z34 DEx4 work 9 timer_ctl 0 22 06>9Xf6?9CzGbdeI2<XVX0
+l40
+L24
+VXBQDJLhD3^J[Ce0b>T]@K0
+!s100 j]3F1k_QlMk4kN0E@fm[c1
 R8
 31
+!i10b 1
 R31
 R32
 R33
 R12
 R13
-!s100 AdDbE7mM>Y@dOe9mBKI4]1
-!i10b 1

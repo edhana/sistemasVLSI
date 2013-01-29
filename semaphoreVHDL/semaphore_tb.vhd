@@ -31,7 +31,7 @@ begin
     );
 
   always : process
-    variable clock_tmp : std_logic := '0';
+    variable clock_tmp : std_logic := '1';
   begin
     clock_tmp := not clock_tmp;
     wait for 20ns;

@@ -1,5 +1,5 @@
 Fitter report for semaphore
-Sun Jan 27 22:23:30 2013
+Tue Jan 29 11:39:41 2013
 Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
 
 
@@ -64,17 +64,17 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Sun Jan 27 22:23:30 2013         ;
+; Fitter Status                      ; Successful - Tue Jan 29 11:39:41 2013         ;
 ; Quartus II 32-bit Version          ; 12.0 Build 263 08/02/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; semaphore                                     ;
 ; Top-level Entity Name              ; semaphore                                     ;
 ; Family                             ; Cyclone IV E                                  ;
 ; Device                             ; EP4CE22F17C6                                  ;
 ; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 9 / 22,320 ( < 1 % )                          ;
-;     Total combinational functions  ; 9 / 22,320 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 5 / 22,320 ( < 1 % )                          ;
-; Total registers                    ; 5                                             ;
+; Total logic elements               ; 56 / 22,320 ( < 1 % )                         ;
+;     Total combinational functions  ; 55 / 22,320 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 38 / 22,320 ( < 1 % )                         ;
+; Total registers                    ; 38                                            ;
 ; Total pins                         ; 9 / 154 ( 6 % )                               ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                           ;
@@ -93,6 +93,7 @@ applicable agreement for further details.
 ; Minimum Core Junction Temperature                                          ; 0                                     ;                                       ;
 ; Maximum Core Junction Temperature                                          ; 85                                    ;                                       ;
 ; Fit Attempts to Skip                                                       ; 0                                     ; 0.0                                   ;
+; Device I/O Standard                                                        ; 2.5 V                                 ;                                       ;
 ; Use smart compilation                                                      ; Off                                   ; Off                                   ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                                    ; On                                    ;
 ; Enable compact report table                                                ; Off                                   ; Off                                   ;
@@ -141,21 +142,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 
 
-+-----------------------------------------------------+
-; I/O Assignment Warnings                             ;
-+---------------------+-------------------------------+
-; Pin Name            ; Reason                        ;
-+---------------------+-------------------------------+
-; reset               ; Incomplete set of assignments ;
-; trafic_light_ctl[0] ; Incomplete set of assignments ;
-; trafic_light_ctl[1] ; Incomplete set of assignments ;
-; trafic_light_ctl[2] ; Incomplete set of assignments ;
-; trafic_light_ctl[3] ; Incomplete set of assignments ;
-; trafic_light_ctl[4] ; Incomplete set of assignments ;
-; trafic_light_ctl[5] ; Incomplete set of assignments ;
-; clk                 ; Incomplete set of assignments ;
-; traffic_sensor      ; Incomplete set of assignments ;
-+---------------------+-------------------------------+
++------------------------------------------------------------+
+; I/O Assignment Warnings                                    ;
++---------------------+--------------------------------------+
+; Pin Name            ; Reason                               ;
++---------------------+--------------------------------------+
+; trafic_light_ctl[0] ; Missing drive strength and slew rate ;
+; trafic_light_ctl[1] ; Missing drive strength and slew rate ;
+; trafic_light_ctl[2] ; Missing drive strength and slew rate ;
+; trafic_light_ctl[3] ; Missing drive strength and slew rate ;
+; trafic_light_ctl[4] ; Missing drive strength and slew rate ;
+; trafic_light_ctl[5] ; Missing drive strength and slew rate ;
++---------------------+--------------------------------------+
 
 
 +----------------------------------------------+
@@ -164,8 +162,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 44 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 44 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 123 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 123 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -188,7 +186,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 34      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 113     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -199,129 +197,129 @@ applicable agreement for further details.
 The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.pin.
 
 
-+--------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                      ;
-+---------------------------------------------+----------------------+
-; Resource                                    ; Usage                ;
-+---------------------------------------------+----------------------+
-; Total logic elements                        ; 9 / 22,320 ( < 1 % ) ;
-;     -- Combinational with no register       ; 4                    ;
-;     -- Register only                        ; 0                    ;
-;     -- Combinational with a register        ; 5                    ;
-;                                             ;                      ;
-; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 5                    ;
-;     -- 3 input functions                    ; 2                    ;
-;     -- <=2 input functions                  ; 2                    ;
-;     -- Register only                        ; 0                    ;
-;                                             ;                      ;
-; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 9                    ;
-;     -- arithmetic mode                      ; 0                    ;
-;                                             ;                      ;
-; Total registers*                            ; 5 / 23,018 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 5 / 22,320 ( < 1 % ) ;
-;     -- I/O registers                        ; 0 / 698 ( 0 % )      ;
-;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 1 / 1,395 ( < 1 % )  ;
-; User inserted logic elements                ; 0                    ;
-; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 9 / 154 ( 6 % )      ;
-;     -- Clock pins                           ; 2 / 7 ( 29 % )       ;
-;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )        ;
-;                                             ;                      ;
-; Global signals                              ; 1                    ;
-; M9Ks                                        ; 0 / 66 ( 0 % )       ;
-; Total block memory bits                     ; 0 / 608,256 ( 0 % )  ;
-; Total block memory implementation bits      ; 0 / 608,256 ( 0 % )  ;
-; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )      ;
-; PLLs                                        ; 0 / 4 ( 0 % )        ;
-; Global clocks                               ; 1 / 20 ( 5 % )       ;
-; JTAGs                                       ; 0 / 1 ( 0 % )        ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
-; Impedance control blocks                    ; 0 / 4 ( 0 % )        ;
-; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
-; Maximum fan-out node                        ; state[3]             ;
-; Maximum fan-out                             ; 7                    ;
-; Highest non-global fan-out signal           ; state[3]             ;
-; Highest non-global fan-out                  ; 7                    ;
-; Total fan-out                               ; 61                   ;
-; Average fan-out                             ; 1.42                 ;
-+---------------------------------------------+----------------------+
++---------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                       ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Total logic elements                        ; 56 / 22,320 ( < 1 % ) ;
+;     -- Combinational with no register       ; 18                    ;
+;     -- Register only                        ; 1                     ;
+;     -- Combinational with a register        ; 37                    ;
+;                                             ;                       ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 16                    ;
+;     -- 3 input functions                    ; 1                     ;
+;     -- <=2 input functions                  ; 38                    ;
+;     -- Register only                        ; 1                     ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 24                    ;
+;     -- arithmetic mode                      ; 31                    ;
+;                                             ;                       ;
+; Total registers*                            ; 38 / 23,018 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 38 / 22,320 ( < 1 % ) ;
+;     -- I/O registers                        ; 0 / 698 ( 0 % )       ;
+;                                             ;                       ;
+; Total LABs:  partially or completely used   ; 5 / 1,395 ( < 1 % )   ;
+; User inserted logic elements                ; 0                     ;
+; Virtual pins                                ; 0                     ;
+; I/O pins                                    ; 9 / 154 ( 6 % )       ;
+;     -- Clock pins                           ; 1 / 7 ( 14 % )        ;
+;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )         ;
+;                                             ;                       ;
+; Global signals                              ; 1                     ;
+; M9Ks                                        ; 0 / 66 ( 0 % )        ;
+; Total block memory bits                     ; 0 / 608,256 ( 0 % )   ;
+; Total block memory implementation bits      ; 0 / 608,256 ( 0 % )   ;
+; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )       ;
+; PLLs                                        ; 0 / 4 ( 0 % )         ;
+; Global clocks                               ; 1 / 20 ( 5 % )        ;
+; JTAGs                                       ; 0 / 1 ( 0 % )         ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
+; Impedance control blocks                    ; 0 / 4 ( 0 % )         ;
+; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
+; Maximum fan-out node                        ; clk~input             ;
+; Maximum fan-out                             ; 33                    ;
+; Highest non-global fan-out signal           ; clk~input             ;
+; Highest non-global fan-out                  ; 33                    ;
+; Total fan-out                               ; 240                   ;
+; Average fan-out                             ; 1.95                  ;
++---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+----------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                        ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Statistic                                   ; Top                 ; hard_block:auto_generated_inst ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low                 ; Low                            ;
-;                                             ;                     ;                                ;
-; Total logic elements                        ; 9 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
-;     -- Combinational with no register       ; 4                   ; 0                              ;
-;     -- Register only                        ; 0                   ; 0                              ;
-;     -- Combinational with a register        ; 5                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 5                   ; 0                              ;
-;     -- 3 input functions                    ; 2                   ; 0                              ;
-;     -- <=2 input functions                  ; 2                   ; 0                              ;
-;     -- Register only                        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 9                   ; 0                              ;
-;     -- arithmetic mode                      ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Total registers                             ; 5                   ; 0                              ;
-;     -- Dedicated logic registers            ; 5 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
-;     -- I/O registers                        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 1 / 1395 ( < 1 % )  ; 0 / 1395 ( 0 % )               ;
-;                                             ;                     ;                                ;
-; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 9                   ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )     ; 0 / 132 ( 0 % )                ;
-; Total memory bits                           ; 0                   ; 0                              ;
-; Total RAM block bits                        ; 0                   ; 0                              ;
-; Clock control block                         ; 1 / 24 ( 4 % )      ; 0 / 24 ( 0 % )                 ;
-;                                             ;                     ;                                ;
-; Connections                                 ;                     ;                                ;
-;     -- Input Connections                    ; 0                   ; 0                              ;
-;     -- Registered Input Connections         ; 0                   ; 0                              ;
-;     -- Output Connections                   ; 0                   ; 0                              ;
-;     -- Registered Output Connections        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 56                  ; 5                              ;
-;     -- Registered Connections               ; 29                  ; 0                              ;
-;                                             ;                     ;                                ;
-; External Connections                        ;                     ;                                ;
-;     -- Top                                  ; 0                   ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 3                   ; 0                              ;
-;     -- Output Ports                         ; 6                   ; 0                              ;
-;     -- Bidir Ports                          ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Registered Ports                            ;                     ;                                ;
-;     -- Registered Input Ports               ; 0                   ; 0                              ;
-;     -- Registered Output Ports              ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Port Connectivity                           ;                     ;                                ;
-;     -- Input Ports driven by GND            ; 0                   ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                   ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                   ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                   ; 0                              ;
-;     -- Input Ports with no Source           ; 0                   ; 0                              ;
-;     -- Output Ports with no Source          ; 0                   ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                   ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                   ; 0                              ;
-+---------------------------------------------+---------------------+--------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                         ;
++---------------------------------------------+----------------------+--------------------------------+
+; Statistic                                   ; Top                  ; hard_block:auto_generated_inst ;
++---------------------------------------------+----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                  ; Low                            ;
+;                                             ;                      ;                                ;
+; Total logic elements                        ; 56 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
+;     -- Combinational with no register       ; 18                   ; 0                              ;
+;     -- Register only                        ; 1                    ; 0                              ;
+;     -- Combinational with a register        ; 37                   ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic element usage by number of LUT inputs ;                      ;                                ;
+;     -- 4 input functions                    ; 16                   ; 0                              ;
+;     -- 3 input functions                    ; 1                    ; 0                              ;
+;     -- <=2 input functions                  ; 38                   ; 0                              ;
+;     -- Register only                        ; 1                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic elements by mode                      ;                      ;                                ;
+;     -- normal mode                          ; 24                   ; 0                              ;
+;     -- arithmetic mode                      ; 31                   ; 0                              ;
+;                                             ;                      ;                                ;
+; Total registers                             ; 38                   ; 0                              ;
+;     -- Dedicated logic registers            ; 38 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
+;     -- I/O registers                        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Total LABs:  partially or completely used   ; 5 / 1395 ( < 1 % )   ; 0 / 1395 ( 0 % )               ;
+;                                             ;                      ;                                ;
+; Virtual pins                                ; 0                    ; 0                              ;
+; I/O pins                                    ; 9                    ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )      ; 0 / 132 ( 0 % )                ;
+; Total memory bits                           ; 0                    ; 0                              ;
+; Total RAM block bits                        ; 0                    ; 0                              ;
+; Clock control block                         ; 1 / 24 ( 4 % )       ; 0 / 24 ( 0 % )                 ;
+;                                             ;                      ;                                ;
+; Connections                                 ;                      ;                                ;
+;     -- Input Connections                    ; 0                    ; 0                              ;
+;     -- Registered Input Connections         ; 0                    ; 0                              ;
+;     -- Output Connections                   ; 0                    ; 0                              ;
+;     -- Registered Output Connections        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Internal Connections                        ;                      ;                                ;
+;     -- Total Connections                    ; 235                  ; 5                              ;
+;     -- Registered Connections               ; 98                   ; 0                              ;
+;                                             ;                      ;                                ;
+; External Connections                        ;                      ;                                ;
+;     -- Top                                  ; 0                    ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Partition Interface                         ;                      ;                                ;
+;     -- Input Ports                          ; 3                    ; 0                              ;
+;     -- Output Ports                         ; 6                    ; 0                              ;
+;     -- Bidir Ports                          ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Registered Ports                            ;                      ;                                ;
+;     -- Registered Input Ports               ; 0                    ; 0                              ;
+;     -- Registered Output Ports              ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Port Connectivity                           ;                      ;                                ;
+;     -- Input Ports driven by GND            ; 0                    ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                    ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                    ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                    ; 0                              ;
+;     -- Input Ports with no Source           ; 0                    ; 0                              ;
+;     -- Output Ports with no Source          ; 0                    ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                    ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                    ; 0                              ;
++---------------------------------------------+----------------------+--------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -329,9 +327,9 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; clk            ; E1    ; 1        ; 0            ; 16           ; 7            ; 5                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; reset          ; E16   ; 6        ; 53           ; 17           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; traffic_sensor ; E15   ; 6        ; 53           ; 17           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; clk            ; R4    ; 3        ; 5            ; 0            ; 21           ; 33                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; reset          ; E1    ; 1        ; 0            ; 16           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; traffic_sensor ; J15   ; 5        ; 53           ; 14           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -340,12 +338,12 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 +---------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name                ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +---------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; trafic_light_ctl[0] ; F1    ; 1        ; 0            ; 23           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; trafic_light_ctl[1] ; D1    ; 1        ; 0            ; 25           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; trafic_light_ctl[2] ; F2    ; 1        ; 0            ; 24           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; trafic_light_ctl[3] ; G1    ; 1        ; 0            ; 23           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; trafic_light_ctl[4] ; G2    ; 1        ; 0            ; 23           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; trafic_light_ctl[5] ; G5    ; 1        ; 0            ; 24           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; trafic_light_ctl[0] ; A15   ; 7        ; 38           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; trafic_light_ctl[1] ; A13   ; 7        ; 49           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; trafic_light_ctl[2] ; B13   ; 7        ; 49           ; 34           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; trafic_light_ctl[3] ; F3    ; 1        ; 0            ; 26           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; trafic_light_ctl[4] ; B1    ; 1        ; 0            ; 28           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
+; trafic_light_ctl[5] ; L3    ; 2        ; 0            ; 10           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; User                 ; -                    ; -                   ;
 +---------------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -361,29 +359,31 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ; H2       ; DATA0                       ; As input tri-stated      ; ~ALTERA_DATA0~          ; Dual Purpose Pin          ;
 ; H5       ; nCONFIG                     ; -                        ; -                       ; Dedicated Programming Pin ;
 ; J3       ; nCE                         ; -                        ; -                       ; Dedicated Programming Pin ;
+; J15      ; DIFFIO_R9p, DEV_CLRn        ; Use as regular IO        ; traffic_sensor          ; Dual Purpose Pin          ;
 ; H14      ; CONF_DONE                   ; -                        ; -                       ; Dedicated Programming Pin ;
 ; H13      ; MSEL0                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; H12      ; MSEL1                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; G12      ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; G12      ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; F16      ; DIFFIO_R4n, nCEO            ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
+; A15      ; DIFFIO_T19n, PADD1          ; Use as regular IO        ; trafic_light_ctl[0]     ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
 
-+------------------------------------------------------------+
-; I/O Bank Usage                                             ;
-+----------+------------------+---------------+--------------+
-; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
-+----------+------------------+---------------+--------------+
-; 1        ; 11 / 14 ( 79 % ) ; 2.5V          ; --           ;
-; 2        ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ;
-; 3        ; 0 / 25 ( 0 % )   ; 2.5V          ; --           ;
-; 4        ; 0 / 20 ( 0 % )   ; 2.5V          ; --           ;
-; 5        ; 0 / 18 ( 0 % )   ; 2.5V          ; --           ;
-; 6        ; 3 / 13 ( 23 % )  ; 2.5V          ; --           ;
-; 7        ; 0 / 24 ( 0 % )   ; 2.5V          ; --           ;
-; 8        ; 0 / 24 ( 0 % )   ; 2.5V          ; --           ;
-+----------+------------------+---------------+--------------+
++-----------------------------------------------------------+
+; I/O Bank Usage                                            ;
++----------+-----------------+---------------+--------------+
+; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
++----------+-----------------+---------------+--------------+
+; 1        ; 7 / 14 ( 50 % ) ; 2.5V          ; --           ;
+; 2        ; 1 / 16 ( 6 % )  ; 2.5V          ; --           ;
+; 3        ; 1 / 25 ( 4 % )  ; 2.5V          ; --           ;
+; 4        ; 0 / 20 ( 0 % )  ; 2.5V          ; --           ;
+; 5        ; 1 / 18 ( 6 % )  ; 2.5V          ; --           ;
+; 6        ; 1 / 13 ( 8 % )  ; 2.5V          ; --           ;
+; 7        ; 3 / 24 ( 13 % ) ; 2.5V          ; --           ;
+; 8        ; 0 / 24 ( 0 % )  ; 2.5V          ; --           ;
++----------+-----------------+---------------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -403,11 +403,11 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ; A10      ; 198        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A11      ; 188        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A12      ; 186        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A13      ; 179        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A13      ; 179        ; 7        ; trafic_light_ctl[1]                                       ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A14      ; 181        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A15      ; 191        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; A15      ; 191        ; 7        ; trafic_light_ctl[0]                                       ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A16      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; B1       ; 5          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; B1       ; 5          ; 1        ; trafic_light_ctl[4]                                       ; output ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; B2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B3       ; 242        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B4       ; 237        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -419,7 +419,7 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ; B10      ; 199        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B11      ; 189        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B12      ; 187        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B13      ; 180        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B13      ; 180        ; 7        ; trafic_light_ctl[2]                                       ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; B14      ; 182        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B15      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B16      ; 164        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -439,7 +439,7 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ; C14      ; 175        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C15      ; 174        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C16      ; 173        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; D1       ; 10         ; 1        ; trafic_light_ctl[1]                                       ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D1       ; 10         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D2       ; 9          ; 1        ; ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; D3       ; 246        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D4       ;            ;          ; VCCD_PLL3                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -455,7 +455,7 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ; D14      ; 176        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D15      ; 170        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D16      ; 169        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; E1       ; 26         ; 1        ; clk                                                       ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E1       ; 26         ; 1        ; reset                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; E2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E3       ;            ; 1        ; VCCIO1                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; E4       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -469,11 +469,11 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ; E12      ;            ;          ; GNDA2                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E14      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; E15      ; 151        ; 6        ; traffic_sensor                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; E16      ; 150        ; 6        ; reset                                                     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F1       ; 14         ; 1        ; trafic_light_ctl[0]                                       ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F2       ; 13         ; 1        ; trafic_light_ctl[2]                                       ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F3       ; 8          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; E15      ; 151        ; 6        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; E16      ; 150        ; 6        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; F1       ; 14         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; F2       ; 13         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; F3       ; 8          ; 1        ; trafic_light_ctl[3]                                       ; output ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; F4       ; 11         ; 1        ; ^nSTATUS                                                  ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; F5       ;            ; --       ; VCCA3                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; F6       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -487,11 +487,11 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ; F14      ; 167        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F15      ; 163        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F16      ; 162        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G1       ; 16         ; 1        ; trafic_light_ctl[3]                                       ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G2       ; 15         ; 1        ; trafic_light_ctl[4]                                       ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G1       ; 16         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; G2       ; 15         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G3       ;            ; 1        ; VCCIO1                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; G4       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; G5       ; 12         ; 1        ; trafic_light_ctl[5]                                       ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G5       ; 12         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G6       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G7       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G8       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -534,7 +534,7 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ; J12      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; J13      ; 146        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J14      ; 144        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; J15      ; 143        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; J15      ; 143        ; 5        ; traffic_sensor                                            ; input  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; J16      ; 142        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K1       ; 37         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K2       ; 36         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -554,7 +554,7 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ; K16      ; 140        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L1       ; 39         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L2       ; 38         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; L3       ; 40         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; L3       ; 40         ; 2        ; trafic_light_ctl[5]                                       ; output ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; L4       ; 46         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L5       ;            ; --       ; VCCA1                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; L6       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -619,7 +619,7 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ; R1       ; 49         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; R3       ; 54         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; R4       ; 60         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; R4       ; 60         ; 3        ; clk                                                       ; input  ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; R5       ; 71         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R6       ; 73         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; R7       ; 76         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -652,13 +652,15 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |semaphore                 ; 9 (9)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 9    ; 0            ; 4 (4)        ; 0 (0)             ; 5 (5)            ; |semaphore          ;              ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                       ;
++------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                     ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                         ; Library Name ;
++------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------+--------------+
+; |semaphore                                     ; 56 (10)     ; 38 (5)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 9    ; 0            ; 18 (5)       ; 1 (0)             ; 37 (5)           ; |semaphore                                                                  ;              ;
+;    |timer_ctl:timer_ctl_ports|                 ; 46 (0)      ; 33 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (0)       ; 1 (0)             ; 32 (0)           ; |semaphore|timer_ctl:timer_ctl_ports                                        ;              ;
+;       |clk_converter_60hz:clk_converter_ports| ; 46 (46)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 1 (1)             ; 32 (32)          ; |semaphore|timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports ;              ;
++------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -674,61 +676,208 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; trafic_light_ctl[3] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; trafic_light_ctl[4] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; trafic_light_ctl[5] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; traffic_sensor      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; clk                 ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; traffic_sensor      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +---------------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; reset               ;                   ;         ;
-; clk                 ;                   ;         ;
-; traffic_sensor      ;                   ;         ;
-+---------------------+-------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                                                 ;
++--------------------------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                                              ; Pad To Core Index ; Setting ;
++--------------------------------------------------------------------------------------------------+-------------------+---------+
+; reset                                                                                            ;                   ;         ;
+; traffic_sensor                                                                                   ;                   ;         ;
+;      - Mux3~0                                                                                    ; 0                 ; 6       ;
+;      - Mux2~0                                                                                    ; 0                 ; 6       ;
+; clk                                                                                              ;                   ;         ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp                ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[0]  ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[1]  ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[2]  ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[3]  ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[4]  ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[5]  ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[6]  ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[7]  ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[8]  ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[9]  ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[10] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[11] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[12] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[13] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[14] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[15] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[16] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[17] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[18] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[19] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[20] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[21] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[22] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[23] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[24] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[25] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[26] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[27] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[28] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[29] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[30] ; 0                 ; 0       ;
+;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[31] ; 0                 ; 0       ;
++--------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                  ;
-+------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
-; Name ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
-; clk  ; PIN_E1   ; 5       ; Clock ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-+------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                            ;
++----------------------------------------------------------------------------+--------------+---------+-------+--------+----------------------+------------------+---------------------------+
+; Name                                                                       ; Location     ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------------------------------------+--------------+---------+-------+--------+----------------------+------------------+---------------------------+
+; clk                                                                        ; PIN_R4       ; 33      ; Clock ; no     ; --                   ; --               ; --                        ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp ; FF_X4_Y2_N23 ; 5       ; Clock ; yes    ; Global Clock         ; GCLK4            ; --                        ;
++----------------------------------------------------------------------------+--------------+---------+-------+--------+----------------------+------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                            ;
-+------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk  ; PIN_E1   ; 5       ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
-+------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                                                      ;
++----------------------------------------------------------------------------+--------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                                                                       ; Location     ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------------------------------------+--------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp ; FF_X4_Y2_N23 ; 5       ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
++----------------------------------------------------------------------------+--------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------+
-; Non-Global High Fan-Out Signals ;
-+----------------------+----------+
-; Name                 ; Fan-Out  ;
-+----------------------+----------+
-; state[3]             ; 7        ;
-; state[4]             ; 6        ;
-; state[2]             ; 6        ;
-; state[1]             ; 5        ;
-; state[0]             ; 5        ;
-; traffic_sensor~input ; 2        ;
-; Mux6~0               ; 2        ;
-; Mux2~0               ; 1        ;
-; Mux3~1               ; 1        ;
-; Mux3~0               ; 1        ;
-; Mux4~1               ; 1        ;
-; Mux4~0               ; 1        ;
-; Mux5~1               ; 1        ;
-; Mux5~0               ; 1        ;
-; Mux6~1               ; 1        ;
-+----------------------+----------+
++-----------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                     ;
++-------------------------------------------------------------------------------------------+---------+
+; Name                                                                                      ; Fan-Out ;
++-------------------------------------------------------------------------------------------+---------+
+; clk~input                                                                                 ; 33      ;
+; state[2]                                                                                  ; 7       ;
+; state[0]                                                                                  ; 7       ;
+; state[4]                                                                                  ; 6       ;
+; state[3]                                                                                  ; 6       ;
+; state[1]                                                                                  ; 6       ;
+; traffic_sensor~input                                                                      ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~10                ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[1]  ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[2]  ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[3]  ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[0]  ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[4]  ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[5]  ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[6]  ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[7]  ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[8]  ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[9]  ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[10] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[11] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[12] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[13] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[14] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[15] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[16] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[17] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[18] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[19] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[20] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[21] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[22] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[23] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[24] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[25] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[26] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[27] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[28] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[29] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[30] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[31] ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|counter~0                ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp~0              ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~9                 ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~8                 ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~7                 ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~6                 ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~5                 ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~4                 ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~3                 ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~2                 ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~1                 ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~0                 ; 1       ;
+; Mux2~0                                                                                    ; 1       ;
+; Mux6~2                                                                                    ; 1       ;
+; Mux3~1                                                                                    ; 1       ;
+; Mux3~0                                                                                    ; 1       ;
+; Mux4~1                                                                                    ; 1       ;
+; Mux4~0                                                                                    ; 1       ;
+; Mux5~1                                                                                    ; 1       ;
+; Mux5~0                                                                                    ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp                ; 1       ;
+; Mux6~1                                                                                    ; 1       ;
+; Mux6~0                                                                                    ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~62                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~61                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~60                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~59                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~58                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~57                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~56                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~55                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~54                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~53                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~52                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~51                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~50                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~49                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~48                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~47                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~46                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~45                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~44                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~43                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~42                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~41                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~40                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~39                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~38                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~37                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~36                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~35                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~34                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~33                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~32                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~31                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~30                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~29                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~28                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~27                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~26                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~25                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~24                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~23                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~22                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~21                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~20                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~19                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~18                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~17                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~16                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~15                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~14                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~13                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~12                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~11                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~10                  ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~9                   ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~8                   ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~7                   ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~6                   ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~5                   ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~4                   ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~3                   ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~2                   ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~1                   ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~0                   ; 1       ;
++-------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------+
@@ -736,95 +885,144 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-----------------------+
 ; Interconnect Resource Type ; Usage                 ;
 +----------------------------+-----------------------+
-; Block interconnects        ; 10 / 71,559 ( < 1 % ) ;
-; C16 interconnects          ; 1 / 2,597 ( < 1 % )   ;
-; C4 interconnects           ; 2 / 46,848 ( < 1 % )  ;
-; Direct links               ; 7 / 71,559 ( < 1 % )  ;
+; Block interconnects        ; 54 / 71,559 ( < 1 % ) ;
+; C16 interconnects          ; 2 / 2,597 ( < 1 % )   ;
+; C4 interconnects           ; 21 / 46,848 ( < 1 % ) ;
+; Direct links               ; 28 / 71,559 ( < 1 % ) ;
 ; Global clocks              ; 1 / 20 ( 5 % )        ;
-; Local interconnects        ; 9 / 24,624 ( < 1 % )  ;
-; R24 interconnects          ; 3 / 2,496 ( < 1 % )   ;
-; R4 interconnects           ; 1 / 62,424 ( < 1 % )  ;
+; Local interconnects        ; 50 / 24,624 ( < 1 % ) ;
+; R24 interconnects          ; 8 / 2,496 ( < 1 % )   ;
+; R4 interconnects           ; 24 / 62,424 ( < 1 % ) ;
 +----------------------------+-----------------------+
 
 
-+--------------------------------------------------------------------------+
-; LAB Logic Elements                                                       ;
-+--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 9.00) ; Number of LABs  (Total = 1) ;
-+--------------------------------------------+-----------------------------+
-; 1                                          ; 0                           ;
-; 2                                          ; 0                           ;
-; 3                                          ; 0                           ;
-; 4                                          ; 0                           ;
-; 5                                          ; 0                           ;
-; 6                                          ; 0                           ;
-; 7                                          ; 0                           ;
-; 8                                          ; 0                           ;
-; 9                                          ; 1                           ;
-; 10                                         ; 0                           ;
-; 11                                         ; 0                           ;
-; 12                                         ; 0                           ;
-; 13                                         ; 0                           ;
-; 14                                         ; 0                           ;
-; 15                                         ; 0                           ;
-; 16                                         ; 0                           ;
-+--------------------------------------------+-----------------------------+
++---------------------------------------------------------------------------+
+; LAB Logic Elements                                                        ;
++---------------------------------------------+-----------------------------+
+; Number of Logic Elements  (Average = 11.20) ; Number of LABs  (Total = 5) ;
++---------------------------------------------+-----------------------------+
+; 1                                           ; 0                           ;
+; 2                                           ; 0                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 0                           ;
+; 5                                           ; 1                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 1                           ;
+; 10                                          ; 1                           ;
+; 11                                          ; 0                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 0                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 0                           ;
+; 16                                          ; 2                           ;
++---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 1) ;
+; LAB-wide Signals  (Average = 0.80) ; Number of LABs  (Total = 5) ;
 +------------------------------------+-----------------------------+
-; 1 Clock                            ; 1                           ;
+; 1 Clock                            ; 4                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 14.00) ; Number of LABs  (Total = 1) ;
+; Number of Signals Sourced  (Average = 18.80) ; Number of LABs  (Total = 5) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
+; 5                                            ; 1                           ;
 ; 6                                            ; 0                           ;
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
+; 10                                           ; 1                           ;
 ; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
-; 14                                           ; 1                           ;
+; 14                                           ; 0                           ;
+; 15                                           ; 1                           ;
+; 16                                           ; 0                           ;
+; 17                                           ; 0                           ;
+; 18                                           ; 0                           ;
+; 19                                           ; 0                           ;
+; 20                                           ; 0                           ;
+; 21                                           ; 0                           ;
+; 22                                           ; 0                           ;
+; 23                                           ; 0                           ;
+; 24                                           ; 0                           ;
+; 25                                           ; 0                           ;
+; 26                                           ; 0                           ;
+; 27                                           ; 0                           ;
+; 28                                           ; 0                           ;
+; 29                                           ; 0                           ;
+; 30                                           ; 0                           ;
+; 31                                           ; 0                           ;
+; 32                                           ; 2                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 5.00) ; Number of LABs  (Total = 1) ;
+; Number of Signals Sourced Out  (Average = 8.60) ; Number of LABs  (Total = 5) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 0                           ;
-; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
+; 2                                               ; 1                           ;
+; 3                                               ; 1                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 1                           ;
+; 6                                               ; 0                           ;
+; 7                                               ; 0                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 0                           ;
+; 10                                              ; 0                           ;
+; 11                                              ; 0                           ;
+; 12                                              ; 0                           ;
+; 13                                              ; 0                           ;
+; 14                                              ; 0                           ;
+; 15                                              ; 0                           ;
+; 16                                              ; 1                           ;
+; 17                                              ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 2.00) ; Number of LABs  (Total = 1) ;
+; Number of Distinct Inputs  (Average = 8.60) ; Number of LABs  (Total = 5) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
-; 2                                           ; 1                           ;
+; 2                                           ; 3                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 0                           ;
+; 5                                           ; 0                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 0                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 0                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 0                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 0                           ;
+; 16                                          ; 1                           ;
+; 17                                          ; 0                           ;
+; 18                                          ; 0                           ;
+; 19                                          ; 0                           ;
+; 20                                          ; 0                           ;
+; 21                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -834,10 +1032,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; I/O Rules Statistic              ; Total ;
 +----------------------------------+-------+
 ; Total I/O Rules                  ; 30    ;
-; Number of I/O Rules Passed       ; 9     ;
+; Number of I/O Rules Passed       ; 12    ;
 ; Number of I/O Rules Failed       ; 0     ;
 ; Number of I/O Rules Unchecked    ; 0     ;
-; Number of I/O Rules Inapplicable ; 21    ;
+; Number of I/O Rules Inapplicable ; 18    ;
 +----------------------------------+-------+
 
 
@@ -846,13 +1044,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
 ; Status       ; ID        ; Category                          ; Rule Description                                                                                     ; Severity ; Information                                                              ; Area                ; Extra Information ;
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
-; Inapplicable ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available.                   ; Critical ; No Location assignments found.                                           ; I/O                 ;                   ;
+; Pass         ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available.                   ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000002 ; Capacity Checks                   ; Number of clocks in an I/O bank should not exceed the number of clocks available.                    ; Critical ; No Global Signal assignments found.                                      ; I/O                 ;                   ;
-; Inapplicable ; IO_000003 ; Capacity Checks                   ; Number of pins in a Vrefgroup should not exceed the number of locations available.                   ; Critical ; No Location assignments found.                                           ; I/O                 ;                   ;
+; Pass         ; IO_000003 ; Capacity Checks                   ; Number of pins in a Vrefgroup should not exceed the number of locations available.                   ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000004 ; Voltage Compatibility Checks      ; The I/O bank should support the requested VCCIO.                                                     ; Critical ; No IOBANK_VCCIO assignments found.                                       ; I/O                 ;                   ;
 ; Inapplicable ; IO_000005 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VREF values.                                                  ; Critical ; No VREF I/O Standard assignments found.                                  ; I/O                 ;                   ;
 ; Pass         ; IO_000006 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VCCIO values.                                                 ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000007 ; Valid Location Checks             ; Checks for unavailable locations.                                                                    ; Critical ; No Location assignments found.                                           ; I/O                 ;                   ;
+; Pass         ; IO_000007 ; Valid Location Checks             ; Checks for unavailable locations.                                                                    ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000008 ; Valid Location Checks             ; Checks for reserved locations.                                                                       ; Critical ; No reserved LogicLock region found.                                      ; I/O                 ;                   ;
 ; Pass         ; IO_000009 ; I/O Properties Checks for One I/O ; The location should support the requested I/O standard.                                              ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Pass         ; IO_000010 ; I/O Properties Checks for One I/O ; The location should support the requested I/O direction.                                             ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
@@ -880,25 +1078,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
-+---------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Pin/Rules           ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
-+---------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass          ; 0            ; 0            ; 0            ; 0            ; 0            ; 9         ; 0            ; 0            ; 9         ; 9         ; 0            ; 6            ; 0            ; 0            ; 3            ; 0            ; 6            ; 3            ; 0            ; 0            ; 0            ; 6            ; 0            ; 0            ; 0            ; 0            ; 0            ; 9         ; 0            ; 0            ;
-; Total Unchecked     ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable  ; 9            ; 9            ; 9            ; 9            ; 9            ; 0         ; 9            ; 9            ; 0         ; 0         ; 9            ; 3            ; 9            ; 9            ; 6            ; 9            ; 3            ; 6            ; 9            ; 9            ; 9            ; 3            ; 9            ; 9            ; 9            ; 9            ; 9            ; 0         ; 9            ; 9            ;
-; Total Fail          ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; reset               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; trafic_light_ctl[0] ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; trafic_light_ctl[1] ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; trafic_light_ctl[2] ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; trafic_light_ctl[3] ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; trafic_light_ctl[4] ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; trafic_light_ctl[5] ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; clk                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; traffic_sensor      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-+---------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++---------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
+; Pin/Rules           ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
++---------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
+; Total Pass          ; 9         ; 0            ; 9         ; 0            ; 0            ; 9         ; 9         ; 0            ; 9         ; 9         ; 0            ; 6            ; 0            ; 0            ; 3            ; 0            ; 6            ; 3            ; 0            ; 0            ; 0            ; 6            ; 0            ; 0            ; 0            ; 0            ; 0            ; 9         ; 0            ; 0            ;
+; Total Unchecked     ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
+; Total Inapplicable  ; 0         ; 9            ; 0         ; 9            ; 9            ; 0         ; 0         ; 9            ; 0         ; 0         ; 9            ; 3            ; 9            ; 9            ; 6            ; 9            ; 3            ; 6            ; 9            ; 9            ; 9            ; 3            ; 9            ; 9            ; 9            ; 9            ; 9            ; 0         ; 9            ; 9            ;
+; Total Fail          ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
+; reset               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; trafic_light_ctl[0] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; trafic_light_ctl[1] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; trafic_light_ctl[2] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; trafic_light_ctl[3] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; trafic_light_ctl[4] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; trafic_light_ctl[5] ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; traffic_sensor      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; clk                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
++---------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
 +---------------------------------------------------------------------------------------------+
@@ -944,7 +1142,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Fitter
     Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Jan 27 22:23:08 2013
+    Info: Processing started: Tue Jan 29 11:39:16 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off semaphore -c semaphore
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EP4CE22F17C6 for design "semaphore"
@@ -964,23 +1162,15 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_DATA0~ is reserved at location H2
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location F16
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 9 pins of 9 total pins
-    Info (169086): Pin reset not assigned to an exact location on the device
-    Info (169086): Pin trafic_light_ctl[0] not assigned to an exact location on the device
-    Info (169086): Pin trafic_light_ctl[1] not assigned to an exact location on the device
-    Info (169086): Pin trafic_light_ctl[2] not assigned to an exact location on the device
-    Info (169086): Pin trafic_light_ctl[3] not assigned to an exact location on the device
-    Info (169086): Pin trafic_light_ctl[4] not assigned to an exact location on the device
-    Info (169086): Pin trafic_light_ctl[5] not assigned to an exact location on the device
-    Info (169086): Pin clk not assigned to an exact location on the device
-    Info (169086): Pin traffic_sensor not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'semaphore.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN E1 (CLK1, DIFFCLK_0n))
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
+Info (176353): Automatically promoted node timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp~0
 Info (176233): Starting register packing
 Extra Info (176273): Performing register packing on registers with non-logic cell location assignments
 Extra Info (176274): Completed register packing on registers with non-logic cell location assignments
@@ -990,20 +1180,7 @@ Extra Info (176248): Moving registers into I/O cells, Multiplier Blocks, and RAM
 Extra Info (176249): Finished moving registers into I/O cells, Multiplier Blocks, and RAM blocks
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 8 (unused VREF, 2.5V VCCIO, 2 input, 6 output, 0 bidirectional)
-        Info (176212): I/O standards used: 2.5 V.
-Info (176215): I/O bank details before I/O pin placement
-    Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 5 total pin(s) used --  9 pins available
-        Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  16 pins available
-        Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  25 pins available
-        Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  20 pins available
-        Info (176213): I/O bank number 5 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  18 pins available
-        Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  12 pins available
-        Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
-        Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:06
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:07
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1011,7 +1188,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y23 to location X9_Y34
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X9_Y10
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
@@ -1019,10 +1196,10 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info: Quartus II 32-bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 433 megabytes
-    Info: Processing ended: Sun Jan 27 22:23:31 2013
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:22
+Info: Quartus II 32-bit Fitter was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 429 megabytes
+    Info: Processing ended: Tue Jan 29 11:39:41 2013
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:23
 
 

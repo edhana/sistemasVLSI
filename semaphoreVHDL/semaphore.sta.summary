@@ -2,3 +2,76 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.381
+TNS   : -45.818
+
+Type  : Slow 1200mV 85C Model Setup 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
+Slack : -1.795
+TNS   : -17.264
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.008
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -36.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
+Slack : -1.000
+TNS   : -18.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -2.019
+TNS   : -36.564
+
+Type  : Slow 1200mV 0C Model Setup 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
+Slack : -1.514
+TNS   : -13.798
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.052
+TNS   : -0.052
+
+Type  : Slow 1200mV 0C Model Hold 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -36.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
+Slack : -1.000
+TNS   : -18.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.871
+TNS   : -12.256
+
+Type  : Fast 1200mV 0C Model Setup 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
+Slack : -0.565
+TNS   : -3.949
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.015
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -39.380
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
+Slack : -1.000
+TNS   : -18.000
+
+------------------------------------------------------------

@@ -1,5 +1,5 @@
 Fitter report for semaphore
-Tue Jan 29 11:39:41 2013
+Tue Jan 29 15:31:50 2013
 Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
 
 
@@ -64,17 +64,17 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Tue Jan 29 11:39:41 2013         ;
+; Fitter Status                      ; Successful - Tue Jan 29 15:31:50 2013         ;
 ; Quartus II 32-bit Version          ; 12.0 Build 263 08/02/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; semaphore                                     ;
 ; Top-level Entity Name              ; semaphore                                     ;
 ; Family                             ; Cyclone IV E                                  ;
 ; Device                             ; EP4CE22F17C6                                  ;
 ; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 56 / 22,320 ( < 1 % )                         ;
-;     Total combinational functions  ; 55 / 22,320 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 38 / 22,320 ( < 1 % )                         ;
-; Total registers                    ; 38                                            ;
+; Total logic elements               ; 87 / 22,320 ( < 1 % )                         ;
+;     Total combinational functions  ; 82 / 22,320 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 51 / 22,320 ( < 1 % )                         ;
+; Total registers                    ; 51                                            ;
 ; Total pins                         ; 9 / 154 ( 6 % )                               ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                           ;
@@ -162,8 +162,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 123 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 123 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 162 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 162 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -186,7 +186,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 113     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 152     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -202,26 +202,26 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 56 / 22,320 ( < 1 % ) ;
-;     -- Combinational with no register       ; 18                    ;
-;     -- Register only                        ; 1                     ;
-;     -- Combinational with a register        ; 37                    ;
+; Total logic elements                        ; 87 / 22,320 ( < 1 % ) ;
+;     -- Combinational with no register       ; 36                    ;
+;     -- Register only                        ; 5                     ;
+;     -- Combinational with a register        ; 46                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 16                    ;
-;     -- 3 input functions                    ; 1                     ;
-;     -- <=2 input functions                  ; 38                    ;
-;     -- Register only                        ; 1                     ;
+;     -- 4 input functions                    ; 33                    ;
+;     -- 3 input functions                    ; 5                     ;
+;     -- <=2 input functions                  ; 44                    ;
+;     -- Register only                        ; 5                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 24                    ;
-;     -- arithmetic mode                      ; 31                    ;
+;     -- normal mode                          ; 48                    ;
+;     -- arithmetic mode                      ; 34                    ;
 ;                                             ;                       ;
-; Total registers*                            ; 38 / 23,018 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 38 / 22,320 ( < 1 % ) ;
+; Total registers*                            ; 51 / 23,018 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 51 / 22,320 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 698 ( 0 % )       ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 5 / 1,395 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 8 / 1,395 ( < 1 % )   ;
 ; User inserted logic elements                ; 0                     ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 9 / 154 ( 6 % )       ;
@@ -245,8 +245,8 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ; Maximum fan-out                             ; 33                    ;
 ; Highest non-global fan-out signal           ; clk~input             ;
 ; Highest non-global fan-out                  ; 33                    ;
-; Total fan-out                               ; 240                   ;
-; Average fan-out                             ; 1.95                  ;
+; Total fan-out                               ; 366                   ;
+; Average fan-out                             ; 2.19                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -259,26 +259,26 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 56 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
-;     -- Combinational with no register       ; 18                   ; 0                              ;
-;     -- Register only                        ; 1                    ; 0                              ;
-;     -- Combinational with a register        ; 37                   ; 0                              ;
+; Total logic elements                        ; 87 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
+;     -- Combinational with no register       ; 36                   ; 0                              ;
+;     -- Register only                        ; 5                    ; 0                              ;
+;     -- Combinational with a register        ; 46                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 16                   ; 0                              ;
-;     -- 3 input functions                    ; 1                    ; 0                              ;
-;     -- <=2 input functions                  ; 38                   ; 0                              ;
-;     -- Register only                        ; 1                    ; 0                              ;
+;     -- 4 input functions                    ; 33                   ; 0                              ;
+;     -- 3 input functions                    ; 5                    ; 0                              ;
+;     -- <=2 input functions                  ; 44                   ; 0                              ;
+;     -- Register only                        ; 5                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 24                   ; 0                              ;
-;     -- arithmetic mode                      ; 31                   ; 0                              ;
+;     -- normal mode                          ; 48                   ; 0                              ;
+;     -- arithmetic mode                      ; 34                   ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 38                   ; 0                              ;
-;     -- Dedicated logic registers            ; 38 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
+; Total registers                             ; 51                   ; 0                              ;
+;     -- Dedicated logic registers            ; 51 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 5 / 1395 ( < 1 % )   ; 0 / 1395 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 8 / 1395 ( < 1 % )   ; 0 / 1395 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 9                    ; 0                              ;
@@ -294,8 +294,8 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 235                  ; 5                              ;
-;     -- Registered Connections               ; 98                   ; 0                              ;
+;     -- Total Connections                    ; 361                  ; 5                              ;
+;     -- Registered Connections               ; 149                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -329,7 +329,7 @@ The pin-out file can be found in Z:/workspace/mestrado/sistemasVLSI/semaphoreVHD
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; clk            ; R4    ; 3        ; 5            ; 0            ; 21           ; 33                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; reset          ; E1    ; 1        ; 0            ; 16           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; traffic_sensor ; J15   ; 5        ; 53           ; 14           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; traffic_sensor ; J15   ; 5        ; 53           ; 14           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -657,8 +657,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                         ; Library Name ;
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------+--------------+
-; |semaphore                                     ; 56 (10)     ; 38 (5)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 9    ; 0            ; 18 (5)       ; 1 (0)             ; 37 (5)           ; |semaphore                                                                  ;              ;
-;    |timer_ctl:timer_ctl_ports|                 ; 46 (0)      ; 33 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (0)       ; 1 (0)             ; 32 (0)           ; |semaphore|timer_ctl:timer_ctl_ports                                        ;              ;
+; |semaphore                                     ; 87 (28)     ; 51 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 9    ; 0            ; 36 (15)      ; 5 (4)             ; 46 (9)           ; |semaphore                                                                  ;              ;
+;    |timer_ctl:timer_ctl_ports|                 ; 59 (13)     ; 38 (5)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (8)       ; 1 (0)             ; 37 (5)           ; |semaphore|timer_ctl:timer_ctl_ports                                        ;              ;
 ;       |clk_converter_60hz:clk_converter_ports| ; 46 (46)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 1 (1)             ; 32 (32)          ; |semaphore|timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports ;              ;
 +------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -688,8 +688,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------+-------------------+---------+
 ; reset                                                                                            ;                   ;         ;
 ; traffic_sensor                                                                                   ;                   ;         ;
-;      - Mux3~0                                                                                    ; 0                 ; 6       ;
-;      - Mux2~0                                                                                    ; 0                 ; 6       ;
+;      - state[0]~0                                                                                ; 0                 ; 6       ;
 ; clk                                                                                              ;                   ;         ;
 ;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp                ; 0                 ; 0       ;
 ;      - timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[0]  ; 0                 ; 0       ;
@@ -727,14 +726,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                            ;
-+----------------------------------------------------------------------------+--------------+---------+-------+--------+----------------------+------------------+---------------------------+
-; Name                                                                       ; Location     ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------------------------------------------+--------------+---------+-------+--------+----------------------+------------------+---------------------------+
-; clk                                                                        ; PIN_R4       ; 33      ; Clock ; no     ; --                   ; --               ; --                        ;
-; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp ; FF_X4_Y2_N23 ; 5       ; Clock ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-+----------------------------------------------------------------------------+--------------+---------+-------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                         ;
++----------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                       ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; clk                                                                        ; PIN_R4             ; 33      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; state[0]                                                                   ; FF_X37_Y33_N9      ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; state[0]~5                                                                 ; LCCOMB_X38_Y33_N16 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; state[3]                                                                   ; FF_X38_Y33_N5      ; 12      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; state[4]                                                                   ; FF_X38_Y33_N31     ; 11      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; state[5]                                                                   ; FF_X38_Y33_N9      ; 9       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp ; FF_X4_Y3_N31       ; 18      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; timer_reset                                                                ; FF_X37_Y33_N27     ; 7       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
++----------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -742,7 +747,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+--------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                                                       ; Location     ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------------------------+--------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp ; FF_X4_Y2_N23 ; 5       ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp ; FF_X4_Y3_N31 ; 18      ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
 +----------------------------------------------------------------------------+--------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -752,17 +757,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                      ; Fan-Out ;
 +-------------------------------------------------------------------------------------------+---------+
 ; clk~input                                                                                 ; 33      ;
-; state[2]                                                                                  ; 7       ;
-; state[0]                                                                                  ; 7       ;
-; state[4]                                                                                  ; 6       ;
-; state[3]                                                                                  ; 6       ;
-; state[1]                                                                                  ; 6       ;
-; traffic_sensor~input                                                                      ; 2       ;
+; state[3]                                                                                  ; 12      ;
+; state[4]                                                                                  ; 11      ;
+; state[5]                                                                                  ; 9       ;
+; state[2]                                                                                  ; 9       ;
+; state[1]                                                                                  ; 9       ;
+; state[0]                                                                                  ; 8       ;
+; timer_reset                                                                               ; 7       ;
+; state[0]~5                                                                                ; 6       ;
+; timer_ctl:timer_ctl_ports|Add0~2                                                          ; 5       ;
+; timer_ctl:timer_ctl_ports|Add0~0                                                          ; 5       ;
+; timer_ctl:timer_ctl_ports|short_interval                                                  ; 5       ;
+; state[4]~4                                                                                ; 4       ;
+; timer_ctl:timer_ctl_ports|Add0~6                                                          ; 4       ;
+; timer_ctl:timer_ctl_ports|Add0~4                                                          ; 4       ;
+; timer_ctl:timer_ctl_ports|long_interval                                                   ; 4       ;
+; timer_ctl:timer_ctl_ports|LessThan0~0                                                     ; 3       ;
+; state[2]~6                                                                                ; 3       ;
+; ~GND                                                                                      ; 2       ;
+; Mux0~1                                                                                    ; 2       ;
+; Mux6~1                                                                                    ; 2       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~10                ; 2       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[1]  ; 2       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[0]  ; 2       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[2]  ; 2       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[3]  ; 2       ;
-; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[0]  ; 2       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[4]  ; 2       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[5]  ; 2       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[6]  ; 2       ;
@@ -791,7 +810,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[29] ; 2       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[30] ; 2       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|\counter_clk:counter[31] ; 2       ;
+; traffic_sensor~input                                                                      ; 1       ;
+; trafic_light_ctl[3]~1                                                                     ; 1       ;
+; trafic_light_ctl[2]~0                                                                     ; 1       ;
+; Mux0~4                                                                                    ; 1       ;
+; Mux0~3                                                                                    ; 1       ;
+; Mux0~2                                                                                    ; 1       ;
+; Mux0~0                                                                                    ; 1       ;
+; timer_ctl:timer_ctl_ports|internal_counter~3                                              ; 1       ;
+; timer_ctl:timer_ctl_ports|internal_counter~2                                              ; 1       ;
+; timer_ctl:timer_ctl_ports|internal_counter~1                                              ; 1       ;
+; timer_ctl:timer_ctl_ports|internal_counter~0                                              ; 1       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|counter~0                ; 1       ;
+; timer_ctl:timer_ctl_ports|short_interval_tmp~1                                            ; 1       ;
+; timer_ctl:timer_ctl_ports|short_interval_tmp~0                                            ; 1       ;
+; timer_ctl:timer_ctl_ports|long_interval_tmp~1                                             ; 1       ;
+; timer_ctl:timer_ctl_ports|long_interval_tmp~0                                             ; 1       ;
+; timer_ctl:timer_ctl_ports|\always:internal_counter[0]                                     ; 1       ;
+; timer_ctl:timer_ctl_ports|\always:internal_counter[1]                                     ; 1       ;
+; timer_ctl:timer_ctl_ports|\always:internal_counter[2]                                     ; 1       ;
+; state[5]~12                                                                               ; 1       ;
+; state[4]~11                                                                               ; 1       ;
+; state[3]~10                                                                               ; 1       ;
+; state[3]~9                                                                                ; 1       ;
+; state[3]~8                                                                                ; 1       ;
+; state[2]~7                                                                                ; 1       ;
+; Mux5~0                                                                                    ; 1       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp~0              ; 1       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~9                 ; 1       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~8                 ; 1       ;
@@ -803,17 +847,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~2                 ; 1       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~1                 ; 1       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Equal0~0                 ; 1       ;
-; Mux2~0                                                                                    ; 1       ;
-; Mux6~2                                                                                    ; 1       ;
-; Mux3~1                                                                                    ; 1       ;
-; Mux3~0                                                                                    ; 1       ;
-; Mux4~1                                                                                    ; 1       ;
-; Mux4~0                                                                                    ; 1       ;
-; Mux5~1                                                                                    ; 1       ;
-; Mux5~0                                                                                    ; 1       ;
-; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp                ; 1       ;
-; Mux6~1                                                                                    ; 1       ;
+; state[0]~3                                                                                ; 1       ;
+; state[0]~2                                                                                ; 1       ;
+; state[4]~1                                                                                ; 1       ;
+; state[0]~0                                                                                ; 1       ;
 ; Mux6~0                                                                                    ; 1       ;
+; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp                ; 1       ;
+; trafic_light_ctl[5]~reg0                                                                  ; 1       ;
+; trafic_light_ctl[4]~reg0                                                                  ; 1       ;
+; trafic_light_ctl[3]~reg0                                                                  ; 1       ;
+; trafic_light_ctl[2]~reg0                                                                  ; 1       ;
+; trafic_light_ctl[1]~reg0                                                                  ; 1       ;
+; trafic_light_ctl[0]~reg0                                                                  ; 1       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~62                  ; 1       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~61                  ; 1       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~60                  ; 1       ;
@@ -877,6 +922,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~2                   ; 1       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~1                   ; 1       ;
 ; timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|Add0~0                   ; 1       ;
+; timer_ctl:timer_ctl_ports|Add0~5                                                          ; 1       ;
+; timer_ctl:timer_ctl_ports|Add0~3                                                          ; 1       ;
+; timer_ctl:timer_ctl_ports|Add0~1                                                          ; 1       ;
 +-------------------------------------------------------------------------------------------+---------+
 
 
@@ -885,23 +933,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-----------------------+
 ; Interconnect Resource Type ; Usage                 ;
 +----------------------------+-----------------------+
-; Block interconnects        ; 54 / 71,559 ( < 1 % ) ;
-; C16 interconnects          ; 2 / 2,597 ( < 1 % )   ;
-; C4 interconnects           ; 21 / 46,848 ( < 1 % ) ;
-; Direct links               ; 28 / 71,559 ( < 1 % ) ;
+; Block interconnects        ; 69 / 71,559 ( < 1 % ) ;
+; C16 interconnects          ; 5 / 2,597 ( < 1 % )   ;
+; C4 interconnects           ; 14 / 46,848 ( < 1 % ) ;
+; Direct links               ; 41 / 71,559 ( < 1 % ) ;
 ; Global clocks              ; 1 / 20 ( 5 % )        ;
-; Local interconnects        ; 50 / 24,624 ( < 1 % ) ;
+; Local interconnects        ; 75 / 24,624 ( < 1 % ) ;
 ; R24 interconnects          ; 8 / 2,496 ( < 1 % )   ;
-; R4 interconnects           ; 24 / 62,424 ( < 1 % ) ;
+; R4 interconnects           ; 25 / 62,424 ( < 1 % ) ;
 +----------------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 11.20) ; Number of LABs  (Total = 5) ;
+; Number of Logic Elements  (Average = 10.88) ; Number of LABs  (Total = 8) ;
 +---------------------------------------------+-----------------------------+
-; 1                                           ; 0                           ;
+; 1                                           ; 1                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
@@ -910,33 +958,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 1                           ;
-; 10                                          ; 1                           ;
-; 11                                          ; 0                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 1                           ;
 ; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
+; 13                                          ; 1                           ;
 ; 14                                          ; 0                           ;
 ; 15                                          ; 0                           ;
-; 16                                          ; 2                           ;
+; 16                                          ; 3                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 0.80) ; Number of LABs  (Total = 5) ;
+; LAB-wide Signals  (Average = 1.25) ; Number of LABs  (Total = 8) ;
 +------------------------------------+-----------------------------+
-; 1 Clock                            ; 4                           ;
+; 1 Clock                            ; 7                           ;
+; 1 Clock enable                     ; 1                           ;
+; 1 Sync. clear                      ; 1                           ;
+; 1 Sync. load                       ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 18.80) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced  (Average = 17.25) ; Number of LABs  (Total = 8) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
+; 2                                            ; 1                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
 ; 5                                            ; 1                           ;
@@ -949,15 +1000,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
 ; 14                                           ; 0                           ;
-; 15                                           ; 1                           ;
-; 16                                           ; 0                           ;
+; 15                                           ; 0                           ;
+; 16                                           ; 1                           ;
 ; 17                                           ; 0                           ;
-; 18                                           ; 0                           ;
+; 18                                           ; 1                           ;
 ; 19                                           ; 0                           ;
 ; 20                                           ; 0                           ;
 ; 21                                           ; 0                           ;
 ; 22                                           ; 0                           ;
-; 23                                           ; 0                           ;
+; 23                                           ; 1                           ;
 ; 24                                           ; 0                           ;
 ; 25                                           ; 0                           ;
 ; 26                                           ; 0                           ;
@@ -973,18 +1024,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 8.60) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced Out  (Average = 6.88) ; Number of LABs  (Total = 8) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 0                           ;
-; 2                                               ; 1                           ;
-; 3                                               ; 1                           ;
+; 1                                               ; 2                           ;
+; 2                                               ; 2                           ;
+; 3                                               ; 0                           ;
 ; 4                                               ; 0                           ;
-; 5                                               ; 1                           ;
+; 5                                               ; 0                           ;
 ; 6                                               ; 0                           ;
-; 7                                               ; 0                           ;
+; 7                                               ; 1                           ;
 ; 8                                               ; 0                           ;
-; 9                                               ; 0                           ;
+; 9                                               ; 1                           ;
 ; 10                                              ; 0                           ;
 ; 11                                              ; 0                           ;
 ; 12                                              ; 0                           ;
@@ -999,18 +1050,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 8.60) ; Number of LABs  (Total = 5) ;
+; Number of Distinct Inputs  (Average = 7.38) ; Number of LABs  (Total = 8) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
-; 2                                           ; 3                           ;
+; 2                                           ; 4                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
+; 7                                           ; 1                           ;
 ; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
+; 9                                           ; 1                           ;
 ; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
@@ -1020,9 +1071,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 16                                          ; 1                           ;
 ; 17                                          ; 0                           ;
 ; 18                                          ; 0                           ;
-; 19                                          ; 0                           ;
-; 20                                          ; 0                           ;
-; 21                                          ; 1                           ;
+; 19                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1142,7 +1191,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Fitter
     Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Jan 29 11:39:16 2013
+    Info: Processing started: Tue Jan 29 15:31:25 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off semaphore -c semaphore
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119006): Selected device EP4CE22F17C6 for design "semaphore"
@@ -1188,7 +1237,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X9_Y10
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X32_Y23 to location X42_Y34
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
@@ -1198,8 +1247,8 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 429 megabytes
-    Info: Processing ended: Tue Jan 29 11:39:41 2013
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Processing ended: Tue Jan 29 15:31:51 2013
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:24
 
 

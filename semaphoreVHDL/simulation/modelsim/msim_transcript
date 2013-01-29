@@ -820,3 +820,124 @@ vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.v
 restart -f
 # Loading work.timer_ctl(timer_behaviour)
 run 2000ns
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+restart -f
+# Loading work.semaphore(behaviour)
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+restart -f
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(65): near "=": expecting <= or :=
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(71): near "when": expecting END
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(83): near "when": expecting END
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(87): near "if": expecting ';'
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(66): near "end": expecting ';'
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(71): near "when": expecting END
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(75): near "if": expecting CASE
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(83): near "when": expecting END
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(87): near "if": expecting ';'
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(81): near "end": expecting ';'
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd(86): near "process": expecting IF
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+restart -f
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns

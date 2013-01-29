@@ -21,7 +21,6 @@ architecture behaviour of semaphore is
   constant s2     : std_logic_vector(5 downto 0) := "100001";
   constant s3     : std_logic_vector(5 downto 0) := "100010";
   signal state    : std_logic_vector(5 downto 0):= s0;
-  signal light_tmp    : std_logic_vector(5 downto 0):= state;
   signal clk_60Hz : std_logic;
 
   -- timer signal control
@@ -58,57 +57,38 @@ begin
     variable start_tmp : std_logic := '1';
   begin    
     if(clk_60Hz'event and clk_60Hz = '1') then -- rising edge      
-      start <= start_tmp;
+      start <= start_tmp;          
 
       case state is
         when s0 =>
-          -- traffic_sensor is inverted
-          if(traffic_sensor = '0' and long_interval = '1') then
-            -- timer_reset <= '1';
-            state <= s1;
-          else
-            -- timer_reset <= '0';
-            state <= s0;
+          if(timer_reset = '1') then
+            timer_reset <= '0';
           end if;
-        when s1 =>
-          if(short_interval = '1') then
-            -- timer_reset <= '0';
-            state <= s2;
-          else
-            -- timer_reset <= '0';
+          -- traffic_sensor is inverted
+          if(traffic_sensor = '0' and long_interval = '1') then            
             state <= s1;
+          end if;
+        when s1 =>          
+          if(short_interval = '1') then          
+            state <= s2;
+            timer_reset <= '1';
           end if;
         when s2 =>
+          if(timer_reset = '1') then
+            timer_reset <= '0';
+          end if;
           if(long_interval = '1') then
-            -- timer_reset <= '1';
             state <= s3;
-          else
-            -- timer_reset <= '0';
-            state <= s2;
           end if;
         when s3 =>
           if(short_interval = '1') then
-            -- timer_reset <= '0';
+            timer_reset <= '1';
             state <= s0;
-          else
-            -- timer_reset <= '0';
-            state <= s3;
           end if;
         when others =>
           state <= s0;
-      end case;
-      light_tmp <= state;
+      end case;      
+      trafic_light_ctl <= state;
     end if;    
   end process always;
-
-  fsm_ctl : process(light_tmp)
-  begin
-    trafic_light_ctl <= light_tmp;
-
-    if(light_tmp'event) then
-      timer_reset <= '1';
-    end if;
-  end process fsm_ctl;
-  -- fsm 1
-  -- fsm 2
 end behaviour;

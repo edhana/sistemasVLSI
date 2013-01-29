@@ -58,12 +58,8 @@ begin
   begin    
     if(clk_60Hz'event and clk_60Hz = '1') then -- rising edge      
       start <= start_tmp;          
-
       case state is
         when s0 =>
-          if(timer_reset = '1') then
-            timer_reset <= '0';
-          end if;
           -- traffic_sensor is inverted
           if(traffic_sensor = '0' and long_interval = '1') then            
             state <= s1;
@@ -71,18 +67,13 @@ begin
         when s1 =>          
           if(short_interval = '1') then          
             state <= s2;
-            timer_reset <= '1';
           end if;
         when s2 =>
-          if(timer_reset = '1') then
-            timer_reset <= '0';
-          end if;
           if(long_interval = '1') then
             state <= s3;
           end if;
         when s3 =>
           if(short_interval = '1') then
-            timer_reset <= '1';
             state <= s0;
           end if;
         when others =>

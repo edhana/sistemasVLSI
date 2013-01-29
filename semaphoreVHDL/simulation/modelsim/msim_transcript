@@ -941,3 +941,32 @@ vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.v
 restart -f
 # Loading work.timer_ctl(timer_behaviour)
 run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(95): near "end": expecting ';'
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+run 2000ns

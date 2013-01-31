@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, Z:/workspace/mestrado/sistemasVLSI/de0-nano-test/de0_nano_clock.vhd
+source_file = 1, Z:/workspace/mestrado/sistemasVLSI/de0-nano-test/db/de0-nano-clock.cbx.xml
+source_file = 1, c:/developer-apps/altera/12.0sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/developer-apps/altera/12.0sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/developer-apps/altera/12.0sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/developer-apps/altera/12.0sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = de0_nano_clock
+instance = comp, \led~output\, led~output, de0_nano_clock, 1
+instance = comp, \clk~input\, clk~input, de0_nano_clock, 1
+instance = comp, \button~input\, button~input, de0_nano_clock, 1

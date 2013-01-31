@@ -9,8 +9,8 @@ entity semaphore is
   port(
     clk            : in std_logic;
     reset          : in std_logic;
-    traffic_sensor : in std_logic;
-    trafic_light_ctl : out std_logic_vector(5 downto 0) := "001100" -- initial state, its lame but I don't have any better idea
+    -- traffic_sensor : in std_logic;
+    trafic_light_ctl : out std_logic_vector(5 downto 0) := "000000" -- initial state, its lame but I don't have any better idea
   );
 end semaphore;
 
@@ -20,8 +20,9 @@ architecture behaviour of semaphore is
   constant s1     : std_logic_vector(5 downto 0) := "010100";
   constant s2     : std_logic_vector(5 downto 0) := "100001";
   constant s3     : std_logic_vector(5 downto 0) := "100010";
-  signal state    : std_logic_vector(5 downto 0):= s0;
+  signal state    : std_logic_vector(5 downto 0) := s0;
   signal clk_60Hz : std_logic;
+  signal traffic_sensor : std_logic := '1';
 
   -- timer signal control
   signal start          : std_logic := '1';
@@ -61,7 +62,7 @@ begin
       case state is
         when s0 =>
           -- traffic_sensor is inverted
-          if(traffic_sensor = '0' and long_interval = '1') then            
+          if(traffic_sensor = '1' and long_interval = '1') then            
             state <= s1;
           end if;
         when s1 =>          

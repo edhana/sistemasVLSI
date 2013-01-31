@@ -3,19 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -2.495
-TNS   : -46.088
+Slack : -2.464
+TNS   : -45.272
 
 Type  : Slow 1200mV 85C Model Setup 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
-Slack : -1.767
-TNS   : -19.340
+Slack : -1.199
+TNS   : -11.164
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : -0.005
-TNS   : -0.005
+Slack : -0.001
+TNS   : -0.001
 
 Type  : Slow 1200mV 85C Model Hold 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
-Slack : 0.357
+Slack : 0.356
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -24,22 +24,22 @@ TNS   : -36.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
 Slack : -1.000
-TNS   : -18.000
+TNS   : -16.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -2.125
-TNS   : -36.809
+Slack : -2.077
+TNS   : -36.082
 
 Type  : Slow 1200mV 0C Model Setup 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
-Slack : -1.496
-TNS   : -15.825
+Slack : -1.003
+TNS   : -8.443
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -0.060
-TNS   : -0.060
+Slack : -0.073
+TNS   : -0.073
 
 Type  : Slow 1200mV 0C Model Hold 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
-Slack : 0.312
+Slack : 0.311
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -48,30 +48,30 @@ TNS   : -36.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
 Slack : -1.000
-TNS   : -18.000
+TNS   : -16.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.939
-TNS   : -12.406
+Slack : -0.932
+TNS   : -12.254
 
 Type  : Fast 1200mV 0C Model Setup 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
-Slack : -0.534
-TNS   : -5.167
+Slack : -0.250
+TNS   : -1.283
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.018
+Slack : 0.033
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
-Slack : 0.187
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -39.387
+TNS   : -39.609
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
 Slack : -1.000
-TNS   : -18.000
+TNS   : -16.000
 
 ------------------------------------------------------------

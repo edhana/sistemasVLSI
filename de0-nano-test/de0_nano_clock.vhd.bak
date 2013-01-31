@@ -1,0 +1,11 @@
+entity de0_nano_clock is
+	port(
+		clk : in std_logic;
+		led : out std_logic;
+	);
+end entity;
+
+architecture de0_nano_clock_arch of de0_nano_clock is
+begin
+	led <= clk;
+end de0_nano_clock_arch;

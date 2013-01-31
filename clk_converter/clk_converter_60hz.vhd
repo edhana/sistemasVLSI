@@ -23,8 +23,8 @@ begin -- architecture begin
 
   counter_clk : process(clk, reset)
     variable counter : integer := 0;
-    -- variable counter_cycle : integer := 833333;
-    constant counter_cycle : integer := 1;
+    constant counter_cycle : integer := 833333;
+    -- constant counter_cycle : integer := 1;
   begin
     if(reset = '1') then
       counter := 0;

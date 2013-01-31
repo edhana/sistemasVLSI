@@ -39,6 +39,7 @@ architecture timer_behaviour of timer_ctl is
 -- architecture begin
 begin
   clk_60Hz <= clk_60Hz_signal;
+  clk_converter_reset <= '0';
   
   clk_converter_ports : clk_converter_60hz
     port map (
@@ -54,8 +55,8 @@ begin
     variable short_interval_tmp : std_logic := '0';
     variable long_interval_tmp : std_logic := '0';
     variable internal_counter : std_logic_vector(31 downto 0) := (others => '0');
-    constant short_counter : integer := 300;
-    constant long_counter  : integer := 600;      
+    constant short_counter : integer := 1;
+    constant long_counter  : integer := 3;      
   begin
     if(clk_60Hz_signal'event and clk_60Hz_signal = '1') then -- clock rising
       if(reset = '1') then

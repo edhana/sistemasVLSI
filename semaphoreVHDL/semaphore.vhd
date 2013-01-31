@@ -10,7 +10,7 @@ entity semaphore is
     clk            : in std_logic;
     reset          : in std_logic;
     traffic_sensor : in std_logic;
-    trafic_light_ctl : out std_logic_vector(5 downto 0)   
+    trafic_light_ctl : out std_logic_vector(5 downto 0) := "001100" -- initial state, its lame but I don't have any better idea
   );
 end semaphore;
 
@@ -54,7 +54,7 @@ begin
     );
 
   always : process(clk_60Hz, reset)
-    variable start_tmp : std_logic := '1';
+    constant start_tmp : std_logic := '1';
   begin    
     if(clk_60Hz'event and clk_60Hz = '1') then -- rising edge      
       start <= start_tmp;          
@@ -80,6 +80,37 @@ begin
           state <= s0;
       end case;      
       trafic_light_ctl <= state;
+
+      if(state = s0) then
+        if(short_interval = '1' and long_interval = '1') then
+          timer_reset <= '1';
+        else 
+          timer_reset <= '0';
+        end if;
+      elsif (state = s1) then
+        if(short_interval = '1' and long_interval = '0') then
+          timer_reset <= '1';
+        else 
+          timer_reset <= '0';
+        end if;
+      elsif (state = s2) then
+        if(short_interval = '1' and long_interval = '1') then
+          timer_reset <= '1';
+        else 
+          timer_reset <= '0';
+        end if;
+      elsif (state = s3) then
+        if(short_interval = '1' and long_interval = '0') then
+          timer_reset <= '1';
+        else 
+          timer_reset <= '0';
+        end if;      
+      end if;      
     end if;    
   end process always;
+
+  -- restart_prc : process(clk_60Hz)
+  -- begin
+
+  -- end;
 end behaviour;

@@ -54,8 +54,8 @@ begin
     variable short_interval_tmp : std_logic := '0';
     variable long_interval_tmp : std_logic := '0';
     variable internal_counter : std_logic_vector(31 downto 0) := (others => '0');
-    constant short_counter : integer := 3;
-    constant long_counter  : integer := 6;      
+    constant short_counter : integer := 300;
+    constant long_counter  : integer := 600;      
   begin
     if(clk_60Hz_signal'event and clk_60Hz_signal = '1') then -- clock rising
       if(reset = '1') then

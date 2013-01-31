@@ -3,16 +3,16 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -2.381
-TNS   : -45.818
+Slack : -2.495
+TNS   : -46.088
 
 Type  : Slow 1200mV 85C Model Setup 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
-Slack : -1.795
-TNS   : -17.264
+Slack : -1.767
+TNS   : -19.340
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.008
-TNS   : 0.000
+Slack : -0.005
+TNS   : -0.005
 
 Type  : Slow 1200mV 85C Model Hold 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
 Slack : 0.357
@@ -27,16 +27,16 @@ Slack : -1.000
 TNS   : -18.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -2.019
-TNS   : -36.564
+Slack : -2.125
+TNS   : -36.809
 
 Type  : Slow 1200mV 0C Model Setup 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
-Slack : -1.514
-TNS   : -13.798
+Slack : -1.496
+TNS   : -15.825
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -0.052
-TNS   : -0.052
+Slack : -0.060
+TNS   : -0.060
 
 Type  : Slow 1200mV 0C Model Hold 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
 Slack : 0.312
@@ -51,15 +51,15 @@ Slack : -1.000
 TNS   : -18.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.871
-TNS   : -12.256
+Slack : -0.939
+TNS   : -12.406
 
 Type  : Fast 1200mV 0C Model Setup 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
-Slack : -0.565
-TNS   : -3.949
+Slack : -0.534
+TNS   : -5.167
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.015
+Slack : 0.018
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
@@ -68,7 +68,7 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -39.380
+TNS   : -39.387
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports|clock_tmp'
 Slack : -1.000

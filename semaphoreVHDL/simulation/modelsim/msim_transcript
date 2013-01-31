@@ -970,3 +970,86 @@ vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semapho
 restart -f
 # Loading work.semaphore(behaviour)
 run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+restart -f
+# Loading work.semaphore(behaviour)
+# Loading work.timer_ctl(timer_behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(90): Constant "s1" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type std.STANDARD.BOOLEAN.
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(96): Constant "s2" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type std.STANDARD.BOOLEAN.
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(109): near ";": expecting PROCESS
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(110): VHDL Compiler exiting
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(109): near ";": expecting PROCESS
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(110): VHDL Compiler exiting
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+run 2000ns
+restart -f
+# Loading work.semaphore(behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+run 2000ns
+vcom -93 -work work -O0 Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+restart -f
+# Loading work.semaphore(behaviour)
+run 2000ns

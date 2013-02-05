@@ -1,5 +1,5 @@
 Analysis & Synthesis report for semaphore
-Thu Jan 31 13:12:46 2013
+Tue Feb 05 12:13:58 2013
 Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
 
 
@@ -9,17 +9,7 @@ Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Editio
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Resource Usage Summary
-  6. Analysis & Synthesis Resource Utilization by Entity
-  7. Registers Removed During Synthesis
-  8. Removed Registers Triggering Further Register Optimizations
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports"
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  4. Analysis & Synthesis Messages
 
 
 
@@ -45,20 +35,20 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 31 13:12:46 2013         ;
+; Analysis & Synthesis Status        ; Failed - Tue Feb 05 12:13:58 2013             ;
 ; Quartus II 32-bit Version          ; 12.0 Build 263 08/02/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; semaphore                                     ;
 ; Top-level Entity Name              ; semaphore                                     ;
 ; Family                             ; Cyclone IV E                                  ;
-; Total logic elements               ; 97                                            ;
-;     Total combinational functions  ; 93                                            ;
-;     Dedicated logic registers      ; 49                                            ;
-; Total registers                    ; 49                                            ;
-; Total pins                         ; 8                                             ;
-; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 0                                             ;
-; Embedded Multiplier 9-bit elements ; 0                                             ;
-; Total PLLs                         ; 0                                             ;
+; Total logic elements               ; N/A until Partition Merge                     ;
+;     Total combinational functions  ; N/A until Partition Merge                     ;
+;     Dedicated logic registers      ; N/A until Partition Merge                     ;
+; Total registers                    ; N/A until Partition Merge                     ;
+; Total pins                         ; N/A until Partition Merge                     ;
+; Total virtual pins                 ; N/A until Partition Merge                     ;
+; Total memory bits                  ; N/A until Partition Merge                     ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                     ;
+; Total PLLs                         ; N/A until Partition Merge                     ;
 +------------------------------------+-----------------------------------------------+
 
 
@@ -148,150 +138,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+-----------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path        ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
-+-----------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; semaphore.vhd                           ; yes             ; User VHDL File  ; Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd          ;         ;
-; ../timer_ctl/timer_ctl.vhd              ; yes             ; User VHDL File  ; Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd              ;         ;
-; ../clk_converter/clk_converter_60hz.vhd ; yes             ; User VHDL File  ; Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd ;         ;
-+-----------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 97        ;
-;                                             ;           ;
-; Total combinational functions               ; 93        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 31        ;
-;     -- 3 input functions                    ; 9         ;
-;     -- <=2 input functions                  ; 53        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 60        ;
-;     -- arithmetic mode                      ; 33        ;
-;                                             ;           ;
-; Total registers                             ; 49        ;
-;     -- Dedicated logic registers            ; 49        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 8         ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 33        ;
-; Total fan-out                               ; 364       ;
-; Average fan-out                             ; 2.30      ;
-+---------------------------------------------+-----------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
-+------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                         ; Library Name ;
-+------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------+
-; |semaphore                                     ; 93 (28)           ; 49 (12)      ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |semaphore                                                                  ;              ;
-;    |timer_ctl:timer_ctl_ports|                 ; 65 (9)            ; 37 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaphore|timer_ctl:timer_ctl_ports                                        ;              ;
-;       |clk_converter_60hz:clk_converter_ports| ; 56 (56)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaphore|timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports ;              ;
-+------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                  ;
-+------------------------------------------------------------+----------------------------------------+
-; Register name                                              ; Reason for Removal                     ;
-+------------------------------------------------------------+----------------------------------------+
-; timer_ctl:timer_ctl_ports|\always:internal_counter[26..31] ; Stuck at GND due to stuck port data_in ;
-; state[5]                                                   ; Merged with state[2]                   ;
-; timer_ctl:timer_ctl_ports|\always:internal_counter[2..25]  ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 31                     ;                                        ;
-+------------------------------------------------------------+----------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                  ;
-+--------------------------------------------------------+---------------------------+---------------------------------------------------------+
-; Register name                                          ; Reason for Removal        ; Registers Removed due to This Register                  ;
-+--------------------------------------------------------+---------------------------+---------------------------------------------------------+
-; timer_ctl:timer_ctl_ports|\always:internal_counter[31] ; Stuck at GND              ; timer_ctl:timer_ctl_ports|\always:internal_counter[28], ;
-;                                                        ; due to stuck port data_in ; timer_ctl:timer_ctl_ports|\always:internal_counter[27], ;
-;                                                        ;                           ; timer_ctl:timer_ctl_ports|\always:internal_counter[26], ;
-;                                                        ;                           ; timer_ctl:timer_ctl_ports|\always:internal_counter[2],  ;
-;                                                        ;                           ; timer_ctl:timer_ctl_ports|\always:internal_counter[3],  ;
-;                                                        ;                           ; timer_ctl:timer_ctl_ports|\always:internal_counter[4],  ;
-;                                                        ;                           ; timer_ctl:timer_ctl_ports|\always:internal_counter[5],  ;
-;                                                        ;                           ; timer_ctl:timer_ctl_ports|\always:internal_counter[6],  ;
-;                                                        ;                           ; timer_ctl:timer_ctl_ports|\always:internal_counter[7],  ;
-;                                                        ;                           ; timer_ctl:timer_ctl_ports|\always:internal_counter[24], ;
-;                                                        ;                           ; timer_ctl:timer_ctl_ports|\always:internal_counter[25]  ;
-+--------------------------------------------------------+---------------------------+---------------------------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 49    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; state[2]                               ; 14      ;
-; state[3]                               ; 12      ;
-; Total number of inverted registers = 2 ;         ;
-+----------------------------------------+---------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                        ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------+----------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; |semaphore|timer_ctl:timer_ctl_ports|\always:internal_counter[19] ;                            ;
-; 66:1               ; 2 bits    ; 88 LEs        ; 16 LEs               ; 72 LEs                 ; |semaphore|state[4]                                               ;                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------------------------------------+----------------------------+
-
-
-+----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports" ;
-+-------+-------+----------+-------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                           ;
-+-------+-------+----------+-------------------------------------------------------------------+
-; reset ; Input ; Info     ; Stuck at GND                                                      ;
-+-------+-------+----------+-------------------------------------------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:02     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Jan 31 13:12:40 2013
+    Info: Processing started: Tue Feb 05 12:13:55 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off semaphore -c semaphore
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file semaphore.vhd
@@ -304,22 +157,49 @@ Info (12021): Found 2 design units, including 1 entities, in source file /worksp
     Info (12022): Found design unit 1: clk_converter_60hz-behaviour_clk_converter
     Info (12023): Found entity 1: clk_converter_60hz
 Info (12127): Elaborating entity "semaphore" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at semaphore.vhd(25): used explicit default value for signal "traffic_sensor" because signal was never assigned a value
-Info (12128): Elaborating entity "timer_ctl" for hierarchy "timer_ctl:timer_ctl_ports"
-Info (12128): Elaborating entity "clk_converter_60hz" for hierarchy "timer_ctl:timer_ctl_ports|clk_converter_60hz:clk_converter_ports"
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset"
-Info (21057): Implemented 105 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 97 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 318 megabytes
-    Info: Processing ended: Thu Jan 31 13:12:46 2013
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+Warning (10540): VHDL Signal Declaration warning at semaphore.vhd(30): used explicit default value for signal "timer_reset" because signal was never assigned a value
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "state[0]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "state[0]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "state[1]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "state[1]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "state[2]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "state[2]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "state[3]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "state[3]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "state[4]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "state[4]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "state[5]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "state[5]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "trafic_light_ctl[0]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "trafic_light_ctl[0]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "trafic_light_ctl[1]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "trafic_light_ctl[1]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "trafic_light_ctl[2]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "trafic_light_ctl[2]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "trafic_light_ctl[3]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "trafic_light_ctl[3]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "trafic_light_ctl[4]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "trafic_light_ctl[4]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "trafic_light_ctl[5]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "trafic_light_ctl[5]" at semaphore.vhd(58)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "always:state_holder[0]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "always:state_holder[0]" at semaphore.vhd(64)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "always:state_holder[1]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "always:state_holder[1]" at semaphore.vhd(64)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "always:state_holder[2]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "always:state_holder[2]" at semaphore.vhd(64)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "always:state_holder[3]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "always:state_holder[3]" at semaphore.vhd(64)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "always:state_holder[4]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "always:state_holder[4]" at semaphore.vhd(64)
+Error (10821): HDL error at semaphore.vhd(64): can't infer register for "always:state_holder[5]" because its behavior does not match any supported register model File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Info (10041): Inferred latch for "always:state_holder[5]" at semaphore.vhd(64)
+Error (10822): HDL error at semaphore.vhd(64): couldn't implement registers for assignments on this clock edge File: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd Line: 64
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 20 errors, 2 warnings
+    Error: Peak virtual memory: 316 megabytes
+    Error: Processing ended: Tue Feb 05 12:13:58 2013
+    Error: Elapsed time: 00:00:03
+    Error: Total CPU time (on all processors): 00:00:02
 
 

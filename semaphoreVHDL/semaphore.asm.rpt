@@ -1,5 +1,5 @@
 Assembler report for semaphore
-Thu Jan 31 13:09:39 2013
+Thu Jan 31 14:33:58 2013
 Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Jan 31 13:09:39 2013 ;
+; Assembler Status      ; Successful - Thu Jan 31 14:33:58 2013 ;
 ; Revision Name         ; semaphore                             ;
 ; Top-level Entity Name ; semaphore                             ;
 ; Family                ; Cyclone IV E                          ;
@@ -93,7 +93,7 @@ applicable agreement for further details.
 +----------------+-------------------------------------------------------------------------+
 ; Device         ; EP4CE22F17C6                                                            ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                              ;
-; Checksum       ; 0x0013EF9C                                                              ;
+; Checksum       ; 0x00141952                                                              ;
 +----------------+-------------------------------------------------------------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Jan 31 13:09:34 2013
+    Info: Processing started: Thu Jan 31 14:33:52 2013
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off semaphore -c semaphore
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 289 megabytes
-    Info: Processing ended: Thu Jan 31 13:09:39 2013
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Thu Jan 31 14:33:58 2013
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 

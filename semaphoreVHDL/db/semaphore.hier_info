@@ -1,6 +1,21 @@
 |semaphore
 clk => timer_ctl:timer_ctl_ports.clk
+clk => timer_reset.CLK
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+clk => state[3].CLK
+clk => state[4].CLK
+clk => state[5].CLK
+clk => trafic_light_ctl[0]~reg0.CLK
+clk => trafic_light_ctl[1]~reg0.CLK
+clk => trafic_light_ctl[2]~reg0.CLK
+clk => trafic_light_ctl[3]~reg0.CLK
+clk => trafic_light_ctl[4]~reg0.CLK
+clk => trafic_light_ctl[5]~reg0.CLK
+clk => start.CLK
 reset => ~NO_FANOUT~
+traffic_sensor => always.IN1
 trafic_light_ctl[0] <= trafic_light_ctl[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 trafic_light_ctl[1] <= trafic_light_ctl[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 trafic_light_ctl[2] <= trafic_light_ctl[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE

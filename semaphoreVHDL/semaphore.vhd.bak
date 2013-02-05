@@ -55,19 +55,19 @@ begin
       clk_60Hz => clk_60Hz
     );
 
-  -- timer_reset <= '1' when (state = s0) and (traffic_sensor = '1') and (long_interval = '1') else
-  --               '1' when (state = s1) and (short_interval = '1') else
-  --               '1' when (state = s2) and (long_interval = '1') else
-  --               '1' when (state = s3) and (short_interval = '1') else
-  --               '0';
+  timer_reset <= '1' when (state = s0) and (traffic_sensor = '1') and (long_interval = '1') else
+                '1' when (state = s1) and (short_interval = '1') else
+                '1' when (state = s2) and (long_interval = '1') else
+                '1' when (state = s3) and (short_interval = '1') else
+                '0';
 
-  always : process(clk_60Hz, reset)
+  always : process(clk, reset)
     constant start_tmp : std_logic := '1';
     variable state_holder : std_logic_vector(5 downto 0) := s0;
   begin    
     start <= start_tmp;          
 
-      if(rising_edge(clk_60Hz)) then
+      if(clk_60Hz = '1' ) then
         trafic_light_ctl <= state;        
         case state is
           when s0 =>
@@ -91,16 +91,8 @@ begin
             state_holder := s0;
         end case; 
 
-        state <= state_holder;          
-
-        if ((state = s0) and (traffic_sensor = '1') and (long_interval = '1')) or
-          ((state = s1) and (short_interval = '1')) or
-          ((state = s2) and (long_interval = '1')) or
-          ((state = s3) and (short_interval = '1')) then
-          timer_reset <= '1';              
-        else
-          timer_reset <= '0';
-        end if;
+        state <= state_holder;
+          
       end if;   
   end process always;
 end behaviour;

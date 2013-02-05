@@ -10,7 +10,7 @@ end semaphore_tb;
 
 architecture semaphore_tb_arch of semaphore_tb is
   signal clk, reset       : std_logic := '0';
-  signal traffic_sensor   : std_logic := '0'; -- invertido
+  signal traffic_sensor   : std_logic := '1'; -- invertido
   signal trafic_light_ctl : std_logic_vector(5 downto 0);
 
   component semaphore is

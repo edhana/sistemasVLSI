@@ -23,20 +23,18 @@ begin -- architecture begin
 
   counter_clk : process(clk, reset)
     variable counter : integer := 0;
-    constant counter_cycle : integer := 833333;
-    -- constant counter_cycle : integer := 1;
+    -- constant counter_cycle : integer := 83333;
+    constant counter_cycle : integer := 1;
   begin
     if(reset = '1') then
       counter := 0;
       clock_tmp <= '0';
-    elsif(clk'event and clk = '1') then
-      -- 50Mhz to 60 Hz count until 833333
+    elsif(rising_edge(clk)) then
+      -- 50Mhz to 60 Hz count until 83333
       if(counter = counter_cycle) then
-      -- if(counter = 100) then
         counter := 0;
         clock_tmp <= not clock_tmp;
       else
-        clock_tmp <= '0';
         counter := counter + 1;
       end if;
     end if;    

@@ -10,8 +10,7 @@ entity semaphore is
     clk            : in std_logic;
     reset          : in std_logic;
     traffic_sensor : in std_logic;
-    -- started        : out std_logic;
-    -- next_state     : out std_logic;
+    show_state     : out std_logic_vector(1 downto 0) := "00";
     trafic_light_ctl : out std_logic_vector(5 downto 0) := "001100" -- initial state, its lame but I don't have any better idea
   );
 end semaphore;
@@ -30,6 +29,8 @@ architecture behaviour of semaphore is
   signal timer_reset    : std_logic := '0';
   signal short_interval : std_logic := '0';
   signal long_interval  : std_logic := '0';
+
+  signal show_state_tmp : std_logic_vector(1 downto 0) := "00";
 
   -- component  
   component timer_ctl is
@@ -60,30 +61,34 @@ begin
   --               '1' when (state = s2) and (long_interval = '1') else
   --               '1' when (state = s3) and (short_interval = '1') else
   --               '0';
+  start <= '1';          
 
   always : process(clk_60Hz, reset)
-    constant start_tmp : std_logic := '1';
     variable state_holder : std_logic_vector(5 downto 0) := s0;
-  begin    
-    start <= start_tmp;          
+  begin        
+    show_state_tmp <= "11";
 
       if(rising_edge(clk_60Hz)) then
         trafic_light_ctl <= state;        
         case state is
           when s0 =>
             -- traffic_sensor is inverted
-            if(traffic_sensor = '1' and long_interval = '1') then            
+              -- show_state_tmp <= "00";
+            if(traffic_sensor = '0' and long_interval = '1') then            
               state_holder := s1;
             end if;
           when s1 =>          
+            -- show_state_tmp <= "01";
             if(short_interval = '1') then          
               state_holder := s2;
             end if;
           when s2 =>
+            -- show_state_tmp <= "10";
             if(long_interval = '1') then
               state_holder := s3;
             end if;
           when s3 =>
+            -- show_state_tmp <= "11";
             if(short_interval = '1') then
               state_holder := s0;
             end if;
@@ -92,6 +97,7 @@ begin
         end case; 
 
         state <= state_holder;          
+        show_state <= show_state_tmp;
 
         if ((state = s0) and (traffic_sensor = '1') and (long_interval = '1')) or
           ((state = s1) and (short_interval = '1')) or

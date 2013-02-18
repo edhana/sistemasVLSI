@@ -55,10 +55,10 @@ begin
     variable short_interval_tmp : std_logic := '0';
     variable long_interval_tmp : std_logic := '0';
     variable internal_counter : std_logic_vector(31 downto 0) := (others => '0');
-    -- constant short_counter : integer := 60;
-    -- constant long_counter  : integer := 120;  
-    constant short_counter : integer := 1;
-    constant long_counter  : integer := 2;      
+    constant short_counter : integer := 60;
+    constant long_counter  : integer := 120;  
+    -- constant short_counter : integer := 1;
+    -- constant long_counter  : integer := 2;      
   begin
     if(rising_edge(clk_60Hz_signal)) then -- clock rising
       if(reset = '1') then
@@ -74,7 +74,7 @@ begin
           elsif (internal_counter = conv_std_logic_vector(long_counter, 32)) then -- 600 cycles of 1 hz = 10 sec.
             long_interval_tmp := '1';
           end if; 
-          
+
           -- increase the counter
           internal_counter := internal_counter + 1;    
         -- else       

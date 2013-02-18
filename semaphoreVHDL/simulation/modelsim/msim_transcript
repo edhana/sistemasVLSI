@@ -4681,3 +4681,602 @@ do [pwd]/compilar_semaforo.do
 # run 2000ns
 # view signals
 # .main_pane.objects.interior.cs.body.tree
+do [pwd]/compilar_semaforo.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore_tb
+# -- Compiling architecture semaphore_tb_arch of semaphore_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ns -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  semaphore_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ns semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# do [pwd]/wave.do 
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /semaphore_tb/reset
+# add wave -noupdate /semaphore_tb/traffic_sensor
+# add wave -noupdate /semaphore_tb/trafic_light_ctl
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clock_tmp
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/short_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/long_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz_signal
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {480000 ps} 0}
+# quietly wave cursor active 1
+# configure wave -namecolwidth 435
+# configure wave -valuecolwidth 81
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 10000000
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits sec
+# update
+# WaveRestoreZoom {0 ps} {1447680 ps}
+# run 2000ns
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+run -continue
+run -continue
+run -all
+restart
+run
+restart
+run
+do [pwd]/compilar_semaforo.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore_tb
+# -- Compiling architecture semaphore_tb_arch of semaphore_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ns -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  semaphore_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ns semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# do [pwd]/wave.do 
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /semaphore_tb/reset
+# add wave -noupdate /semaphore_tb/traffic_sensor
+# add wave -noupdate /semaphore_tb/trafic_light_ctl
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clock_tmp
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/short_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/long_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz_signal
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {480000 ps} 0}
+# quietly wave cursor active 1
+# configure wave -namecolwidth 435
+# configure wave -valuecolwidth 81
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 10000000
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits sec
+# update
+# WaveRestoreZoom {0 ps} {1447680 ps}
+# run 2000ns
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+run -continue
+run -all
+do [pwd]/compilar_semaforo.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore_tb
+# -- Compiling architecture semaphore_tb_arch of semaphore_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ns -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  semaphore_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ns semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# do [pwd]/wave.do 
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /semaphore_tb/reset
+# add wave -noupdate /semaphore_tb/traffic_sensor
+# add wave -noupdate /semaphore_tb/trafic_light_ctl
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clock_tmp
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/short_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/long_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz_signal
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {480000 ps} 0}
+# quietly wave cursor active 1
+# configure wave -namecolwidth 435
+# configure wave -valuecolwidth 81
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 10000000
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits sec
+# update
+# WaveRestoreZoom {0 ps} {1447680 ps}
+# run 2000ns
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+do [pwd]/compilar_semaforo.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore_tb
+# -- Compiling architecture semaphore_tb_arch of semaphore_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ns -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  semaphore_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ns semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# do [pwd]/wave.do 
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /semaphore_tb/reset
+# add wave -noupdate /semaphore_tb/traffic_sensor
+# add wave -noupdate /semaphore_tb/trafic_light_ctl
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clock_tmp
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/short_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/long_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz_signal
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {480000 ps} 0}
+# quietly wave cursor active 1
+# configure wave -namecolwidth 435
+# configure wave -valuecolwidth 81
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 10000000
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits sec
+# update
+# WaveRestoreZoom {0 ps} {1447680 ps}
+# run 2000ns
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+do [pwd]/compilar_semaforo.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore_tb
+# -- Compiling architecture semaphore_tb_arch of semaphore_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ns -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  semaphore_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ns semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# do [pwd]/wave.do 
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /semaphore_tb/reset
+# add wave -noupdate /semaphore_tb/traffic_sensor
+# add wave -noupdate /semaphore_tb/trafic_light_ctl
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clock_tmp
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/short_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/long_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz_signal
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {480000 ps} 0}
+# quietly wave cursor active 1
+# configure wave -namecolwidth 435
+# configure wave -valuecolwidth 81
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 10000000
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits sec
+# update
+# WaveRestoreZoom {0 ps} {1447680 ps}
+# run 2000ns
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+run -all
+run -all
+do [pwd]/compilar_semaforo.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(64): (vcom-1136) Unknown identifier "start_tmp".
+# 
+# ** Error: Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd(113): VHDL Compiler exiting
+# ** Error: C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+# Error in macro Z:\workspace\mestrado\sistemasVLSI\semaphoreVHDL\simulation\modelsim\compilar_semaforo.do line 8
+# C:/developer-apps/altera/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd}"
+do [pwd]/compilar_semaforo.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore
+# -- Compiling architecture behaviour of semaphore
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/timer_ctl/timer_ctl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity timer_ctl
+# -- Compiling architecture timer_behaviour of timer_ctl
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/clk_converter/clk_converter_60hz.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_converter_60hz
+# -- Compiling architecture behaviour_clk_converter of clk_converter_60hz
+# 
+# vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity semaphore_tb
+# -- Compiling architecture semaphore_tb_arch of semaphore_tb
+# ** Warning: [4] Z:/workspace/mestrado/sistemasVLSI/semaphoreVHDL/semaphore_tb.vhd(37): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# 
+# vsim -t 1ns -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  semaphore_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ns semaphore_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.semaphore_tb(semaphore_tb_arch)
+# Loading work.semaphore(behaviour)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.timer_ctl(timer_behaviour)
+# Loading ieee.numeric_std(body)
+# Loading work.clk_converter_60hz(behaviour_clk_converter)
+# 
+# do [pwd]/wave.do 
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /semaphore_tb/reset
+# add wave -noupdate /semaphore_tb/traffic_sensor
+# add wave -noupdate /semaphore_tb/trafic_light_ctl
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_converter_ports/clock_tmp
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/start
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/reset
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/short_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/long_interval
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz
+# add wave -noupdate /semaphore_tb/semaphore_port/timer_ctl_ports/clk_60Hz_signal
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {480000 ps} 0}
+# quietly wave cursor active 1
+# configure wave -namecolwidth 435
+# configure wave -valuecolwidth 81
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 10000000
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits sec
+# update
+# WaveRestoreZoom {0 ps} {1447680 ps}
+# run 2000ns
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+run -all

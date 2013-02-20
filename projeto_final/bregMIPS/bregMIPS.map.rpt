@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bregMIPS
-Mon Feb 18 20:50:02 2013
+Wed Feb 20 19:10:23 2013
 Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
 
 
@@ -12,11 +12,10 @@ Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Editio
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. Registers Removed During Synthesis
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |bregMIPS
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  7. General Register Statistics
+  8. Parameter Settings for User Entity Instance: Top-level Entity: |bregMIPS
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +41,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb 18 20:50:02 2013         ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 20 19:10:23 2013         ;
 ; Quartus II 32-bit Version          ; 12.0 Build 263 08/02/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; bregMIPS                                      ;
 ; Top-level Entity Name              ; bregMIPS                                      ;
 ; Family                             ; Cyclone IV E                                  ;
-; Total logic elements               ; 0                                             ;
-;     Total combinational functions  ; 0                                             ;
-;     Dedicated logic registers      ; 0                                             ;
-; Total registers                    ; 0                                             ;
-; Total pins                         ; 115                                           ;
+; Total logic elements               ; 2,416                                         ;
+;     Total combinational functions  ; 1,392                                         ;
+;     Dedicated logic registers      ; 1,024                                         ;
+; Total registers                    ; 1024                                          ;
+; Total pins                         ; 114                                           ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                             ;
@@ -154,32 +153,33 @@ applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 115   ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 115   ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 2,416     ;
+;                                             ;           ;
+; Total combinational functions               ; 1392      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 1296      ;
+;     -- 3 input functions                    ; 96        ;
+;     -- <=2 input functions                  ; 0         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 1392      ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 1024      ;
+;     -- Dedicated logic registers            ; 1024      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 114       ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1024      ;
+; Total fan-out                               ; 8722      ;
+; Average fan-out                             ; 3.30      ;
++---------------------------------------------+-----------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -187,50 +187,9 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |bregMIPS                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 115  ; 0            ; |bregMIPS           ;              ;
+; |bregMIPS                  ; 1392 (1392)       ; 1024 (1024)  ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |bregMIPS           ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; r1[10]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[9]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; r1[8]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; r1[7]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; r1[6]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; r1[5]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; r1[4]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; r1[3]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; r1[2]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; r1[1]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; r1[0]~reg0                             ; Stuck at GND due to stuck port data_in ;
-; r1[11]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[12]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[13]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[14]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[15]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[16]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[17]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[18]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[19]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[20]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[21]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[22]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[23]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[24]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[25]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[26]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[27]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[28]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[29]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[30]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; r1[31]~reg0                            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 32 ;                                        ;
-+----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -238,24 +197,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 1024  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 1024  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
 +--------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |bregMIPS ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; bits           ; 32    ; Signed Integer                                  ;
-; words          ; 32    ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
++----------------+----------------------------------+----------------------+
+; Parameter Name ; Value                            ; Type                 ;
++----------------+----------------------------------+----------------------+
+; bits           ; 32                               ; Signed Integer       ;
+; words          ; 32                               ; Signed Integer       ;
+; zero32_bits    ; 00000000000000000000000000000000 ; Unsigned Binary      ;
++----------------+----------------------------------+----------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -264,7 +224,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -274,141 +234,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Feb 18 20:49:58 2013
+    Info: Processing started: Wed Feb 20 19:10:15 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bregMIPS -c bregMIPS
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file bregmips.vhd
     Info (12022): Found design unit 1: bregMIPS-behaviour
     Info (12023): Found entity 1: bregMIPS
 Info (12127): Elaborating entity "bregMIPS" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at bregMIPS.vhd(25): used implicit default value for signal "r2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at bregMIPS.vhd(31): used implicit default value for signal "registers" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "r1[0]" is stuck at GND
-    Warning (13410): Pin "r1[1]" is stuck at GND
-    Warning (13410): Pin "r1[2]" is stuck at GND
-    Warning (13410): Pin "r1[3]" is stuck at GND
-    Warning (13410): Pin "r1[4]" is stuck at GND
-    Warning (13410): Pin "r1[5]" is stuck at GND
-    Warning (13410): Pin "r1[6]" is stuck at GND
-    Warning (13410): Pin "r1[7]" is stuck at GND
-    Warning (13410): Pin "r1[8]" is stuck at GND
-    Warning (13410): Pin "r1[9]" is stuck at GND
-    Warning (13410): Pin "r1[10]" is stuck at GND
-    Warning (13410): Pin "r1[11]" is stuck at GND
-    Warning (13410): Pin "r1[12]" is stuck at GND
-    Warning (13410): Pin "r1[13]" is stuck at GND
-    Warning (13410): Pin "r1[14]" is stuck at GND
-    Warning (13410): Pin "r1[15]" is stuck at GND
-    Warning (13410): Pin "r1[16]" is stuck at GND
-    Warning (13410): Pin "r1[17]" is stuck at GND
-    Warning (13410): Pin "r1[18]" is stuck at GND
-    Warning (13410): Pin "r1[19]" is stuck at GND
-    Warning (13410): Pin "r1[20]" is stuck at GND
-    Warning (13410): Pin "r1[21]" is stuck at GND
-    Warning (13410): Pin "r1[22]" is stuck at GND
-    Warning (13410): Pin "r1[23]" is stuck at GND
-    Warning (13410): Pin "r1[24]" is stuck at GND
-    Warning (13410): Pin "r1[25]" is stuck at GND
-    Warning (13410): Pin "r1[26]" is stuck at GND
-    Warning (13410): Pin "r1[27]" is stuck at GND
-    Warning (13410): Pin "r1[28]" is stuck at GND
-    Warning (13410): Pin "r1[29]" is stuck at GND
-    Warning (13410): Pin "r1[30]" is stuck at GND
-    Warning (13410): Pin "r1[31]" is stuck at GND
-    Warning (13410): Pin "r2[0]" is stuck at GND
-    Warning (13410): Pin "r2[1]" is stuck at GND
-    Warning (13410): Pin "r2[2]" is stuck at GND
-    Warning (13410): Pin "r2[3]" is stuck at GND
-    Warning (13410): Pin "r2[4]" is stuck at GND
-    Warning (13410): Pin "r2[5]" is stuck at GND
-    Warning (13410): Pin "r2[6]" is stuck at GND
-    Warning (13410): Pin "r2[7]" is stuck at GND
-    Warning (13410): Pin "r2[8]" is stuck at GND
-    Warning (13410): Pin "r2[9]" is stuck at GND
-    Warning (13410): Pin "r2[10]" is stuck at GND
-    Warning (13410): Pin "r2[11]" is stuck at GND
-    Warning (13410): Pin "r2[12]" is stuck at GND
-    Warning (13410): Pin "r2[13]" is stuck at GND
-    Warning (13410): Pin "r2[14]" is stuck at GND
-    Warning (13410): Pin "r2[15]" is stuck at GND
-    Warning (13410): Pin "r2[16]" is stuck at GND
-    Warning (13410): Pin "r2[17]" is stuck at GND
-    Warning (13410): Pin "r2[18]" is stuck at GND
-    Warning (13410): Pin "r2[19]" is stuck at GND
-    Warning (13410): Pin "r2[20]" is stuck at GND
-    Warning (13410): Pin "r2[21]" is stuck at GND
-    Warning (13410): Pin "r2[22]" is stuck at GND
-    Warning (13410): Pin "r2[23]" is stuck at GND
-    Warning (13410): Pin "r2[24]" is stuck at GND
-    Warning (13410): Pin "r2[25]" is stuck at GND
-    Warning (13410): Pin "r2[26]" is stuck at GND
-    Warning (13410): Pin "r2[27]" is stuck at GND
-    Warning (13410): Pin "r2[28]" is stuck at GND
-    Warning (13410): Pin "r2[29]" is stuck at GND
-    Warning (13410): Pin "r2[30]" is stuck at GND
-    Warning (13410): Pin "r2[31]" is stuck at GND
-    Warning (13410): Pin "r2[32]" is stuck at GND
+Warning (10620): VHDL warning at bregMIPS.vhd(44): comparison between unequal length operands always returns TRUE
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "registers" is uninferred due to asynchronous read logic
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 50 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk"
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "rd"
-    Warning (15610): No output dependent on input pin "wr"
-    Warning (15610): No output dependent on input pin "add1[0]"
-    Warning (15610): No output dependent on input pin "add1[1]"
-    Warning (15610): No output dependent on input pin "add1[2]"
-    Warning (15610): No output dependent on input pin "add1[3]"
-    Warning (15610): No output dependent on input pin "add1[4]"
-    Warning (15610): No output dependent on input pin "add2[0]"
-    Warning (15610): No output dependent on input pin "add2[1]"
-    Warning (15610): No output dependent on input pin "add2[2]"
-    Warning (15610): No output dependent on input pin "add2[3]"
-    Warning (15610): No output dependent on input pin "add2[4]"
-    Warning (15610): No output dependent on input pin "wadd[0]"
-    Warning (15610): No output dependent on input pin "wadd[1]"
-    Warning (15610): No output dependent on input pin "wadd[2]"
-    Warning (15610): No output dependent on input pin "wadd[3]"
-    Warning (15610): No output dependent on input pin "wadd[4]"
-    Warning (15610): No output dependent on input pin "wdata[0]"
-    Warning (15610): No output dependent on input pin "wdata[1]"
-    Warning (15610): No output dependent on input pin "wdata[2]"
-    Warning (15610): No output dependent on input pin "wdata[3]"
-    Warning (15610): No output dependent on input pin "wdata[4]"
-    Warning (15610): No output dependent on input pin "wdata[5]"
-    Warning (15610): No output dependent on input pin "wdata[6]"
-    Warning (15610): No output dependent on input pin "wdata[7]"
-    Warning (15610): No output dependent on input pin "wdata[8]"
-    Warning (15610): No output dependent on input pin "wdata[9]"
-    Warning (15610): No output dependent on input pin "wdata[10]"
-    Warning (15610): No output dependent on input pin "wdata[11]"
-    Warning (15610): No output dependent on input pin "wdata[12]"
-    Warning (15610): No output dependent on input pin "wdata[13]"
-    Warning (15610): No output dependent on input pin "wdata[14]"
-    Warning (15610): No output dependent on input pin "wdata[15]"
-    Warning (15610): No output dependent on input pin "wdata[16]"
-    Warning (15610): No output dependent on input pin "wdata[17]"
-    Warning (15610): No output dependent on input pin "wdata[18]"
-    Warning (15610): No output dependent on input pin "wdata[19]"
-    Warning (15610): No output dependent on input pin "wdata[20]"
-    Warning (15610): No output dependent on input pin "wdata[21]"
-    Warning (15610): No output dependent on input pin "wdata[22]"
-    Warning (15610): No output dependent on input pin "wdata[23]"
-    Warning (15610): No output dependent on input pin "wdata[24]"
-    Warning (15610): No output dependent on input pin "wdata[25]"
-    Warning (15610): No output dependent on input pin "wdata[26]"
-    Warning (15610): No output dependent on input pin "wdata[27]"
-    Warning (15610): No output dependent on input pin "wdata[28]"
-    Warning (15610): No output dependent on input pin "wdata[29]"
-    Warning (15610): No output dependent on input pin "wdata[30]"
-    Warning (15610): No output dependent on input pin "wdata[31]"
-Info (21057): Implemented 115 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2530 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 50 input pins
-    Info (21059): Implemented 65 output pins
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 120 warnings
-    Info: Peak virtual memory: 326 megabytes
-    Info: Processing ended: Mon Feb 18 20:50:02 2013
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 2416 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 318 megabytes
+    Info: Processing ended: Wed Feb 20 19:10:23 2013
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 

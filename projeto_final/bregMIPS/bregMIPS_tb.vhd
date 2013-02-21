@@ -1,4 +1,5 @@
 -- Testbench for the file bregMIPS.library ieee ;
+library ieee;
 use ieee.std_logic_1164.all ;
 use ieee.numeric_std.all ;
 
@@ -8,7 +9,7 @@ end entity ; -- bregMIPS_tb
 architecture arch of bregMIPS_tb is
   signal clk, rd, wr : std_logic;
   signal add1, add2, wadd : std_logic_vector(4 downto 0);
-  signal wdata, r1, r2 : std_logic_vector(4 downto 0);
+  signal wdata, r1, r2 : std_logic_vector(31 downto 0);
 
   component bregMIPS is
     port (
@@ -37,12 +38,23 @@ begin
       r2 => r2
     );
 
+  init : process
+  begin
+    rd <= '1';
+    wr <= '0';
+    add1 <= "00001";
+    add2 <= "00010";
+    wadd <= "00100";
+    wdata <= x"CCCCFFFF";    
+    wait;
+  end process init;
+
   always : process
-    variable clk_tmp : std_logic := '0';
+    variable clk_tmp : std_logic := '0';    
   begin
     clk <= clk_tmp;
     clk_tmp := not clk_tmp;
     wait for 20ns;
   end process always;
-end architecture ; -- arch
+end architecture arch; -- arch
 

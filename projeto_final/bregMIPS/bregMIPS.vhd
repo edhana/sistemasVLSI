@@ -11,6 +11,7 @@ entity bregMIPS is
   generic(
      bits  : INTEGER := 32;
      words : INTEGER := 32;
+     zero5_bits : std_logic_vector :=  "00000";
      zero32_bits : std_logic_vector(31 downto 0) := "00000000000000000000000000000000"
     );
 
@@ -29,11 +30,17 @@ end bregMIPS;
 
 architecture behaviour of bregMIPS is
   type register_bank is array (words-1 downto 0) of std_logic_vector(bits-1 downto 0);
-  signal registers : register_bank;
+  signal registers : register_bank := (others => (others => '0'));
+  signal iaddr1 : INTEGER;
 begin
   
-  r1 <= registers(to_integer(signed(add1)));        
-  r2 <= registers(to_integer(signed(add2)));        
+  first_register : r1 <= 
+    registers(to_integer(signed(add1))) when rd = '1' else
+    registers(0);
+
+  second_register : r2 <= 
+    registers(to_integer(signed(add2))) when rd = '1' else
+     registers(0);       
 
   -- read write process
   register_process: process(clk)
@@ -41,9 +48,9 @@ begin
   begin
     if(clk'EVENT and clk = '1') then
       -- Write only in the next clock cycle
-      if ((wr = '1') and (wadd /= zero32_bits) ) then -- write | TODO: Acertar a comparação dos std_logic_vector
-        registers(to_integer(signed(wadd))) <= wdata;
-      end if;
+      -- if ((wr = '1') and (wadd /= zero5_bits) ) then -- write | TODO: Acertar a comparação dos std_logic_vector
+      --   registers(to_integer(signed(wadd))) <= wdata;
+      -- end if;
     end if;
   end process register_process;
 end behaviour;

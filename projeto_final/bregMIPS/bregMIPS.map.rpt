@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bregMIPS
-Thu Feb 21 12:27:31 2013
+Thu Feb 21 15:01:11 2013
 Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
 
 
@@ -12,10 +12,12 @@ Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Editio
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. General Register Statistics
-  8. Parameter Settings for User Entity Instance: Top-level Entity: |bregMIPS
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |bregMIPS
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -41,15 +43,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Feb 21 12:27:31 2013         ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 21 15:01:11 2013         ;
 ; Quartus II 32-bit Version          ; 12.0 Build 263 08/02/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; bregMIPS                                      ;
 ; Top-level Entity Name              ; bregMIPS                                      ;
 ; Family                             ; Cyclone IV E                                  ;
-; Total logic elements               ; 2,416                                         ;
-;     Total combinational functions  ; 1,392                                         ;
-;     Dedicated logic registers      ; 1,024                                         ;
-; Total registers                    ; 1024                                          ;
+; Total logic elements               ; 1,148                                         ;
+;     Total combinational functions  ; 668                                           ;
+;     Dedicated logic registers      ; 480                                           ;
+; Total registers                    ; 480                                           ;
 ; Total pins                         ; 114                                           ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
@@ -158,27 +160,27 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 2,416     ;
+; Estimated Total logic elements              ; 1,148     ;
 ;                                             ;           ;
-; Total combinational functions               ; 1392      ;
+; Total combinational functions               ; 668       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1296      ;
-;     -- 3 input functions                    ; 96        ;
-;     -- <=2 input functions                  ; 0         ;
+;     -- 4 input functions                    ; 654       ;
+;     -- 3 input functions                    ; 10        ;
+;     -- <=2 input functions                  ; 4         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1392      ;
+;     -- normal mode                          ; 668       ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 1024      ;
-;     -- Dedicated logic registers            ; 1024      ;
+; Total registers                             ; 480       ;
+;     -- Dedicated logic registers            ; 480       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 114       ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 1024      ;
-; Total fan-out                               ; 8722      ;
-; Average fan-out                             ; 3.30      ;
+; Maximum fan-out                             ; 480       ;
+; Total fan-out                               ; 4272      ;
+; Average fan-out                             ; 3.10      ;
 +---------------------------------------------+-----------+
 
 
@@ -187,9 +189,50 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |bregMIPS                  ; 1392 (1392)       ; 1024 (1024)  ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |bregMIPS           ;              ;
+; |bregMIPS                  ; 668 (668)         ; 480 (480)    ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |bregMIPS           ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; registers[0][0]                        ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][1]                        ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][2]                        ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][3]                        ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][4]                        ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][5]                        ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][6]                        ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][7]                        ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][8]                        ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][9]                        ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][10]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][11]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][12]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][13]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][14]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][15]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][16]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][17]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][18]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][19]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][20]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][21]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][22]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][23]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][24]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][25]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][26]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][27]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][28]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][29]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][30]                       ; Stuck at GND due to stuck port clock_enable ;
+; registers[0][31]                       ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 32 ;                                             ;
++----------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -197,14 +240,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1024  ;
+; Total registers                              ; 480   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1024  ;
+; Number of registers using Clock Enable       ; 480   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered   ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------+----------------------------+
+; 17:1               ; 32 bits   ; 352 LEs       ; 320 LEs              ; 32 LEs                 ; |bregMIPS|r1 ;                            ;
+; 17:1               ; 32 bits   ; 352 LEs       ; 320 LEs              ; 32 LEs                 ; |bregMIPS|r2 ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+--------------+----------------------------+
 
 
 +--------------------------------------------------------------------------+
@@ -214,6 +267,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+----------------------------------+----------------------+
 ; bits           ; 32                               ; Signed Integer       ;
 ; words          ; 32                               ; Signed Integer       ;
+; zero5_bits     ; 00000                            ; Unsigned Binary      ;
 ; zero32_bits    ; 00000000000000000000000000000000 ; Unsigned Binary      ;
 +----------------+----------------------------------+----------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -234,29 +288,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Feb 21 12:27:17 2013
+    Info: Processing started: Thu Feb 21 15:01:01 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bregMIPS -c bregMIPS
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file bregmips.vhd
     Info (12022): Found design unit 1: bregMIPS-behaviour
     Info (12023): Found entity 1: bregMIPS
 Info (12127): Elaborating entity "bregMIPS" for the top level hierarchy
-Warning (10620): VHDL warning at bregMIPS.vhd(44): comparison between unequal length operands always returns TRUE
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "registers" is uninferred due to asynchronous read logic
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "rd"
-Info (21057): Implemented 2530 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "add1[4]"
+    Warning (15610): No output dependent on input pin "add2[4]"
+Info (21057): Implemented 1262 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 50 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 2416 logic cells
+    Info (21061): Implemented 1148 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 318 megabytes
-    Info: Processing ended: Thu Feb 21 12:27:31 2013
-    Info: Elapsed time: 00:00:14
+    Info: Processing ended: Thu Feb 21 15:01:11 2013
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:09
 
 

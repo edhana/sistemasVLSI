@@ -48,9 +48,9 @@ begin
   begin
     if(clk'EVENT and clk = '1') then
       -- Write only in the next clock cycle
-      -- if ((wr = '1') and (wadd /= zero5_bits) ) then -- write | TODO: Acertar a comparação dos std_logic_vector
-      --   registers(to_integer(signed(wadd))) <= wdata;
-      -- end if;
+      if ((wr = '1') and (wadd /= zero5_bits) ) then -- write | TODO: Acertar a comparação dos std_logic_vector
+        registers(to_integer(signed(wadd))) <= wdata;
+      end if;
     end if;
   end process register_process;
 end behaviour;

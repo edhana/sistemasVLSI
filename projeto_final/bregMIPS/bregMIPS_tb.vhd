@@ -39,21 +39,32 @@ begin
     );
 
   init : process
-  begin
-    rd <= '1';
-    wr <= '0';
+  begin    
     add1 <= "00001";
-    add2 <= "00010";
+    add2 <= "00100";
     wadd <= "00100";
     wdata <= x"CCCCFFFF";    
     wait;
   end process init;
 
   always : process
-    variable clk_tmp : std_logic := '0';    
+    variable clk_tmp : std_logic := '0';   
+    variable wr_tmp : std_logic := '0';
+    variable rd_tmp : std_logic := '1';
+    variable counter : INTEGER := 0;
   begin
     clk <= clk_tmp;
     clk_tmp := not clk_tmp;
+    counter := counter + 1;
+
+    if(counter > 10) then
+      counter := 0;
+      wr_tmp := not wr_tmp;
+      rd_tmp := not rd_tmp;
+    end if;
+    
+    rd <= rd_tmp; 
+    wr <= wr_tmp;
     wait for 20ns;
   end process always;
 end architecture arch; -- arch

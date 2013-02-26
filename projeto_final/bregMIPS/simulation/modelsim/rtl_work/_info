@@ -16,7 +16,7 @@ L10
 VREdgIE8V=jNH1c9]3n@8h1
 Z8 OV;C;10.1b;51
 31
-Z9 !s108 1361470248.268000
+Z9 !s108 1361893811.156000
 Z10 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/bregMIPS/bregMIPS.vhd|
 Z11 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/bregMIPS/bregMIPS.vhd|
 Z12 o-93 -work work -O0
@@ -41,7 +41,7 @@ R13
 !s100 ]A=@G3;>M82AK_GT<PWZM1
 !i10b 1
 Ebregmips_tb
-Z14 w1361470232
+Z14 w1361470280
 R2
 R3
 R4
@@ -55,7 +55,7 @@ V:;;IBQU@DF<_oIDTYaa2_1
 R8
 31
 !i10b 1
-Z17 !s108 1361470248.518000
+Z17 !s108 1361893812.453000
 Z18 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/bregMIPS/bregMIPS_tb.vhd|
 Z19 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/bregMIPS/bregMIPS_tb.vhd|
 R12
@@ -67,8 +67,8 @@ R4
 DEx4 work 11 bregmips_tb 0 22 :;;IBQU@DF<_oIDTYaa2_1
 l27
 L9
-V7aAGjgAkoG1G0[^VKeD8E2
-!s100 9`LRegG8dFFJ4oJ05EQ@z1
+V^U2zPLk:@HnV``UOY6`]X1
+!s100 Vzhl0W@2e5BX7ca=OE7NG0
 R8
 31
 !i10b 1

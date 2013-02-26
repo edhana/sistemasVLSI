@@ -44,3 +44,23 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+pwd
+# Z:/workspace/mestrado/sistemasVLSI/projeto_final/bregMIPS/simulation/modelsim
+cd ..
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+cd ..
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+stop
+cd ..
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+quit -sim
+pwd
+# Z:/workspace/mestrado/sistemasVLSI/projeto_final/bregMIPS/simulation/modelsim
+cd ..
+# reading C:\developer-apps\altera\modelsim_ase\win32aloem/../modelsim.ini
+cd Z:/workspace/mestrado/sistemasVLSI/projeto_final/
+pwd
+# Z:/workspace/mestrado/sistemasVLSI/projeto_final

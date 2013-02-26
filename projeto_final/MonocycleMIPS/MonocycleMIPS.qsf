@@ -18,7 +18,7 @@
 #
 # Quartus II 32-bit
 # Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
-# Date created = 12:55:02  February 26, 2013
+# Date created = 13:07:52  February 26, 2013
 #
 # -------------------------------------------------------------------------- #
 #
@@ -40,12 +40,15 @@ set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
 set_global_assignment -name TOP_LEVEL_ENTITY MonocycleMIPS
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.0 SP2"
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:55:02  FEBRUARY 26, 2013"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:07:52  FEBRUARY 26, 2013"
 set_global_assignment -name LAST_QUARTUS_VERSION "12.0 SP2"
-set_global_assignment -name VHDL_FILE ../bregMIPS/bregMIPS.vhd
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name VHDL_FILE bregMIPS.vhd
+set_global_assignment -name VHDL_FILE MonocycleMIPS.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"

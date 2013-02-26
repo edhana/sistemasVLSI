@@ -1,0 +1,5 @@
+|MonocycleMIPS
+clk => ~NO_FANOUT~
+rst => ~NO_FANOUT~
+
+

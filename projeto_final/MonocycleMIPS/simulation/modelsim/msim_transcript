@@ -29,3 +29,5 @@
 # "vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/testbenches/MonocycleMIPS_TB.vhd}"
 pwd
 # Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/simulation/modelsim
+cd ..
+# reading C:\developer-apps\altera\modelsim_ase\win32aloem/../modelsim.ini

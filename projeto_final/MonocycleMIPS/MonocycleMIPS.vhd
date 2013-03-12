@@ -1,4 +1,6 @@
 -- MIPS Module
+-- This File is not used anymore. Deprecated 05/03/2013
+
 library ieee;
 use ieee.std_logic_1164.all;
 

@@ -1,8 +1,9 @@
 -- Testbench for de ulaMIPS module
-
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 use work.project_constants.all;
+
 
 entity ulaMIPS_tb is
   generic(
@@ -18,7 +19,7 @@ end ulaMIPS_tb;
 
 architecture behaviour_ulaMips_tb_arch of ulaMIPS_tb is
   signal data_operator1, data_operator2 : std_logic_vector(31 downto 0);
-  signal operation : std_logic_vector(3 downto 0);
+  signal operation, last_operation : std_logic_vector(3 downto 0);
   signal zero : std_logic;
   signal result : std_logic_vector(31 downto 0);
   signal st : state := idle;
@@ -61,18 +62,19 @@ begin
     if(clock_tmp'event and clock_tmp = '1') then
       case st is
         when idle =>
+          last_operation <= operation;
           operation <= "1111";
           data_operator1 <= zero32_bits;
           data_operator2 <= zero32_bits;
           st <= test_sum;
         when test_sum =>
+          last_operation <= operation;
           operation <= "0111";
           data_operator1 <= op_test_1a;
           data_operator2 <= op_test_1b;
           st <= test_and;
         when test_and =>      
-          -- Verificar como fazer para usar os asserts de orma inteligente
-          assert (result = "11100001111000011110000111100001") report "Resultado da Soma Incorreto" severity error;  
+          last_operation <= operation;          
           operation <= "0000";
           data_operator1 <= op_test_2a;
           data_operator2 <= op_test_2b;
@@ -84,5 +86,19 @@ begin
 
   end process test_state_type;
 
+  test_process : process(last_operation)
+  begin
+    case last_operation is
+      when "1111" =>
+      -- Ultimo teste
+      when "0111" =>
+        -- Verificar como fazer para usar os asserts de orma inteligente
+        assert (result = "11100001111000011110000111100001") report "Resultado da Soma Incorreto" severity error;  
+      -- TODO: Testar todos os estados da ula
+      when others =>
+        -- Por enquanto nada          
+        report "TODOS os outros valores de operation: ";-- & str(operation);
+    end case;
+  end process test_process;
   
 end architecture;

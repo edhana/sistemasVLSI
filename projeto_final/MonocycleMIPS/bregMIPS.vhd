@@ -5,16 +5,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use work.project_constants.all;
 -- use ieee.std_logic_arith.all;
 
 entity bregMIPS is 
-  generic(
-     bits  : INTEGER := 32;
-     words : INTEGER := 32;
-     zero5_bits : std_logic_vector :=  "00000";
-     zero32_bits : std_logic_vector(31 downto 0) := "00000000000000000000000000000000"
-    );
-
 	port (
 		clk   : in std_logic;
 		rd    : in std_logic; -- read signal
@@ -29,7 +23,7 @@ entity bregMIPS is
 end bregMIPS;
 
 architecture behaviour of bregMIPS is
-  type register_bank is array (words-1 downto 0) of std_logic_vector(bits-1 downto 0);
+  type register_bank is array (words-1 downto 0) of std_logic_vector(register_width-1 downto 0);
   signal registers : register_bank := (others => (others => '0'));
   signal iaddr1 : INTEGER;
 begin

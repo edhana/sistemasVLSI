@@ -9,11 +9,12 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
--- Instruction Memory ROM
-vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instructionMemory.vhd}
-
--- project library
+-- project libraries
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/project_constants.vhd}
+
+-- Instruction Memory ROM
+vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd}
+
 
 -- register bank
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/bregMIPS.vhd}
@@ -22,7 +23,7 @@ vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleM
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd}
 
 -- Main Project Module
-vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/top.vhd}
+vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/MipsUnicycle.vhd}
 
 
 -- Main Projeto Module Testbench

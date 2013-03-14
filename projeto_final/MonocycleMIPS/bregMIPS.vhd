@@ -28,13 +28,9 @@ architecture behaviour of bregMIPS is
   signal iaddr1 : INTEGER;
 begin
   
-  first_register : r1 <= 
-    registers(to_integer(signed(add1))) when rd = '1' else
-    registers(0);
+  r1 <= registers(to_integer(signed(add1)));
 
-  second_register : r2 <= 
-    registers(to_integer(signed(add2))) when rd = '1' else
-     registers(0);       
+  r2 <= registers(to_integer(signed(add2)));       
 
   -- read write process
   register_process: process(clk)
@@ -42,7 +38,7 @@ begin
   begin
     if(clk'EVENT and clk = '1') then
       -- Write only in the next clock cycle
-      if ((wr = '1') and (wadd /= zero5_bits) ) then -- write | TODO: Acertar a comparação dos std_logic_vector
+      if ((wr = '1') and (wadd /= zero5_bits) ) then -- write
         registers(to_integer(signed(wadd))) <= wdata;
       end if;
     end if;

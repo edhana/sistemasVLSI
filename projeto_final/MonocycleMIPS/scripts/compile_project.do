@@ -15,15 +15,23 @@ vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleM
 -- Instruction Memory ROM
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd}
 
-
 -- register bank
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/bregMIPS.vhd}
 
 -- ULA
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd}
 
+-- Simple RAM (Data Memory RAM)
+vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/simple_ram.vhd}
+
+-- Simple RAM (Data Memory RAM)
+vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/control_unit.vhd}
+
+-- Generic 5 bit mux
+vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/generic_5_bit_mux.vhd}
+
 -- Main Project Module
-vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/MipsUnicycle.vhd}
+vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/mips_unicycle.vhd}
 
 
 -- Main Projeto Module Testbench

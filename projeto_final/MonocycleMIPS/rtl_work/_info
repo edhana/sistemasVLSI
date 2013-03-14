@@ -5,7 +5,7 @@ cModel Technology
 Z0 dZ:\workspace\mestrado\sistemasVLSI\projeto_final\MonocycleMIPS
 Ebregmips
 Z1 w1363277920
-Z2 DPx4 work 17 project_constants 0 22 Eg8oCR0n5T78JIM]:ChF02
+Z2 DPx4 work 17 project_constants 0 22 2>4<;>RjG^>dgmPRDdFOB0
 Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -17,7 +17,7 @@ L11
 VbI1_QnQ9`3M:LSES3:?G>3
 Z9 OV;C;10.1b;51
 31
-Z10 !s108 1363289885.947000
+Z10 !s108 1363295684.708000
 Z11 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/bregMIPS.vhd|
 Z12 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/bregMIPS.vhd|
 Z13 o-93 -work work -O0
@@ -42,23 +42,97 @@ R13
 R14
 !s100 VWCJZBOY7f0DemSIhRHJ;0
 !i10b 1
+Econtrol_unit
+Z16 w1363294816
+R2
+R4
+R5
+R6
+Z17 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/control_unit.vhd
+Z18 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/control_unit.vhd
+l0
+L5
+Vf4JPQ9;5I[hRk_ac];3:e2
+R9
+31
+Z19 !s108 1363295700.411000
+Z20 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/control_unit.vhd|
+Z21 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/control_unit.vhd|
+R13
+R14
+!s100 2@zBSFde9n_:lAmM@nX?B3
+!i10b 1
+Acontrol_behaviour
+R2
+R4
+R5
+Z22 DEx4 work 12 control_unit 0 22 f4JPQ9;5I[hRk_ac];3:e2
+l21
+L20
+V0j3dXJgDmI=ZoYkdhE6D;0
+R9
+31
+R19
+R20
+R21
+R13
+R14
+!s100 3IQ<73]mk6`aJY=T;fdRO2
+!i10b 1
+Egeneric_5_bit_mux
+Z23 w1363294113
+R2
+R4
+R5
+R6
+Z24 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/generic_5_bit_mux.vhd
+Z25 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/generic_5_bit_mux.vhd
+l0
+L7
+VYCWdmX<dI`44CXGa]GVzJ1
+R9
+31
+Z26 !s108 1363295704.723000
+Z27 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/generic_5_bit_mux.vhd|
+Z28 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/generic_5_bit_mux.vhd|
+R13
+R14
+!s100 ]4YR0mPY>D[BbXbRh0@jg3
+!i10b 1
+Ageneric_5_bit_mux_behaviour
+R2
+R4
+R5
+DEx4 work 17 generic_5_bit_mux 0 22 YCWdmX<dI`44CXGa]GVzJ1
+l17
+L16
+Vkgj]H6UfhUUM8WhC4]]9?0
+R9
+31
+R26
+R27
+R28
+R13
+R14
+!s100 KDOcVCb@`kPnhWH>@mgAb0
+!i10b 1
 Einstruction_memory
-Z16 w1363289547
+Z29 w1363289547
 R2
 R3
 R4
 R5
 R6
-Z17 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd
-Z18 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd
+Z30 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd
+Z31 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd
 l0
 L12
 V[B^mjQ_1VZFV83Sm>8>fG2
 R9
 31
-Z19 !s108 1363289885.697000
-Z20 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd|
-Z21 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd|
+Z32 !s108 1363295680.020000
+Z33 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd|
+Z34 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd|
 R13
 R14
 !s100 VQWYO^V@M>^SM_DJDVb[h2
@@ -68,88 +142,125 @@ R2
 R3
 R4
 R5
-Z22 DEx4 work 18 instruction_memory 0 22 [B^mjQ_1VZFV83Sm>8>fG2
+Z35 DEx4 work 18 instruction_memory 0 22 [B^mjQ_1VZFV83Sm>8>fG2
 l51
 L29
 VN;OBIJilW1MO6CbDG2Q_A3
 R9
 31
-R19
-R20
-R21
+R32
+R33
+R34
 R13
 R14
 !s100 XbCH6on@WN3C[3iA6?i>A3
 !i10b 1
 Emipsunicycle
-Z23 w1363289882
+Z36 w1363295657
 R2
 R4
 R5
 R6
-Z24 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/MipsUnicycle.vhd
-Z25 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/MipsUnicycle.vhd
+Z37 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/MipsUnicycle.vhd
+Z38 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/MipsUnicycle.vhd
 l0
 L6
-V4]2S[f[UQODC=Zb]7YKY@2
+V5bkZ^@CBeV;8S8If;:?WE0
 R9
 31
-Z26 !s108 1363289886.431000
-Z27 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/MipsUnicycle.vhd|
-Z28 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/MipsUnicycle.vhd|
+Z39 !s108 1363295709.551000
+Z40 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/MipsUnicycle.vhd|
+Z41 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/MipsUnicycle.vhd|
 R13
 R14
-!s100 lafQRzkeb90<C]MMQLHU]3
+!s100 eaml^m705XNfYg<>jTQBD3
 !i10b 1
 Amain
-R22
-Z29 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
-Z30 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
-Z31 DEx4 work 7 ulamips 0 22 I^=UKZh:jCF`X<8Q[:H871
-R3
+Z42 DEx4 work 10 simple_ram 0 22 CAT1hnh:3:IXPZJB=lJGZ0
+Z43 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z44 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z45 DEx4 work 7 ulamips 0 22 I^=UKZh:jCF`X<8Q[:H871
 R15
+R22
+R3
+R35
 R2
 R4
 R5
-DEx4 work 12 mipsunicycle 0 22 4]2S[f[UQODC=Zb]7YKY@2
-l51
-L13
-V=`Ud<E@Sl]]NNz@_T3Q>h0
+DEx4 work 12 mipsunicycle 0 22 5bkZ^@CBeV;8S8If;:?WE0
+l60
+L17
+VzIORVGbOn=P8`^hSJ9`3^1
 R9
 31
-R26
-R27
-R28
+R39
+R40
+R41
 R13
 R14
-!s100 kVnW`GlBU4Y<<zKzU>Uf73
+!s100 OEeLJY69Zf4WUoKz?LWO[1
 !i10b 1
 Pproject_constants
 R4
 R5
-Z32 w1363110435
+w1363295620
 R6
 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/project_constants.vhd
 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/project_constants.vhd
 l0
 L8
-VEg8oCR0n5T78JIM]:ChF02
+V2>4<;>RjG^>dgmPRDdFOB0
 R9
 31
 R13
 R14
-!s100 =8;A=VUE^0RkKPIIAXcGE2
+!s100 Vf5c6Yn07mPN@hE]dB5^d1
 !i10b 1
-!s108 1363289885.478000
+!s108 1363295674.864000
 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/project_constants.vhd|
 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/project_constants.vhd|
-Etop_tb
-R32
+Esimple_ram
+Z46 w1363288730
 R4
 R5
 R6
-Z33 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/top_tb.vhd
-Z34 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/top_tb.vhd
+Z47 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/simple_ram.vhd
+Z48 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/simple_ram.vhd
+l0
+L7
+VCAT1hnh:3:IXPZJB=lJGZ0
+R9
+31
+Z49 !s108 1363295695.411000
+Z50 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/simple_ram.vhd|
+Z51 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/simple_ram.vhd|
+R13
+R14
+!s100 hijFBOKlCU_5H92K]D@G21
+!i10b 1
+Artl
+R4
+R5
+R42
+l38
+L26
+V@zUM?I4]IVmJkVagTK0Il0
+R9
+31
+R49
+R50
+R51
+R13
+R14
+!s100 WJLe55iePM9i7Uea:LC<f0
+!i10b 1
+Etop_tb
+Z52 w1363110435
+R4
+R5
+R6
+Z53 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/top_tb.vhd
+Z54 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/top_tb.vhd
 l0
 L4
 VIZTNl2155Y_88a0E[Rd@]1
@@ -157,9 +268,9 @@ VIZTNl2155Y_88a0E[Rd@]1
 R9
 31
 !i10b 1
-Z35 !s108 1363289886.712000
-Z36 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/top_tb.vhd|
-Z37 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/top_tb.vhd|
+Z55 !s108 1363295714.895000
+Z56 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/top_tb.vhd|
+Z57 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/top_tb.vhd|
 R13
 R14
 Abehaviour
@@ -173,48 +284,48 @@ VEo^TeD[J1VWLN^oKbZU;k0
 R9
 31
 !i10b 1
-R35
-R36
-R37
+R55
+R56
+R57
 R13
 R14
 Eulamips
-Z38 w1363280331
+Z58 w1363280331
 R2
-R29
-R30
+R43
+R44
 R4
 R5
 R6
-Z39 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd
-Z40 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd
+Z59 8Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd
+Z60 FZ:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd
 l0
 L8
 VI^=UKZh:jCF`X<8Q[:H871
 R9
 31
-Z41 !s108 1363289886.181000
-Z42 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd|
-Z43 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd|
+Z61 !s108 1363295689.004000
+Z62 !s90 -reportprogress|300|-93|-work|work|Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd|
+Z63 !s107 Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd|
 R13
 R14
 !s100 39]fAR9QnmIQ@HL?OLFoJ3
 !i10b 1
 Abehaviourulamips
 R2
-R29
-R30
+R43
+R44
 R4
 R5
-R31
+R45
 l20
 L18
 VGZCVfXO8K[On0MXY8P5YN0
 R9
 31
-R41
-R42
-R43
+R61
+R62
+R63
 R13
 R14
 !s100 d7k123BcdT94G9NINiA7h2

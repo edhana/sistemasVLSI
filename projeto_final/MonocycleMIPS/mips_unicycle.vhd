@@ -33,13 +33,13 @@ architecture main of mips_unicycle is
   signal write_data_address : std_logic_vector(address_width-1 downto 0);
 
   -- program counter(pc)
-  signal pc_next_address : std_logic_vector(address_width-1 downto 0);
+  signal pc_next_address : natural range 0 to 2**ADDR_WIDTH - 1;
 
   -- pc adder
   signal pc_adder_result : std_logic_vector(word_length-1 downto 0);
 
   -- instruction address bus
-  signal instruction_address_bus : natural; --TODO: Deixar o range claro
+  signal instruction_address_bus : natural range 0 to 2**ADDR_WIDTH - 1; --TODO: Deixar o range claro
 
   -- instruction bus
   signal instruction_bus : std_logic_vector(word_length-1 downto 0);
@@ -62,13 +62,13 @@ begin
   -- Declaration of all modules                      
   ---------------------------------------------------------
 
-  -- -- Program Counter
-  -- pc : entity work.programCounter(main)
-  --   port map (
-  --     clock => clk,
-  --     read_address => pc_next_address,
-  --     instruction_address => instruction_address_bus
-  --   );
+  -- Program Counter
+  pc : entity work.program_counter(main)
+    port map (
+      clk => clk,
+      read_address => pc_next_address,
+      instruction_address => instruction_address_bus
+    );
 
   -- -- Program Counter Adder
   -- pc_adder : entity work.ulaMIPS(main)
@@ -96,13 +96,13 @@ begin
     );
 
   -- Mux RegDst
-  -- mrd : entity work.generic_5_bit_mux(main)
-  --   port map(
-  --     data_input_A => instruction_bus(20 downto 16),
-  --     data_input_B => instruction_bus(15 downto 11),
-  --     control_signal => cu_output_bus(0),
-  --     data_output => write_data_address
-  --   );
+  mrd : entity work.generic_5_bit_mux(main)
+    port map(
+      data_input_A => instruction_bus(20 downto 16),
+      data_input_B => instruction_bus(15 downto 11),
+      control_signal => cu_output_bus(0),
+      data_output => write_data_address
+    );
 
   -- register bank
   rb : entity work.bregMIPS(main)

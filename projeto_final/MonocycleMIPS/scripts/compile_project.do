@@ -12,14 +12,18 @@ vmap work rtl_work
 -- project libraries
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/project_constants.vhd}
 
+-- program counter
+vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/program_counter.vhd}
+
+-- ULA
+vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd}
+
 -- Instruction Memory ROM
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd}
 
 -- register bank
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/bregMIPS.vhd}
 
--- ULA
-vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ulaMIPS.vhd}
 
 -- Simple RAM (Data Memory RAM)
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/simple_ram.vhd}
@@ -40,8 +44,15 @@ vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleM
 vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ns top_tb 
 
 add wave *
+
+-- Adicionando Sinais dos outros modulos
+-- Program Counter
+add wave -position insertpoint sim:/top_tb/uni_mips/pc/read_address
+add wave -position insertpoint sim:/top_tb/uni_mips/pc/instruction_address
+
 run 1000ns
 -- view signals
+
 
 
 

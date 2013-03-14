@@ -13,7 +13,7 @@ entity generic_5_bit_mux is
   );
 end entity;
 
-architecture generic_5_bit_mux_behaviour of generic_5_bit_mux is
+architecture main of generic_5_bit_mux is
 begin
 
-end generic_5_bit_mux_behaviour;
+end main;

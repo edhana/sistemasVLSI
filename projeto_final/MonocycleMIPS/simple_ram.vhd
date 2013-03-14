@@ -23,7 +23,7 @@ entity simple_ram is
 
 end entity;
 
-architecture rtl of simple_ram is
+architecture main of simple_ram is
 
   -- Build a 2-D array type for the RAM
   subtype word_t is std_logic_vector((DATA_WIDTH-1) downto 0);
@@ -51,4 +51,4 @@ begin
 
   q <= ram(addr_reg);
 
-end rtl;
+end main;

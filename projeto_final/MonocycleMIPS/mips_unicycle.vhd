@@ -3,7 +3,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use work.project_constants.all;
 
-entity MipsUnicycle is
+entity mips_unicycle is
   generic(
       ula_add_op : std_logic_vector(3 downto 0) := "0111"
     );
@@ -12,9 +12,9 @@ entity MipsUnicycle is
     clk : in std_logic;
     rst : in std_logic -- ainda não sei se e necessario
     );
-end MipsUnicycle;
+end mips_unicycle;
 
-architecture main of MipsUnicycle is
+architecture main of mips_unicycle is
 
   -- component signals
   -- Arithmetic Logic Unit(ULA)

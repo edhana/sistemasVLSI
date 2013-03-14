@@ -14,7 +14,7 @@ entity instruction_memory is
   generic 
   (
     DATA_WIDTH : natural := 32;
-    ADDR_WIDTH : natural := 64  -- meaning 64 instructions as the limit
+    ADDR_WIDTH : natural := 6  -- meaning 64 instructions as the limit
   );
 
   port 
@@ -26,7 +26,7 @@ entity instruction_memory is
 
 end entity;
 
-architecture rtl of instruction_memory is
+architecture main of instruction_memory is
 
   -- Build a 2-D array type for the RoM
   subtype word_t is std_logic_vector((DATA_WIDTH-1) downto 0);
@@ -57,4 +57,4 @@ begin
   end if;
   end process;
 
-end rtl;
+end main;

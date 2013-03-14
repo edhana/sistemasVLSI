@@ -22,7 +22,7 @@ entity bregMIPS is
 	);
 end bregMIPS;
 
-architecture behaviour of bregMIPS is
+architecture main of bregMIPS is
   type register_bank is array (words-1 downto 0) of std_logic_vector(register_width-1 downto 0);
   signal registers : register_bank := (others => (others => '0'));
   signal iaddr1 : INTEGER;
@@ -43,4 +43,4 @@ begin
       end if;
     end if;
   end process register_process;
-end behaviour;
+end main;

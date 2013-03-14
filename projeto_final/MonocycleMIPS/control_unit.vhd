@@ -17,7 +17,7 @@ entity control_unit is
     );
 end entity;
 
-architecture control_behaviour of control_unit is
+architecture main of control_unit is
 begin
   -----------------------------
   -- Output Format:
@@ -40,4 +40,4 @@ begin
   -- sw input format = 101011 -- TODO: Revisar as saidas
 
   -- beq input format = 000100 -- TODO: Revisar as saidas
-end control_behaviour;
+end main;

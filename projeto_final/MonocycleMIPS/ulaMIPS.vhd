@@ -15,7 +15,7 @@ entity ulaMIPS is
   );
 end ulaMIPS;
 
-architecture behaviourUlaMips of ulaMIPS is
+architecture main of ulaMIPS is
   signal temp : std_logic_vector(31 downto 0);
 begin
   temp <= (data_operator1 - data_operator2);
@@ -30,4 +30,4 @@ begin
   SelectZero: with result select
     zero <= '1' when zero32_bits,
             '0' when others;
-end behaviourUlaMips;
+end main;

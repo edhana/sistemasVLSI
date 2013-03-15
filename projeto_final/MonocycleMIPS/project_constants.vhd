@@ -8,8 +8,7 @@ use ieee.std_logic_1164.all;
 package project_constants is      
     constant indexes :  natural := 32;
     constant register_width  : integer := 32;
-    constant words : integer := 32;
-    constant ADDR_WIDTH : natural := 6;
+    constant words : integer := 32;    
     constant word_length : natural := 32;
     constant address_width : natural := 5;
 

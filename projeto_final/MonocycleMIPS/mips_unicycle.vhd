@@ -1,11 +1,14 @@
 -- Top entitiy of the project
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+-- use ieee.numeric_std.all;
 use work.project_constants.all;
 
 entity mips_unicycle is
   generic(
-      ula_add_op : std_logic_vector(3 downto 0) := "0111"
+      ula_add_op : std_logic_vector(3 downto 0) := "0111";
+      adder_4_number : std_logic_vector(31 downto 0) := x"00000004"
     );
 
   port(
@@ -32,14 +35,14 @@ architecture main of mips_unicycle is
   signal write_data : std_logic_vector(register_width-1 downto 0);
   signal write_data_address : std_logic_vector(address_width-1 downto 0);
 
-  -- program counter(pc)
-  signal pc_next_address : natural range 0 to 2**ADDR_WIDTH - 1;
+  -- program counter(pc) - 32 bit address
+  signal pc_next_address : natural range 0 to indexes - 1;
 
   -- pc adder
   signal pc_adder_result : std_logic_vector(word_length-1 downto 0);
 
   -- instruction address bus
-  signal instruction_address_bus : natural range 0 to 2**ADDR_WIDTH - 1; --TODO: Deixar o range claro
+  signal instruction_address_bus : natural range 0 to indexes - 1; --TODO: Deixar o range claro
 
   -- instruction bus
   signal instruction_bus : std_logic_vector(word_length-1 downto 0);
@@ -57,7 +60,10 @@ architecture main of mips_unicycle is
   signal shift_left_bus : std_logic_vector(word_length-1 downto 0);
   signal shift_left_ula_result_bus : std_logic_vector(word_length-1 downto 0);
 
+  -- signal to hold the converted memory address value
+  signal stv_address_bus_value : std_logic_vector(indexes-1 downto 0);
 begin    
+  stv_address_bus_value <= conv_std_logic_vector(instruction_address_bus, indexes);  
   ---------------------------------------------------------
   -- Declaration of all modules                      
   ---------------------------------------------------------
@@ -70,15 +76,15 @@ begin
       instruction_address => instruction_address_bus
     );
 
-  -- -- Program Counter Adder
-  -- pc_adder : entity work.ulaMIPS(main)
-  --   port map(
-  --     data_operator1 => instruction_address_bus,
-  --     data_operator2 => x"00000000000000000000000000000004",
-  --     operation => ula_add_op, -- sum
-  --     zero => zero,
-  --     result => pc_adder_result
-  --   );
+  -- Program Counter Adder
+  pc_adder : entity work.ulaMIPS(main)
+    port map(
+      data_operator1 => stv_address_bus_value, 
+      data_operator2 => adder_4_number,
+      operation => ula_add_op, -- sum
+      zero => zero,
+      result => pc_adder_result
+    );
 
   -- Instruction Memory
   im : entity work.instruction_memory(main)
@@ -88,7 +94,7 @@ begin
       q => instruction_bus
     );
 
-  -- Control Unit2
+  -- Control Unit
   cu : entity work.control_unit(main)
     port map(
         instruction_input => instruction_bus(31 downto 26),

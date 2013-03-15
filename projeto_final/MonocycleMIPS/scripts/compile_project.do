@@ -50,6 +50,9 @@ add wave *
 add wave -position insertpoint sim:/top_tb/uni_mips/pc/read_address
 add wave -position insertpoint sim:/top_tb/uni_mips/pc/instruction_address
 
+-- Counter Adder
+add wave -position end  sim:/top_tb/uni_mips/stv_address_bus_value
+
 run 1000ns
 -- view signals
 

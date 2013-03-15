@@ -14,7 +14,7 @@ entity instruction_memory is
   generic 
   (
     DATA_WIDTH : natural := 32;
-    ADDR_WIDTH : natural := 6  -- meaning 64 instructions as the limit
+    ADDR_WIDTH : natural := 5  -- meaning 64 instructions as the limit
   );
 
   port 

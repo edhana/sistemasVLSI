@@ -5,20 +5,20 @@ use work.project_constants.all;
 entity control_unit is
   port(
       instruction_input : in std_logic_vector(5 downto 0);
-      operation_output : out std_logic_vector(op_sig_control-1 downto 0)
-      -- reg_dst    : out std_logic;
-      -- branch     : out std_logic;
-      -- mem_read   : out std_logic;
-      -- mem_to_reg : out std_logic;
-      -- alu_op     : out std_logic;
-      -- mem_write  : out std_logic;
-      -- alu_src    : out std_logic;
-      -- reg_write  : out std_logic
+      reg_dst    : out std_logic;
+      branch     : out std_logic;
+      jump       : out std_logic;
+      mem_read   : out std_logic;
+      mem_to_reg : out std_logic;
+      op_alu     : out std_logic_vector(1 downto 0);
+      mem_write  : out std_logic;
+      alu_src    : out std_logic;
+      reg_write  : out std_logic
     );
 end entity;
 
 architecture main of control_unit is
-begin
+begin  
   -----------------------------
   -- Output Format:
   -- RegDST 
@@ -32,12 +32,86 @@ begin
   -- RegWrite
   -----------------------------
 
-  -- R input format = 000000 -- TODO: Revisar as saidas
-  -- operation_output_bus <= "000000000" when (instruction_input = "000000" else
-
-  -- lw input format = 100011 -- TODO: Revisar as saidas
-
-  -- sw input format = 101011 -- TODO: Revisar as saidas
-
-  -- beq input format = 000100 -- TODO: Revisar as saidas
+  instruction_code_decoder : process(instruction_input)
+  begin
+    case instruction_input is
+      when "100011" =>
+        -- lw instruction
+        op_alu     <= "00"; 
+        reg_dst    <= '0';  
+        jump       <= '0';
+        alu_src    <= '1';
+        mem_to_reg <= '1';
+        reg_write  <= '1';
+        mem_read   <= '1';
+        mem_write  <= '0';
+        branch     <= '0';
+      when "101011" =>
+        -- sw instructions
+        op_alu     <= "00"; 
+        reg_dst    <= '0';  
+        jump       <= '0';
+        alu_src    <= '1';
+        mem_to_reg <= '0';
+        reg_write  <= '0';
+        mem_read   <= '0';
+        mem_write  <= '1';
+        branch     <= '0';
+      when "000000" =>
+        -- type R instructions
+        op_alu     <= "10"; 
+        reg_dst    <= '1';  
+        jump       <= '0';
+        alu_src    <= '0';
+        mem_to_reg <= '0';
+        reg_write  <= '1';
+        mem_read   <= '0';
+        mem_write  <= '0';
+        branch     <= '0';      
+      when "001000" =>
+        -- type ADDI instructions
+        op_alu     <= "00"; 
+        reg_dst    <= '0';  
+        jump       <= '0';
+        alu_src    <= '1';
+        mem_to_reg <= '0';
+        reg_write  <= '1';
+        mem_read   <= '0';
+        mem_write  <= '0';
+        branch     <= '0';        
+      when "000010" =>
+        -- type Jump instruction
+        op_alu     <= "00"; 
+        reg_dst    <= '0';  
+        jump       <= '1';
+        alu_src    <= '0';
+        mem_to_reg <= '0';
+        reg_write  <= '1';
+        mem_read   <= '0';
+        mem_write  <= '0';
+        branch     <= '0';                        
+      when "000100" =>
+        -- type Beq instruction
+        op_alu     <= "01"; 
+        reg_dst    <= '0';  
+        jump       <= '0';
+        alu_src    <= '0';
+        mem_to_reg <= '0';
+        reg_write  <= '0';
+        mem_read   <= '0';
+        mem_write  <= '0';
+        branch     <= '1';        
+      when OTHERS =>
+        -- TODO: verificar se isso pode causar um problema 
+        op_alu     <= "00"; 
+        reg_dst    <= '0';  
+        jump       <= '0';
+        alu_src    <= '0';
+        mem_to_reg <= '0';
+        reg_write  <= '0';
+        mem_read   <= '0';
+        mem_write  <= '0';
+        branch     <= '0';
+    end case;
+  end process instruction_code_decoder;
 end main;

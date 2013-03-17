@@ -18,6 +18,9 @@ vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleM
 -- ULA
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ula_mips.vhd}
 
+-- ULA control
+vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/ula_control.vhd}
+
 -- Instruction Memory ROM
 vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleMIPS/instruction_memory.vhd}
 

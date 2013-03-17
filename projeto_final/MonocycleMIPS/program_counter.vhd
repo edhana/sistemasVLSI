@@ -8,8 +8,8 @@ use work.project_constants.all;
 entity program_counter is
   port(
       clk : in std_logic;
-      read_address : in natural range 0 to indexes - 1; --TODO esse range e em bits? ou significa que o numero vai de zero a 32?
-      instruction_address : out natural range 0 to indexes - 1
+      read_address : in natural range 0 to memory_size-1; 
+      instruction_address : out natural range 0 to memory_size-1
     );
 end entity;
 

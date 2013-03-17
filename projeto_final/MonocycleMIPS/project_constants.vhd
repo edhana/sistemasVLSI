@@ -12,6 +12,13 @@ package project_constants is
     constant word_length : natural := 32;
     constant address_width : natural := 5;
 
+    -- instruction set
+    constant instruction_ammount : natural := 32; -- meaning we have 32 only instructions
+
+    -- instuction memory data definition
+    constant data_width : natural := 32;
+    constant memory_size : natural := 256; -- 8 bits addressable memory
+
     -- amount of control signals
     constant op_sig_control : natural := 9; 
 

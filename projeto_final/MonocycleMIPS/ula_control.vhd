@@ -1,5 +1,7 @@
 -- Author Eduardo Marques
 -- ULA contro module
+library ieee;
+use ieee.std_logic_1164.all;
 
 entity ula_control is
   port(

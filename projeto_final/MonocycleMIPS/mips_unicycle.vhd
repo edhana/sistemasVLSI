@@ -24,7 +24,7 @@ architecture main of mips_unicycle is
   -- Arithmetic Logic Unit(ULA)
   signal data_input1 :  std_logic_vector(register_width-1 downto 0);
   signal data_input2 :  std_logic_vector(register_width-1 downto 0);
-  signal operation : std_logic_vector(3 downto 0);
+  signal ula_operation : std_logic_vector(3 downto 0);
   signal zero : std_logic;
   signal result : std_logic_vector(register_width-1 downto 0);
 
@@ -43,7 +43,7 @@ architecture main of mips_unicycle is
   signal pc_adder_result : std_logic_vector(word_length-1 downto 0);
 
   -- instruction address bus
-  signal instruction_address_bus : natural range 0 to memory_size - 1; --TODO: Deixar o range claro
+  signal instruction_address_bus : natural range 0 to memory_size - 1;
 
   -- instruction bus
   signal instruction_bus : std_logic_vector(word_length-1 downto 0);
@@ -55,7 +55,9 @@ architecture main of mips_unicycle is
   signal memory_write_enable : std_logic;
 
   -- control unit
-  signal cu_output_bus : std_logic_vector(8 downto 0);
+  signal reg_dst, jump, branch, mem_read, mem_write : std_logic;
+  signal mem_to_reg, alu_src, reg_write : std_logic;
+  signal alu_op : std_logic_vector(1 downto 0);
 
   -- shift left result bus
   signal shift_left_bus : std_logic_vector(word_length-1 downto 0);
@@ -98,13 +100,21 @@ begin
       clk => clk,
       addr => instruction_address_bus,
       q => instruction_bus
-    );
+    );  
 
   -- Control Unit
   cu : entity work.control_unit(main)
     port map(
-        instruction_input => instruction_bus(31 downto 26),
-        operation_output => cu_output_bus
+      instruction_input => instruction_bus(31 downto 26),
+      reg_dst => reg_dst,
+      jump => jump,
+      branch => branch,
+      mem_read => mem_read,
+      mem_to_reg => mem_to_reg,
+      op_alu => alu_op,
+      mem_write => mem_write,
+      alu_src => alu_src,
+      reg_write => reg_write
     );
 
   -- Mux RegDst
@@ -112,7 +122,7 @@ begin
     port map(
       data_input_A => instruction_bus(20 downto 16),
       data_input_B => instruction_bus(15 downto 11),
-      control_signal => cu_output_bus(0),
+      control_signal => reg_dst,
       data_output => write_data_address
     );
 
@@ -130,12 +140,20 @@ begin
       r2 => data_input2
     );
 
+  -- ula control unit
+  ula_c_unit : entity work.ula_control(main)
+    port map(
+      op_code => instruction_bus(5 downto 0),
+      op_ula_type => alu_op,
+      alu_operation => ula_operation
+    );
+
   -- Main ULA
   ula : entity work.ula_mips(main)
     port map(
       data_operator1 => data_input1,
       data_operator2 => data_input1,
-      operation => operation,
+      operation => ula_operation,
       zero => zero,
       result => result
     );

@@ -1,13 +1,11 @@
--- Author Eduardo
--- Simple 5bit mux
+-- Author: Eduardo Marques
 
 library ieee;
 use ieee.std_logic_1164.all;
-use work.project_constants.all;
 
-entity generic_5_bit_mux is
+entity generic_32_bit_mux is
   generic(
-    data_size : natural := 5
+    data_size : natural := 32
   );
 
   port(
@@ -18,7 +16,7 @@ entity generic_5_bit_mux is
   );
 end entity;
 
-architecture main of generic_5_bit_mux is
+architecture main of generic_32_bit_mux is
 begin
   mux_p : process(control_signal)
   begin

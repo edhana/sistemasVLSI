@@ -49,30 +49,7 @@ vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleM
 
 vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ns top_tb 
 
-add wave *
-
--- Adicionando Sinais dos outros modulos
--- Program Counter
-add wave -position insertpoint sim:/top_tb/uni_mips/pc/read_address
-add wave -position insertpoint sim:/top_tb/uni_mips/pc/instruction_address
-
--- Counter Adder
-add wave -position end  sim:/top_tb/uni_mips/stv_address_bus_value
-
--- Instruction Memory
-add wave -position insertpoint sim:/top_tb/uni_mips/im/addr sim:/top_tb/uni_mips/im/q  
--- add wave -position insertpoint sim:/top_tb/uni_mips/im/rom
-add wave -position insertpoint sim:/top_tb/uni_mips/instruction_bus
-
--- Control Unit
-add wave -position insertpoint sim:/top_tb/uni_mips/cu/op_alu
-
--- Ula Control
-add wave -position insertpoint  sim:/top_tb/uni_mips/ula_c_unit/op_code sim:/top_tb/uni_mips/ula_c_unit/op_ula_type sim:/top_tb/uni_mips/ula_c_unit/alu_operation
-
--- Ula 
-add wave -position insertpoint  sim:/top_tb/uni_mips/ula/data_operator1 sim:/top_tb/uni_mips/ula/data_operator2 sim:/top_tb/uni_mips/ula/result sim:/top_tb/uni_mips/ula/zero
-
+do wave.do
 
 run 1000ns
 -- view signals

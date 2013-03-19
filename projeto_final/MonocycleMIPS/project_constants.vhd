@@ -19,6 +19,9 @@ package project_constants is
     constant data_width : natural := 32;
     constant memory_size : natural := 256; -- 8 bits addressable memory
 
+    -- ram memory data definition
+    constant RAM_ADDR_WIDTH : natural := 12;
+
     -- amount of control signals
     constant op_sig_control : natural := 9; 
 

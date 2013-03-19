@@ -23,7 +23,6 @@ architecture main of mips_unicycle is
   -- component signals
   -- Arithmetic Logic Unit(ULA)
   signal data_input1 :  std_logic_vector(register_width-1 downto 0);
-  signal data_input2 :  std_logic_vector(register_width-1 downto 0);
   signal ula_operation : std_logic_vector(3 downto 0);
   signal zero : std_logic;
   signal result : std_logic_vector(register_width-1 downto 0);
@@ -49,7 +48,7 @@ architecture main of mips_unicycle is
   signal instruction_bus : std_logic_vector(word_length-1 downto 0);
 
   -- data memory bus and data memory value
-  signal data_memory_bus : natural;
+  signal data_memory_bus_address : natural range 0 to 2**RAM_ADDR_WIDTH - 1;
   signal data_memory_input : std_logic_vector(word_length-1 downto 0);
   signal data_memory_output : std_logic_vector(word_length-1 downto 0);
   signal memory_write_enable : std_logic;
@@ -65,12 +64,19 @@ architecture main of mips_unicycle is
 
   -- signal to hold the converted memory address value
   signal stv_address_bus_value : std_logic_vector(word_length-1 downto 0);
+
+  -- signal to hold converted memory data to address bit
+  signal stv_data_memory_bus : std_logic_vector(word_length-1 downto 0);
+
+  -- sign extend bus
+  signal sign_extend_output_bus : std_logic_vector(word_length-1 downto 0);
+  signal sign_extend_input_bus : std_logic_vector((word_length/2)-1 downto 0);
+  signal mux_extend_output_data : std_logic_vector(word_length-1 downto 0);
 begin    
 
   -- program counter conversions
   stv_address_bus_value <= conv_std_logic_vector(instruction_address_bus, indexes);  
   pc_next_address <= conv_integer(pc_adder_result);
-
 
   ---------------------------------------------------------
   -- Declaration of all modules                      
@@ -137,7 +143,16 @@ begin
       wadd  => write_data_address, 
       wdata => write_data,
       r1 => data_input1,
-      r2 => data_input2
+      r2 => data_memory_input
+    );
+
+  -- signal extend mux
+  signal_extend_mux : entity work.generic_32_bit_mux(main)
+    port map(
+      data_input_A => data_memory_input,
+      data_input_B => sign_extend_output_bus,
+      control_signal => alu_src,
+      data_output => mux_extend_output_data
     );
 
   -- ula control unit
@@ -146,16 +161,16 @@ begin
       op_code => instruction_bus(5 downto 0),
       op_ula_type => alu_op,
       alu_operation => ula_operation
-    );
+    );    
 
   -- Main ULA
   ula : entity work.ula_mips(main)
     port map(
       data_operator1 => data_input1,
-      data_operator2 => data_input1,
+      data_operator2 => mux_extend_output_data,
       operation => ula_operation,
       zero => zero,
-      result => result
+      result => stv_data_memory_bus
     );
 
   -- Sign Extend and Adder ALU
@@ -172,9 +187,37 @@ begin
   dm : entity work.simple_ram(main)
     port map(
       clk => clk,
-      addr => data_memory_bus,
+      addr => data_memory_bus_address,
       data => data_memory_input,
       we => memory_write_enable,
       q => data_memory_output
     );
+
+  dm_mux : entity work.generic_32_bit_mux(main)
+    port map(
+      data_input_A => data_memory_output,
+      data_input_B => stv_data_memory_bus,
+      control_signal => mem_to_reg,
+      data_output => write_data
+    );  
+
+  -- this is just for the generic case of address use, not the mips
+  -- common address
+  address_bus_converter : process (stv_data_memory_bus)  
+    variable int_converted_addr : integer := 0;
+  begin
+    int_converted_addr := to_integer(ieee.numeric_std.unsigned(stv_data_memory_bus));
+      
+    if(int_converted_addr >= 0) then
+      -- data memory bus convertion
+      data_memory_bus_address <= int_converted_addr;
+    end if;
+  end process address_bus_converter;
+
+  -- Sign Extend behaviour
+  sign_extend_input_bus <= instruction_bus(15 downto 0);
+  with sign_extend_input_bus(15) select
+      sign_extend_output_bus <= (X"0000" & sign_extend_input_bus) when '0',
+                                (X"FFFF" & sign_extend_input_bus) WHEN '1',
+                                ("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ") when others;
 end main;

@@ -21,7 +21,7 @@ begin
 
     init: process    
     begin
-      addr <= 10;
+      addr <= 4;
       wait;
     end process init;
 

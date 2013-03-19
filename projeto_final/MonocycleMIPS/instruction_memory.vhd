@@ -126,7 +126,7 @@ architecture main of instruction_memory is
       read(iline, str);
       hexstr_to_bin(str, tmp_read_reg);
       tmp(addr_pos) := tmp_read_reg;
-      addr_pos := addr_pos + 1;
+      addr_pos := addr_pos + 4;
     end loop;
 
     return tmp;

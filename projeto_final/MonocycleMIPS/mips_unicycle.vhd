@@ -93,7 +93,8 @@ begin
   se_shift_left_bus <= sign_extend_output_bus(29 downto 0)&"00";
 
   -- Jump Address definition
-  jump_address <= (instruction_bus(25 downto 0)&"00")&pc_adder_result(31 downto 28);
+  -- jump_address <= (instruction_bus(25 downto 0)&"00")&pc_adder_result(31 downto 28);
+  jump_address <= (instruction_bus(25 downto 0)&"00")&pc_adder_result(3 downto 0);
 
   -- Branch And Op
   branch_op <= (branch and zero);

@@ -9,7 +9,7 @@ entity simple_ram is
   generic 
   (
     DATA_WIDTH : natural := 32;
-    ADDR_WIDTH : natural := 16
+    ADDR_WIDTH : natural := 12
   );
 
   port 

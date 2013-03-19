@@ -35,11 +35,17 @@ add wave -noupdate /top_tb/uni_mips/signal_extend_mux/control_signal
 add wave -noupdate /top_tb/uni_mips/signal_extend_mux/data_input_A
 add wave -noupdate /top_tb/uni_mips/signal_extend_mux/data_input_B
 add wave -noupdate /top_tb/uni_mips/signal_extend_mux/data_output
+add wave -noupdate -divider {Data Memory}
+add wave -noupdate /top_tb/uni_mips/dm/addr
+add wave -noupdate /top_tb/uni_mips/dm/data
+add wave -noupdate /top_tb/uni_mips/dm/we
+add wave -noupdate /top_tb/uni_mips/dm/q
+add wave -noupdate /top_tb/uni_mips/dm/addr_reg
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {23 ns} 0}
+WaveRestoreCursors {{Cursor 1} {981 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 307
-configure wave -valuecolwidth 100
+configure wave -valuecolwidth 225
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -52,4 +58,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {750 ns} {1002 ns}
+WaveRestoreZoom {829 ns} {1009 ns}

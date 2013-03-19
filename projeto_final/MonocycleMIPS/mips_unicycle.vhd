@@ -88,7 +88,6 @@ begin
 
   -- program counter conversions
   stv_address_bus_value <= conv_std_logic_vector(instruction_address_bus, indexes);  
-  pc_next_address <= conv_integer(mux_jump_output);
 
   -- Shift left on the sign extend output operation
   se_shift_left_bus <= sign_extend_output_bus(29 downto 0)&"00";
@@ -98,6 +97,11 @@ begin
 
   -- Branch And Op
   branch_op <= (branch and zero);
+
+  -- always : process(clk)
+  -- begin
+    pc_next_address <= conv_integer(x"000000"&mux_jump_output(7 downto 0));
+  -- end process always;
 
   ---------------------------------------------------------
   -- Declaration of all modules                      
@@ -244,8 +248,10 @@ begin
   -- common address
   address_bus_converter : process (stv_data_memory_bus)  
     variable int_converted_addr : integer := 0;
+    variable memory_part : std_logic_vector(31 downto 0) := x"00000000";
   begin
-    int_converted_addr := to_integer(ieee.numeric_std.unsigned(stv_data_memory_bus));
+    memory_part := "00000000000000000000"&stv_data_memory_bus(11 downto 0);
+    int_converted_addr := to_integer(ieee.numeric_std.signed(memory_part));
       
     if(int_converted_addr >= 0) then
       -- data memory bus convertion

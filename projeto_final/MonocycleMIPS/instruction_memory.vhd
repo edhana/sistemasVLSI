@@ -127,13 +127,8 @@ architecture main of instruction_memory is
       hexstr_to_bin(str, tmp_read_reg);
       tmp(addr_pos) := tmp_read_reg;
       addr_pos := addr_pos + 1;
-      report "Li linha";
     end loop;
 
-    -- for addr_pos in 0 to memory_size - 1 loop 
-      -- Initialize each address with the address itself
-      -- tmp(addr_pos) := std_logic_vector(to_unsigned(addr_pos, data_width));
-    -- end loop;
     return tmp;
   end init_rom;  
 
@@ -148,6 +143,7 @@ begin
   main: process(clk)
   begin
   if(rising_edge(clk)) then
+    report "Cheguei aqui mas e ai?";
     q <= rom(addr);
   end if;
   end process main;

@@ -20,12 +20,5 @@ end entity;
 
 architecture main of generic_5_bit_mux is
 begin
-  mux_p : process(control_signal)
-  begin
-    if(control_signal = '0') then
-      data_output <= data_input_A;
-    elsif(control_signal = '1') then
-      data_output <= data_input_B;    
-    end if;
-  end process mux_p;
+  data_output <= data_input_A when (control_signal = '0') else data_input_B;
 end main;

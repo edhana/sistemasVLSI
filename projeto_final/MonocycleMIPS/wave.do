@@ -10,6 +10,7 @@ add wave -noupdate /top_tb/uni_mips/stv_address_bus_value
 add wave -noupdate /top_tb/uni_mips/stv_data_memory_bus
 add wave -noupdate /top_tb/uni_mips/instruction_bus
 add wave -noupdate /top_tb/uni_mips/jump_address
+add wave -noupdate /top_tb/uni_mips/mux_extend_output_data
 add wave -noupdate -divider {Program Counter}
 add wave -noupdate /top_tb/uni_mips/pc/read_address
 add wave -noupdate /top_tb/uni_mips/pc/instruction_address
@@ -29,10 +30,15 @@ add wave -noupdate /top_tb/uni_mips/ula/data_operator1
 add wave -noupdate /top_tb/uni_mips/ula/data_operator2
 add wave -noupdate /top_tb/uni_mips/ula/result
 add wave -noupdate /top_tb/uni_mips/ula/zero
+add wave -noupdate -divider {Signal Extend MUX}
+add wave -noupdate /top_tb/uni_mips/signal_extend_mux/control_signal
+add wave -noupdate /top_tb/uni_mips/signal_extend_mux/data_input_A
+add wave -noupdate /top_tb/uni_mips/signal_extend_mux/data_input_B
+add wave -noupdate /top_tb/uni_mips/signal_extend_mux/data_output
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {29 ns} 0}
+WaveRestoreCursors {{Cursor 1} {23 ns} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 262
+configure wave -namecolwidth 307
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -46,4 +52,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {264 ns}
+WaveRestoreZoom {750 ns} {1002 ns}

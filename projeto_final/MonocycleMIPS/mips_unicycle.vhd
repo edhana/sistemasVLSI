@@ -257,6 +257,5 @@ begin
   sign_extend_input_bus <= instruction_bus(15 downto 0);
   with sign_extend_input_bus(15) select
       sign_extend_output_bus <= (X"0000" & sign_extend_input_bus) when '0',
-                                (X"FFFF" & sign_extend_input_bus) WHEN '1',
-                                ("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ") when others;
+                                (X"FFFF" & sign_extend_input_bus) when others;
 end main;

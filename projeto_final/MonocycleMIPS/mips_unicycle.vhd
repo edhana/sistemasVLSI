@@ -78,6 +78,9 @@ begin
   stv_address_bus_value <= conv_std_logic_vector(instruction_address_bus, indexes);  
   pc_next_address <= conv_integer(pc_adder_result);
 
+  -- Shift left on the sign extend output operation
+  shift_left_bus <= sign_extend_output_bus(29 downto 0)&"00";
+
   ---------------------------------------------------------
   -- Declaration of all modules                      
   ---------------------------------------------------------
@@ -174,7 +177,7 @@ begin
     );
 
   -- Sign Extend and Adder ALU
-  seula : entity work.ula_mips(main)
+  sign_extend_ula : entity work.ula_mips(main)
     port map(
       data_operator1 => pc_adder_result,
       data_operator2 => shift_left_bus,

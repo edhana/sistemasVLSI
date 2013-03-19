@@ -4,6 +4,8 @@ add wave -noupdate /top_tb/clk
 add wave -noupdate -radix hexadecimal /top_tb/rst
 add wave -noupdate -divider Buses
 add wave -noupdate /top_tb/uni_mips/stv_address_bus_value
+add wave -noupdate /top_tb/uni_mips/shift_left_bus
+add wave -noupdate /top_tb/uni_mips/sign_extend_output_bus
 add wave -noupdate /top_tb/uni_mips/shift_left_ula_result_bus
 add wave -noupdate /top_tb/uni_mips/stv_address_bus_value
 add wave -noupdate /top_tb/uni_mips/stv_data_memory_bus
@@ -25,7 +27,7 @@ add wave -noupdate /top_tb/uni_mips/ula/data_operator2
 add wave -noupdate /top_tb/uni_mips/ula/result
 add wave -noupdate /top_tb/uni_mips/ula/zero
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {115 ns} 0}
+WaveRestoreCursors {{Cursor 1} {73 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 262
 configure wave -valuecolwidth 100

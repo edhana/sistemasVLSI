@@ -143,7 +143,6 @@ begin
   main: process(clk)
   begin
   if(rising_edge(clk)) then
-    report "Cheguei aqui mas e ai?";
     q <= rom(addr);
   end if;
   end process main;

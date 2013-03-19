@@ -16,7 +16,6 @@ entity ula_mips is
 end ula_mips;
 
 architecture main of ula_mips is
-  signal temp : std_logic_vector(word_length-1 downto 0);
   signal difference : std_logic_vector(word_length-1 downto 0);
   signal bit_vector_31 : std_logic_vector(word_length-2 downto 0);
 begin
@@ -30,7 +29,8 @@ begin
               (data_operator1 + data_operator2) when "0010",
               (data_operator1 - data_operator2) when "0110",
               bit_vector_31&difference(31) when "0111", -- Select on Less Than
-              (data_operator1 NOR data_operator2) when others;
+              (data_operator1 NOR data_operator2) when "1100",
+              x"00000000" when others;
 
   select_zero: with difference select
     zero <= '1' when zero32_bits,

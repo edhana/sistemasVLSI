@@ -28,5 +28,4 @@ package project_constants is
     constant zero5_bits : std_logic_vector :=  "00000";
     constant zero32_bits : std_logic_vector(31 downto 0) := "00000000000000000000000000000000"; -- TODO: Alterar para others
     
-    type mem_type is array  (indexes-1 downto 0) of std_logic_vector(register_width-1 downto 0);
 end project_constants;

@@ -54,7 +54,6 @@ architecture main of mips_unicycle is
   signal data_memory_bus_address : natural range 0 to 2**RAM_ADDR_WIDTH - 1;
   signal data_memory_input : std_logic_vector(word_length-1 downto 0);
   signal data_memory_output : std_logic_vector(word_length-1 downto 0);
-  signal memory_write_enable : std_logic;
 
   -- control unit
   signal reg_dst, jump, branch, mem_read, mem_write : std_logic;
@@ -93,16 +92,13 @@ begin
   se_shift_left_bus <= sign_extend_output_bus(29 downto 0)&"00";
 
   -- Jump Address definition
-  -- jump_address <= (instruction_bus(25 downto 0)&"00")&pc_adder_result(31 downto 28);
-  jump_address <= (instruction_bus(25 downto 0)&"00")&pc_adder_result(3 downto 0);
+  jump_address <= (instruction_bus(25 downto 0)&"00")&pc_adder_result(31 downto 28);
+  -- jump_address <= (instruction_bus(25 downto 0)&"00")&pc_adder_result(3 downto 0);
 
   -- Branch And Op
   branch_op <= (branch and zero);
 
-  -- always : process(clk)
-  -- begin
-    pc_next_address <= conv_integer(x"000000"&mux_jump_output(7 downto 0));
-  -- end process always;
+  pc_next_address <= conv_integer(x"000000"&mux_jump_output(7 downto 0));
 
   ---------------------------------------------------------
   -- Declaration of all modules                      
@@ -162,10 +158,10 @@ begin
   rb : entity work.bregMIPS(main)
     port map(
       clk => clk,
-      rd  => read_signal,      
-      wr  => write_signal,
-      add1 => input_address1,
-      add2 => input_address2,
+      rd  => '1', -- Not used
+      wr  => reg_write,
+      add1 => instruction_bus(25 downto 21),
+      add2 => instruction_bus(20 downto 16),
       wadd  => write_data_address, 
       wdata => write_data,
       r1 => data_input1,
@@ -221,8 +217,8 @@ begin
   -- mux jump with mux se cu alu  
   mux_jump_se_cu_ula : entity work.generic_32_bit_mux(main)
   port map(
-    data_input_A => jump_address,
-    data_input_B => mux_pc_se_cu_ula_output,
+    data_input_A => mux_pc_se_cu_ula_output,
+    data_input_B => jump_address,
     control_signal => jump,
     data_output => mux_jump_output
   );        
@@ -233,32 +229,34 @@ begin
       clk => clk,
       addr => data_memory_bus_address,
       data => data_memory_input,
-      we => memory_write_enable,
+      we => mem_write,
       q => data_memory_output
     );
 
   dm_mux : entity work.generic_32_bit_mux(main)
     port map(
-      data_input_A => data_memory_output,
-      data_input_B => stv_data_memory_bus,
+      data_input_A => stv_data_memory_bus,
+      data_input_B => data_memory_output,
       control_signal => mem_to_reg,
       data_output => write_data
     );  
 
-  -- this is just for the generic case of address use, not the mips
-  -- common address
-  address_bus_converter : process (stv_data_memory_bus)  
-    variable int_converted_addr : integer := 0;
-    variable memory_part : std_logic_vector(31 downto 0) := x"00000000";
-  begin
-    memory_part := "00000000000000000000"&stv_data_memory_bus(11 downto 0);
-    int_converted_addr := to_integer(ieee.numeric_std.signed(memory_part));
+  data_memory_bus_address <= to_integer(ieee.numeric_std.signed(x"00000"&stv_data_memory_bus(11 downto 0)));
+
+  -- -- this is just for the generic case of address use, not the mips
+  -- -- common address
+  -- address_bus_converter : process (stv_data_memory_bus)  
+  --   variable int_converted_addr : integer := 0;
+  --   variable memory_part : std_logic_vector(31 downto 0) := x"00000000";
+  -- begin
+  --   memory_part := "00000000000000000000"&stv_data_memory_bus(11 downto 0);
+  --   int_converted_addr := to_integer(ieee.numeric_std.signed(memory_part));
       
-    if(int_converted_addr >= 0) then
-      -- data memory bus convertion
-      data_memory_bus_address <= int_converted_addr;
-    end if;
-  end process address_bus_converter;
+  --   if(int_converted_addr >= 0) then
+  --     -- data memory bus convertion
+  --     data_memory_bus_address <= int_converted_addr;
+  --   end if;
+  -- end process address_bus_converter;
 
   -- Sign Extend behaviour
   sign_extend_input_bus <= instruction_bus(15 downto 0);

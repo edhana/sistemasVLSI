@@ -10,9 +10,11 @@ add wave -noupdate /top_tb/uni_mips/shift_left_ula_result_bus
 add wave -noupdate /top_tb/uni_mips/stv_address_bus_value
 add wave -noupdate /top_tb/uni_mips/stv_data_memory_bus
 add wave -noupdate /top_tb/uni_mips/instruction_bus
+add wave -noupdate /top_tb/uni_mips/jump_address
 add wave -noupdate -divider {Program Counter}
 add wave -noupdate /top_tb/uni_mips/pc/read_address
 add wave -noupdate /top_tb/uni_mips/pc/instruction_address
+add wave -noupdate /top_tb/uni_mips/pc_adder/result
 add wave -noupdate -divider {Control Unit}
 add wave -noupdate /top_tb/uni_mips/cu/op_alu
 add wave -noupdate /top_tb/uni_mips/ula_c_unit/op_code
@@ -27,7 +29,7 @@ add wave -noupdate /top_tb/uni_mips/ula/data_operator2
 add wave -noupdate /top_tb/uni_mips/ula/result
 add wave -noupdate /top_tb/uni_mips/ula/zero
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {73 ns} 0}
+WaveRestoreCursors {{Cursor 1} {10 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 262
 configure wave -valuecolwidth 100

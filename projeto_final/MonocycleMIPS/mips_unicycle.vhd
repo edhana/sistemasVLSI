@@ -41,6 +41,9 @@ architecture main of mips_unicycle is
   -- pc adder
   signal pc_adder_result : std_logic_vector(word_length-1 downto 0);
 
+  -- jump address
+  signal jump_address : std_logic_vector(word_length-1 downto 0);
+
   -- instruction address bus
   signal instruction_address_bus : natural range 0 to memory_size - 1;
 
@@ -80,6 +83,9 @@ begin
 
   -- Shift left on the sign extend output operation
   shift_left_bus <= sign_extend_output_bus(29 downto 0)&"00";
+
+  -- Jump Address definition
+  jump_address <= (instruction_bus(25 downto 0)&"00")&pc_adder_result(31 downto 28);
 
   ---------------------------------------------------------
   -- Declaration of all modules                      

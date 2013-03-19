@@ -62,7 +62,7 @@ architecture main of mips_unicycle is
   signal alu_op : std_logic_vector(1 downto 0);
 
   -- shift left result bus
-  signal shift_left_bus : std_logic_vector(word_length-1 downto 0);
+  signal se_shift_left_bus : std_logic_vector(word_length-1 downto 0);
   signal shift_left_ula_result_bus : std_logic_vector(word_length-1 downto 0);
 
   -- signal to hold the converted memory address value
@@ -75,17 +75,29 @@ architecture main of mips_unicycle is
   signal sign_extend_output_bus : std_logic_vector(word_length-1 downto 0);
   signal sign_extend_input_bus : std_logic_vector((word_length/2)-1 downto 0);
   signal mux_extend_output_data : std_logic_vector(word_length-1 downto 0);
+
+  signal pc_ula_zero : std_logic;
+  signal se_cu_ula_zero : std_logic;
+  signal branch_op : std_logic;
+
+  -- mux pc + se_cu_ula output
+  signal mux_pc_se_cu_ula_output : std_logic_vector(word_length-1 downto 0);
+  signal mux_jump_output : std_logic_vector(word_length-1 downto 0);
+
 begin    
 
   -- program counter conversions
   stv_address_bus_value <= conv_std_logic_vector(instruction_address_bus, indexes);  
-  pc_next_address <= conv_integer(pc_adder_result);
+  pc_next_address <= conv_integer(mux_jump_output);
 
   -- Shift left on the sign extend output operation
-  shift_left_bus <= sign_extend_output_bus(29 downto 0)&"00";
+  se_shift_left_bus <= sign_extend_output_bus(29 downto 0)&"00";
 
   -- Jump Address definition
   jump_address <= (instruction_bus(25 downto 0)&"00")&pc_adder_result(31 downto 28);
+
+  -- Branch And Op
+  branch_op <= (branch and zero);
 
   ---------------------------------------------------------
   -- Declaration of all modules                      
@@ -97,7 +109,7 @@ begin
       data_operator1 => stv_address_bus_value, 
       data_operator2 => adder_number_4,
       operation => ula_add_op, -- sum
-      zero => zero,
+      zero => pc_ula_zero,
       result => pc_adder_result
     );
 
@@ -130,7 +142,7 @@ begin
       mem_write => mem_write,
       alu_src => alu_src,
       reg_write => reg_write
-    );
+    );  
 
   -- Mux RegDst
   mrd : entity work.generic_5_bit_mux(main)
@@ -170,7 +182,7 @@ begin
       op_code => instruction_bus(5 downto 0),
       op_ula_type => alu_op,
       alu_operation => ula_operation
-    );    
+    );
 
   -- Main ULA
   ula : entity work.ula_mips(main)
@@ -186,11 +198,29 @@ begin
   sign_extend_ula : entity work.ula_mips(main)
     port map(
       data_operator1 => pc_adder_result,
-      data_operator2 => shift_left_bus,
+      data_operator2 => se_shift_left_bus,
       operation => ula_add_op,
-      zero => zero,
+      zero => se_cu_ula_zero,
       result => shift_left_ula_result_bus
-    );    
+    );
+
+  -- Mux from control unit ula
+  mux_con_u_ula : entity work.generic_32_bit_mux(main)
+  port map(
+    data_input_A => pc_adder_result,
+    data_input_B => shift_left_ula_result_bus,
+    control_signal => branch_op,
+    data_output => mux_pc_se_cu_ula_output
+  );      
+
+  -- mux jump with mux se cu alu  
+  mux_jump_se_cu_ula : entity work.generic_32_bit_mux(main)
+  port map(
+    data_input_A => jump_address,
+    data_input_B => mux_pc_se_cu_ula_output,
+    control_signal => jump,
+    data_output => mux_jump_output
+  );        
 
   -- Data Memory
   dm : entity work.simple_ram(main)

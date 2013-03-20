@@ -100,6 +100,9 @@ begin
 
   pc_next_address <= conv_integer(x"000000"&mux_jump_output(7 downto 0));
 
+  -- data memory bus address
+  data_memory_bus_address <= to_integer(ieee.numeric_std.signed(x"00000"&stv_data_memory_bus(11 downto 0)));
+
   ---------------------------------------------------------
   -- Declaration of all modules                      
   ---------------------------------------------------------
@@ -240,23 +243,6 @@ begin
       control_signal => mem_to_reg,
       data_output => write_data
     );  
-
-  data_memory_bus_address <= to_integer(ieee.numeric_std.signed(x"00000"&stv_data_memory_bus(11 downto 0)));
-
-  -- -- this is just for the generic case of address use, not the mips
-  -- -- common address
-  -- address_bus_converter : process (stv_data_memory_bus)  
-  --   variable int_converted_addr : integer := 0;
-  --   variable memory_part : std_logic_vector(31 downto 0) := x"00000000";
-  -- begin
-  --   memory_part := "00000000000000000000"&stv_data_memory_bus(11 downto 0);
-  --   int_converted_addr := to_integer(ieee.numeric_std.signed(memory_part));
-      
-  --   if(int_converted_addr >= 0) then
-  --     -- data memory bus convertion
-  --     data_memory_bus_address <= int_converted_addr;
-  --   end if;
-  -- end process address_bus_converter;
 
   -- Sign Extend behaviour
   sign_extend_input_bus <= instruction_bus(15 downto 0);

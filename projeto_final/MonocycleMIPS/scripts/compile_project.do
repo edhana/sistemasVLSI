@@ -51,7 +51,7 @@ vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl
 
 do wave.do
 
-run 1000ns
+run 10000ns
 -- view signals
 
 

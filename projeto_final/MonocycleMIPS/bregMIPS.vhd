@@ -5,10 +5,15 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
 use work.project_constants.all;
--- use ieee.std_logic_arith.all;
 
 entity bregMIPS is 
+  generic (
+    reg_size : natural := register_width;  
+    reg_ammount : natural := 32
+  );
+
 	port (
 		clk   : in std_logic;
 		rd    : in std_logic; -- read signal
@@ -23,23 +28,37 @@ entity bregMIPS is
 end bregMIPS;
 
 architecture main of bregMIPS is
-  type register_bank is array (words-1 downto 0) of std_logic_vector(register_width-1 downto 0);
-  signal registers : register_bank := (others => (others => '0'));
-  signal iaddr1 : INTEGER;
+  subtype reg_bank is std_logic_vector(reg_size-1 downto 0);
+  type reg_t is array(0 to reg_ammount-1) of reg_bank;
+
+  -- Declare the memory registers
+  signal registers : reg_t;
+
+  signal read_addr1 : natural range 0 to 32;
+  signal read_addr2 : natural range 0 to 32;
+  signal wadd_temp : std_logic_vector(4 downto 0);
+
 begin
-  
-  r1 <= registers(to_integer(signed(add1)));
+  read_addr1 <= to_integer(unsigned(add1));  
+  r1 <= x"00000000" when add1 = "00000" else
+        registers(read_addr1);
 
-  r2 <= registers(to_integer(signed(add2)));       
+  read_addr2 <= to_integer(unsigned(add2));
+  r2 <= x"00000000" when add2 = "00000" else
+        registers(read_addr2);
 
-  -- read write process
+  wadd_temp <= wadd;
+
+  -- main process
   register_process: process(clk)
-    variable iaddr1 : integer range 0 to 31  := 0;
+    variable read_wadd : natural range 0 to 32;
   begin
     if(clk'EVENT and clk = '1') then
       -- Write only in the next clock cycle
-      if ((wr = '1') and (wadd /= zero5_bits) ) then -- write
-        registers(to_integer(signed(wadd))) <= wdata;
+      if (wr = '1' and wadd /= "00000") then -- write
+        report "Aconteceu, virou manchete.";
+        read_wadd := to_integer(unsigned(wadd));
+        registers(read_wadd) <= wdata;
       end if;
     end if;
   end process register_process;

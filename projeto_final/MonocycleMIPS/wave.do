@@ -55,7 +55,6 @@ add wave -noupdate /top_tb/uni_mips/rb/wdata
 add wave -noupdate /top_tb/uni_mips/rb/wr
 add wave -noupdate /top_tb/uni_mips/rb/r1
 add wave -noupdate /top_tb/uni_mips/rb/r2
-add wave -noupdate /top_tb/uni_mips/rb/iaddr1
 add wave -noupdate /top_tb/uni_mips/rb/registers
 add wave -noupdate -divider {Data Memory}
 add wave -noupdate /top_tb/uni_mips/dm/addr
@@ -64,7 +63,7 @@ add wave -noupdate /top_tb/uni_mips/dm/we
 add wave -noupdate /top_tb/uni_mips/dm/q
 add wave -noupdate /top_tb/uni_mips/dm/addr_reg
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {62 ns} 0}
+WaveRestoreCursors {{Cursor 1} {22 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 307
 configure wave -valuecolwidth 70

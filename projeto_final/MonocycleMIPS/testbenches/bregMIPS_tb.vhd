@@ -40,7 +40,7 @@ begin
 
   init : process
   begin    
-    add1 <= "00001";
+    add1 <= "00000";
     add2 <= "00100";
     wadd <= "00100";
     wdata <= x"CCCCFFFF";    
@@ -50,7 +50,7 @@ begin
   always : process
     variable clk_tmp : std_logic := '0';   
     variable wr_tmp : std_logic := '0';
-    variable rd_tmp : std_logic := '1';
+    variable rd_tmp : std_logic := '0';
     variable counter : INTEGER := 0;
   begin
     clk <= clk_tmp;

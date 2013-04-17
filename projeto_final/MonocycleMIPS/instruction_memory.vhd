@@ -27,107 +27,53 @@ architecture main of instruction_memory is
   subtype word_t is std_logic_vector((data_width-1) downto 0);
   type memory_t is array(memory_size-1 downto 0) of word_t;
 
-  -- open the instructions file
-  file datainfile  : text open read_mode is "datain.txt";
-
-  -----------------------------------------------------------------------------
-  -- Convertion Procedures
-  -----------------------------------------------------------------------------
-  procedure hexstr_to_dec(hex_str : string; num : out integer) is
-     variable base : integer := 16;
-     variable int  : integer;
-     variable sum  : integer :=0;
-  begin
-    for i in hex_str'range loop
-      if (hex_str(i to i) = "0") THEN
-        int := 0;
-      elsif (hex_str(i to i) = "1") THEN
-        int := 1;
-      elsif (hex_str(i to i) = "2") THEN
-        int := 2;
-      elsif (hex_str(i to i) = "3") THEN
-        int := 3;
-      elsif (hex_str(i to i) = "4") THEN
-        int := 4;
-      elsif (hex_str(i to i) = "5") THEN
-        int := 5;
-      elsif (hex_str(i to i) = "6") THEN
-        int := 6;
-      elsif (hex_str(i to i) = "7") THEN
-        int := 7;
-      elsif (hex_str(i to i) = "8") THEN
-        int := 8;
-      elsif (hex_str(i to i) = "9") THEN
-        int := 9;
-      elsif (hex_str(i to i) = "A") THEN
-        int := 10;
-      elsif (hex_str(i to i) = "B") THEN
-        int := 11;
-      elsif (hex_str(i to i) = "C") THEN
-        int := 12;
-      elsif (hex_str(i to i) = "D") THEN
-        int := 13;
-      elsif (hex_str(i to i) = "E") THEN
-        int := 14;
-      elsif (hex_str(i to i) = "F") THEN
-        int := 15;
-      end if;
-      sum := sum + (int*(base**(hex_str'high-i)));
-      
-    end loop;
-    num := sum;
-  end;
-
-  procedure dec_to_bin(int : integer; o : out std_logic_vector(31 downto 0)) is
-     variable output : std_logic_vector(31 downto 0) := X"00000000";
-     variable count : integer := 0;
-     variable input : integer := int;
-     
-  begin
-    while input >= 1 loop
-       if (input mod 2 = 1) then
-          --add 1 into output
-          input := (input- 1) /2;
-      output(count) := '1';
-          --save(count) <= '1';
-       else
-          --add 0 into output
-          input := input / 2;
-       end if;
-       count := count + 1;
-    end loop;
-    o := output;
-  end;
-
-  procedure hexstr_to_bin(hex_str : string ; o : out std_logic_vector(31 downto 0)) is
-    variable int : integer;
-    variable bin : std_logic_vector(31 downto 0);
-  begin
-    hexstr_to_dec(hex_str, int);
-    dec_to_bin(int, bin);
-    o := bin;
-  end;  
-
   -----------------------------------------------------------------------------
   -- MAIN init module
   -----------------------------------------------------------------------------
-  impure function init_rom(file ifile : text)
+  impure function init_rom
     return memory_t is 
     variable tmp : memory_t := (others => (others => '0'));
     variable tmp_read_reg : std_logic_vector(31 downto 0);
     variable addr_pos : natural range 0 to memory_size-1;    
-    variable iline : line;
     variable str : string(1 to 8);
   begin 
-    addr_pos := 0;
-
-    while not endfile(ifile) loop
-      readline(ifile, iline);
-      read(iline, str);
-      hexstr_to_bin(str, tmp_read_reg);
-      tmp(addr_pos) := tmp_read_reg;
-      addr_pos := addr_pos + 4;
-    end loop;
+    
+    -- Loading program instruction
+    tmp(0) := x"20082000";
+    tmp(4) := x"200d2030";
+    tmp(8) := x"8dad0000";
+    tmp(12) := x"240a0001";
+    tmp(16) := x"46241000";
+    tmp(20) := x"ad0a0000";
+    tmp(24) := x"ad0a0004";
+    tmp(28) := x"21a9fffe";
+    tmp(32) := x"8d0b0000";
+    tmp(36) := x"8d0c0004";
+    tmp(40) := x"016c5020";
+    tmp(44) := x"ad0a0008";
+    tmp(48) := x"21080004";
+    tmp(52) := x"2129ffff";
+    tmp(56) := x"1d20fff9";
+    tmp(60) := x"20042000";
+    tmp(64) := x"000d2820";
+    tmp(68) := x"0c000014";
+    tmp(72) := x"2402000a";
+    tmp(76) := x"0000000c";
+    tmp(80) := x"00044020";
+    tmp(84) := x"00054820";
+    tmp(88) := x"20042036";
+    tmp(92) := x"24020004";
+    tmp(96) := x"0000000c";
+    tmp(100) := x"8d040000";
+    tmp(104) := x"24020001";
+    tmp(108) := x"0000000c";
+    tmp(112) := x"20042034";
+    tmp(116) := x"24020004";
+    tmp(120) := x"0000000c";
+    tmp(124) := x"21080004";
+    tmp(128) := x"2129ffff";
+    tmp(132) := x"1d20fff7";
+    tmp(136) := x"03e00008";
 
     return tmp;
   end init_rom;  
@@ -136,7 +82,7 @@ architecture main of instruction_memory is
   -- Declare the ROM signal and specify a default value.  Quartus II
   -- will create a memory initialization file (.mif) based on the 
   -- default value.
-  signal rom : memory_t := init_rom(datainfile);
+  signal rom : memory_t := init_rom;
 
 begin
 

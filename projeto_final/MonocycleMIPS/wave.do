@@ -17,8 +17,6 @@ add wave -noupdate /top_tb/uni_mips/pc/instruction_address
 add wave -noupdate /top_tb/uni_mips/instruction_address_bus
 add wave -noupdate /top_tb/uni_mips/stv_address_bus_value
 add wave -noupdate /top_tb/uni_mips/pc_next_address
-add wave -noupdate -divider {PC ADDER}
-add wave -noupdate /top_tb/uni_mips/pc_adder/result
 add wave -noupdate -divider {Control Unit}
 add wave -noupdate /top_tb/uni_mips/cu/alu_src
 add wave -noupdate /top_tb/uni_mips/cu/branch
@@ -65,9 +63,9 @@ add wave -noupdate /top_tb/uni_mips/dm/we
 add wave -noupdate /top_tb/uni_mips/dm/q
 add wave -noupdate /top_tb/uni_mips/dm/addr_reg
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {23 ns} 0}
+WaveRestoreCursors {{Cursor 1} {151 ns} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 307
+configure wave -namecolwidth 297
 configure wave -valuecolwidth 70
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
@@ -81,4 +79,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {86 ns}
+WaveRestoreZoom {0 ns} {347 ns}

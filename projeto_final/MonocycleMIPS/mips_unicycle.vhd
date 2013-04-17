@@ -232,7 +232,8 @@ begin
       clk => clk,
       addr => data_memory_bus_address,
       data => data_memory_input,
-      we => mem_write,
+      -- we => mem_write,
+      we => '1', -- teste
       q => data_memory_output
     );
 

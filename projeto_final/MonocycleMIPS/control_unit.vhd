@@ -102,16 +102,6 @@ begin
         mem_write  <= '0';
         branch     <= '1';        
       when OTHERS =>
-        -- TODO: verificar se isso pode causar um problema 
-        op_alu     <= "00"; 
-        reg_dst    <= '0';  
-        jump       <= '0';
-        alu_src    <= '0';
-        mem_to_reg <= '0';
-        reg_write  <= '0';
-        mem_read   <= '0';
-        mem_write  <= '0';
-        branch     <= '0';
     end case;
   end process instruction_code_decoder;
 end main;

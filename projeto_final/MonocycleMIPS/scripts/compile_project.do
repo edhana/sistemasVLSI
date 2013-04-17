@@ -49,9 +49,11 @@ vcom -93 -work work {Z:/workspace/mestrado/sistemasVLSI/projeto_final/MonocycleM
 
 vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ns top_tb 
 
-do wave.do
+-- do wave.do
+-- do wave_min1.do
+do wave_min2.do
 
-run 10000ns
+run 1000ns
 -- view signals
 
 

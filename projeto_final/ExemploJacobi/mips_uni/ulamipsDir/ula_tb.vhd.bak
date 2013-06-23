@@ -1,0 +1,10 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_signed.all;
+
+entity ula_tb is 
+end entity;
+
+architecture tb of ula_tb is
+
+component ulamips

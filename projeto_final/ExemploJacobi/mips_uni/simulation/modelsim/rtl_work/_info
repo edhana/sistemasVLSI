@@ -1,0 +1,568 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Ricardo\Documents\Altera\mips_uni\simulation\modelsim
+Eadder
+Z1 w1364165391
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx4 work 12 mips_uni_pkg 0 22 2m]<?iBl?BOTHYg=g;T]82
+Z4 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z5 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
+Z6 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z8 dC:\Users\Ricardo\Documents\Altera\mips_uni\simulation\modelsim
+Z9 8C:/Users/Ricardo/Documents/Altera/mips_uni/adder.vhd
+Z10 FC:/Users/Ricardo/Documents/Altera/mips_uni/adder.vhd
+l0
+L9
+V<6Sc6XXdm4=:0BXL[1_4S2
+Z11 OV;C;10.1b;51
+31
+Z12 !s108 1366206918.776000
+Z13 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/adder.vhd|
+Z14 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/adder.vhd|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 7;MT?9?GM]iDE?EbM`kWl2
+!i10b 1
+Artl
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 5 adder 0 22 <6Sc6XXdm4=:0BXL[1_4S2
+l21
+L20
+VaJJZ]Oe;G^kg1DdA6FBa52
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 6WAImEBTIK_nP5>6K0N[T3
+!i10b 1
+Ealu_ctr
+Z17 w1364682572
+R2
+R3
+R6
+R7
+R8
+Z18 8C:/Users/Ricardo/Documents/Altera/mips_uni/alu_ctr.vhd
+Z19 FC:/Users/Ricardo/Documents/Altera/mips_uni/alu_ctr.vhd
+l0
+L8
+VEPZ<UjUJWRJgM=k8R^9B61
+R11
+31
+Z20 !s108 1366206919.322000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/alu_ctr.vhd|
+Z22 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/alu_ctr.vhd|
+R15
+R16
+!s100 M@KBfXYl]O][eJ_nlYCY[1
+!i10b 1
+Abehav
+R2
+R3
+R6
+R7
+DEx4 work 7 alu_ctr 0 22 EPZ<UjUJWRJgM=k8R^9B61
+l19
+L17
+V=aZQj[MZz7<WGn@E1CaX_2
+R11
+31
+R20
+R21
+R22
+R15
+R16
+!s100 OKM>@0Vz@XbB7[3h1SL^W1
+!i10b 1
+Ebreg
+Z23 w1358637426
+R2
+R3
+R4
+Z24 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R6
+R7
+R8
+Z25 8C:/Users/Ricardo/Documents/Altera/mips_uni/breg.vhd
+Z26 FC:/Users/Ricardo/Documents/Altera/mips_uni/breg.vhd
+l0
+L10
+V4JaDLh>c8<=^?DRiz2?zn2
+R11
+31
+Z27 !s108 1366206918.854000
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/breg.vhd|
+Z29 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/breg.vhd|
+R15
+R16
+!s100 4aKHTSXoDX19jjCSS=b_h1
+!i10b 1
+Artl
+R2
+R3
+R4
+R24
+R6
+R7
+DEx4 work 4 breg 0 22 4JaDLh>c8<=^?DRiz2?zn2
+l32
+L28
+Vm[Yj[aQHEQhbgT]EYoo]?1
+R11
+31
+R27
+R28
+R29
+R15
+R16
+!s100 NWo]LTD1ZnJ4L;2Ij^7[32
+!i10b 1
+Eclk_div
+Z30 w1358383900
+R4
+R24
+R6
+R7
+R8
+Z31 8C:/Users/Ricardo/Documents/Altera/mips_uni/clk_div.vhd
+Z32 FC:/Users/Ricardo/Documents/Altera/mips_uni/clk_div.vhd
+l0
+L8
+VSzOXK9LV=oNjmVl]2KZ`[2
+R11
+31
+Z33 !s108 1366206918.527000
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/clk_div.vhd|
+Z35 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/clk_div.vhd|
+R15
+R16
+!s100 cj;V<3Z178izZT^AeJmC32
+!i10b 1
+Artl
+R4
+R24
+R6
+R7
+DEx4 work 7 clk_div 0 22 SzOXK9LV=oNjmVl]2KZ`[2
+l18
+L17
+VchTZ?FjBaN@>M:0FBm5TN3
+R11
+31
+R33
+R34
+R35
+R15
+R16
+!s100 W8R1o:Lf8azicoM^WnmB[0
+!i10b 1
+Econtrol
+Z36 w1364700717
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z37 8C:/Users/Ricardo/Documents/Altera/mips_uni/control.vhd
+Z38 FC:/Users/Ricardo/Documents/Altera/mips_uni/control.vhd
+l0
+L6
+VSjoc@?IAiZ`8RLN>?EEc92
+R11
+31
+Z39 !s108 1366206918.667000
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/control.vhd|
+Z41 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/control.vhd|
+R15
+R16
+!s100 lR0fV]?2;c?O:dOgWL]5;1
+!i10b 1
+Artl
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 control 0 22 Sjoc@?IAiZ`8RLN>?EEc92
+l22
+L21
+VlbVzVVb>8CDX<:^Oe:Tl:2
+R11
+31
+R39
+R40
+R41
+R15
+R16
+!s100 7jWTU2[PIhLoV[m2J;mX?3
+!i10b 1
+Edata_mem
+Z42 w1364767666
+R6
+R7
+R8
+Z43 8C:/Users/Ricardo/Documents/Altera/mips_uni/data_mem.vhd
+Z44 FC:/Users/Ricardo/Documents/Altera/mips_uni/data_mem.vhd
+l0
+L42
+VnJ<Y0nRVfbeB5h_l0FnEd0
+R11
+31
+Z45 !s108 1366206918.433000
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/data_mem.vhd|
+Z47 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/data_mem.vhd|
+R15
+R16
+!s100 lkg^?ik[dDdZ]O<S@J[DI2
+!i10b 1
+Asyn
+R6
+R7
+DEx4 work 8 data_mem 0 22 nJ<Y0nRVfbeB5h_l0FnEd0
+l84
+L54
+VF?WCe[1SG66G42VezR@9@1
+R11
+31
+R45
+R46
+R47
+R15
+R16
+!s100 QJ;M5eRV;@coRV8Ic=]610
+!i10b 1
+Einst_mem
+Z48 w1364070642
+Z49 DPx9 altera_mf 20 altera_mf_components 0 22 ^IX6G>H7:I6bRMgMQQ0UY1
+R3
+R2
+R6
+R7
+R8
+Z50 8C:/Users/Ricardo/Documents/Altera/mips_uni/inst_mem.vhd
+Z51 FC:/Users/Ricardo/Documents/Altera/mips_uni/inst_mem.vhd
+l0
+L12
+VFjhTGm9U1hPGW5KkPVSRI1
+R11
+31
+Z52 !s108 1366206919.104000
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/inst_mem.vhd|
+Z54 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/inst_mem.vhd|
+R15
+R16
+!s100 oAnJWa>IhIm1iT_B`eEk<3
+!i10b 1
+Artl
+R49
+R3
+R2
+R6
+R7
+DEx4 work 8 inst_mem 0 22 FjhTGm9U1hPGW5KkPVSRI1
+l49
+L21
+V[Ll0GJWKHo?ROkE7HT?4A1
+R11
+31
+R52
+R53
+R54
+R15
+R16
+!s100 82KgE3WRAjMEUOO8lbnRK2
+!i10b 1
+Emips_tb
+Z55 w1364677716
+R2
+R3
+R6
+R7
+R8
+Z56 8C:/Users/Ricardo/Documents/Altera/mips_uni/mips_tb.vhd
+Z57 FC:/Users/Ricardo/Documents/Altera/mips_uni/mips_tb.vhd
+l0
+L8
+V1>@QI0kVA@OJ>^RX][hQY1
+!s100 T4fnz0[15]TefOj;hza;Z3
+R11
+31
+!i10b 1
+Z58 !s108 1366206919.993000
+Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/mips_tb.vhd|
+Z60 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/mips_tb.vhd|
+R15
+R16
+Atb
+R2
+R3
+R6
+R7
+DEx4 work 7 mips_tb 0 22 1>@QI0kVA@OJ>^RX][hQY1
+l18
+L11
+V6fl`1TzM8aV<VJ@zB5fBf2
+!s100 mTF=_Q2hZ60>Vf36;NLLZ2
+R11
+31
+!i10b 1
+R58
+R59
+R60
+R15
+R16
+Emips_uni
+Z61 w1364766610
+R2
+R3
+R6
+R7
+R8
+Z62 8C:/Users/Ricardo/Documents/Altera/mips_uni/mips_uni.vhd
+Z63 FC:/Users/Ricardo/Documents/Altera/mips_uni/mips_uni.vhd
+l0
+L8
+V0<@Rd=LI?<hC:BQ51`@l_0
+R11
+31
+Z64 !s108 1366206918.948000
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/mips_uni.vhd|
+Z66 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/mips_uni.vhd|
+R15
+R16
+!s100 KO9OPQ4gh;?ON@hUCz1?31
+!i10b 1
+Artl
+R2
+R3
+R6
+R7
+DEx4 work 8 mips_uni 0 22 0<@Rd=LI?<hC:BQ51`@l_0
+l70
+L18
+V<KPXd1@<Vm3IQVJizz_=Z0
+R11
+31
+R64
+R65
+R66
+R15
+R16
+!s100 bCTCWHAe802OTW75YljnN1
+!i10b 1
+Pmips_uni_pkg
+R2
+R6
+R7
+Z67 w1364767524
+R8
+Z68 8C:/Users/Ricardo/Documents/Altera/mips_uni/mips_uni_pkg.vhd
+Z69 FC:/Users/Ricardo/Documents/Altera/mips_uni/mips_uni_pkg.vhd
+l0
+L6
+V2m]<?iBl?BOTHYg=g;T]82
+R11
+31
+Z70 !s108 1366206917.762000
+Z71 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/mips_uni_pkg.vhd|
+Z72 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/mips_uni_pkg.vhd|
+R15
+R16
+!s100 VN[W`9FPfQ^T9aVm77Pjc3
+!i10b 1
+Bbody
+R3
+R2
+R6
+R7
+l0
+L181
+V@`;:mjHPOdnJ;KgAe0Q@A1
+R11
+31
+R70
+R71
+R72
+R15
+R16
+nbody
+!s100 gglU9Xb:MM]_l02P:d]411
+!i10b 1
+Emux_2
+Z73 w1364082857
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z74 8C:/Users/Ricardo/Documents/Altera/mips_uni/mux_2.vhd
+Z75 FC:/Users/Ricardo/Documents/Altera/mips_uni/mux_2.vhd
+l0
+L6
+VQ1b`[P5V:O=ZX2WONadVg0
+R11
+31
+Z76 !s108 1366206919.899000
+Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/mux_2.vhd|
+Z78 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/mux_2.vhd|
+R15
+R16
+!s100 Bm__dig6RU3nW=3eClzNc3
+!i10b 1
+Artl
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 5 mux_2 0 22 Q1b`[P5V:O=ZX2WONadVg0
+l16
+L15
+VeShBG@FzQc0:GjFD]2Z001
+R11
+31
+R76
+R77
+R78
+R15
+R16
+!s100 E?5jS]Sd5gQzi1UJMfSXE2
+!i10b 1
+Ereg
+Z79 w1364599671
+R6
+R7
+R8
+Z80 8C:/Users/Ricardo/Documents/Altera/mips_uni/reg.vhd
+Z81 FC:/Users/Ricardo/Documents/Altera/mips_uni/reg.vhd
+l0
+L7
+V=M[ABcRJOEGR;Bk2YdQ=C3
+R11
+31
+Z82 !s108 1366206918.090000
+Z83 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/reg.vhd|
+Z84 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/reg.vhd|
+R15
+R16
+!s100 VzGUjc>85]Tl_V^;DRB]42
+!i10b 1
+Artl
+R6
+R7
+DEx4 work 3 reg 0 22 =M[ABcRJOEGR;Bk2YdQ=C3
+l25
+L21
+VGI8ZZ_bzE>hF;BINzY?G>1
+R11
+31
+R82
+R83
+R84
+R15
+R16
+!s100 m3b>>X::ZgKUNcA2PKKXY1
+!i10b 1
+Esig_ext
+Z85 w1364167036
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z86 8C:/Users/Ricardo/Documents/Altera/mips_uni/sig_ext.vhd
+Z87 FC:/Users/Ricardo/Documents/Altera/mips_uni/sig_ext.vhd
+l0
+L9
+VPWKah5c<mFKf@Ulk@e9M70
+R11
+31
+Z88 !s108 1366206919.821000
+Z89 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/sig_ext.vhd|
+Z90 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/sig_ext.vhd|
+R15
+R16
+!s100 C[>OFYJL0=C?i0BnX8bYR3
+!i10b 1
+Artl
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 sig_ext 0 22 PWKah5c<mFKf@Ulk@e9M70
+l22
+L16
+V;a0fF[jJS<ni7cjaJ]4VY3
+R11
+31
+R88
+R89
+R90
+R15
+R16
+!s100 h7Ul4>F_I?O7c307BNhd60
+!i10b 1
+Eulamips
+Z91 w1364767663
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z92 8C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd
+Z93 FC:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd
+l0
+L6
+V:b;8]FZIQnJO;ALBd27@42
+R11
+31
+Z94 !s108 1366206919.026000
+Z95 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd|
+Z96 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd|
+R15
+R16
+!s100 FzHFE^n7hMLn@?P=8E:NQ3
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 ulamips 0 22 :b;8]FZIQnJO;ALBd27@42
+l27
+L19
+Vleb13g;zA41QJWaoVS=Zd2
+R11
+31
+R94
+R95
+R96
+R15
+R16
+!s100 hL:VAL5cTJ@PAP]F2Dg[X2
+!i10b 1

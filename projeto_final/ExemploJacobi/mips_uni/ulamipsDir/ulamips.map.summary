@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Mar 25 00:27:58 2013
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
+Revision Name : ulamips
+Top-level Entity Name : ulamips
+Family : Cyclone II
+Total logic elements : 208
+    Total combinational functions : 208
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 101
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

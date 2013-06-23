@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clk'
+Slack : -14.747
+TNS   : -12084.192
+
+Type  : Slow Model Setup 'clk_rom'
+Slack : -10.519
+TNS   : -386.838
+
+Type  : Slow Model Setup 'inst_mem:imem|clk_div:clock|cnt[0]'
+Slack : -2.164
+TNS   : -84.558
+
+Type  : Slow Model Hold 'clk_rom'
+Slack : -2.766
+TNS   : -2.766
+
+Type  : Slow Model Hold 'clk'
+Slack : 0.696
+TNS   : 0.000
+
+Type  : Slow Model Hold 'inst_mem:imem|clk_div:clock|cnt[0]'
+Slack : 1.317
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk_rom'
+Slack : -2.000
+TNS   : -330.380
+
+Type  : Slow Model Minimum Pulse Width 'inst_mem:imem|clk_div:clock|cnt[0]'
+Slack : -1.423
+TNS   : -136.608
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -1055.380
+
+Type  : Fast Model Setup 'clk'
+Slack : -6.198
+TNS   : -4854.501
+
+Type  : Fast Model Setup 'clk_rom'
+Slack : -4.131
+TNS   : -161.785
+
+Type  : Fast Model Setup 'inst_mem:imem|clk_div:clock|cnt[0]'
+Slack : -0.979
+TNS   : -32.078
+
+Type  : Fast Model Hold 'clk_rom'
+Slack : -1.747
+TNS   : -1.747
+
+Type  : Fast Model Hold 'clk'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast Model Hold 'inst_mem:imem|clk_div:clock|cnt[0]'
+Slack : 0.663
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk_rom'
+Slack : -2.000
+TNS   : -330.380
+
+Type  : Fast Model Minimum Pulse Width 'inst_mem:imem|clk_div:clock|cnt[0]'
+Slack : -1.423
+TNS   : -136.608
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : -1.380
+TNS   : -1055.380
+
+------------------------------------------------------------

@@ -5,8 +5,8 @@ use ieee.std_logic_1164.all;
 
 entity ula_control is
   port(
-    op_code : in std_logic_vector(5 downto 0); -- operation code
-    op_ula_type : in std_logic_vector(1 downto 0);
+    op_inst : in std_logic_vector(5 downto 0); -- ALU CTL Instruction part
+    op_code : in std_logic_vector(1 downto 0); -- operation code
     alu_operation : out std_logic_vector(3 downto 0)
     );
 end entity;
@@ -15,10 +15,18 @@ architecture main of ula_control is
   signal fbody : std_logic_vector(3 downto 0);
   signal aluop : std_logic_vector(3 downto 0);
 begin
-  fbody <= op_code(3 downto 0);
+  -- fbody <= op_code(3 downto 0);
 
-  with op_ula_type select
-    alu_operation <= "0110" when "01",
+  -- aluop <= "0010" when fbody = "0000" else
+  --          "0110" when fbody = "0010" else
+  --          "0000" when fbody = "0100" else
+  --          "0001" when fbody = "0101" else
+  --          "0111" when fbody = "1010" else
+  --          "1100" when fobody;
+
+
+  -- with op_ula_type select
+    -- alu_operation <= "0110" when "01",
 
 
   -- decode : process(op_code)

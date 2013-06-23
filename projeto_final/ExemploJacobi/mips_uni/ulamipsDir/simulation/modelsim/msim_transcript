@@ -1,0 +1,52 @@
+# Reading C:/altera/12.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do ulamips_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying c:\altera\12.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied c:\altera\12.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Ricardo/Documents/Altera/mips_uni/mips_uni_pkg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package mips_uni_pkg
+# -- Compiling package body mips_uni_pkg
+# -- Loading package mips_uni_pkg
+# vcom -93 -work work {C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package mips_uni_pkg
+# -- Compiling entity ulamips
+# -- Compiling architecture behavioral of ulamips
+# ** Error: C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd(32): (vcom-1014) Array type case expression must be of a locally static subtype.
+# 
+# ** Warning: C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd(37): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
+# 
+# ** Warning: C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd(33): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd(34): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd(35): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd(36): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Warning: C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd(37): (vcom-1322) Case statement choice cannot be checked for uniqueness.
+# 
+# ** Error: C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd(42): VHDL Compiler exiting
+# ** Error: c:/altera/12.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./ulamips_run_msim_rtl_vhdl.do line 9
+# c:/altera/12.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/Ricardo/Documents/Altera/mips_uni/ulamips.vhd}"

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Mar 24 23:57:00 2013
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
+Revision Name : breg
+Top-level Entity Name : breg
+Family : Cyclone II
+Device : EP2C70F896C6
+Timing Models : Final
+Total logic elements : 1,394 / 68,416 ( 2 % )
+    Total combinational functions : 1,394 / 68,416 ( 2 % )
+    Dedicated logic registers : 1,024 / 68,416 ( 1 % )
+Total registers : 1024
+Total pins : 113 / 622 ( 18 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,152,000 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 300 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

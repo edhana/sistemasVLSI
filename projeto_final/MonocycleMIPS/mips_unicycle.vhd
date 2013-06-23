@@ -183,8 +183,8 @@ begin
   -- ula control unit
   ula_c_unit : entity work.ula_control(main)
     port map(
-      op_code => instruction_bus(5 downto 0),
-      op_ula_type => alu_op,
+      op_inst => instruction_bus(5 downto 0),
+      op_code => alu_op,
       alu_operation => ula_operation
     );
 

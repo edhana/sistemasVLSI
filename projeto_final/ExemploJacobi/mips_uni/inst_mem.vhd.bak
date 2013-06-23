@@ -1,0 +1,60 @@
+-- Quartus II VHDL Template
+-- Single-Port ROM
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+library altera_mf;
+use altera_mf.altera_mf_components.all;
+
+
+entity marsrom is
+	port (ADDRESS  : in STD_LOGIC_VECTOR (7 downto 0);
+			MEMENAB  : in STD_LOGIC := '1';
+			clk		: in std_logic;
+			Q 			: out STD_LOGIC_VECTOR(7 downto 0));
+end entity;
+
+architecture rtl of marsrom is
+
+component LPM_ROM
+	generic (LPM_WIDTH 	: natural;    -- MUST be greater than 0
+				LPM_WIDTHAD : natural;    -- MUST be greater than 0
+				LPM_NUMWORDS: natural := 0;
+				LPM_ADDRESS_CONTROL : string := "REGISTERED";
+				LPM_OUTDATA : string := "REGISTERED";
+				LPM_FILE : string;
+				LPM_TYPE : string := "L_ROM";
+				INTENDED_DEVICE_FAMILY  : string := "UNUSED";
+				LPM_HINT : string := "UNUSED");
+
+	port (ADDRESS : in STD_LOGIC_VECTOR(7 downto 0);
+			INCLOCK : in STD_LOGIC := '0';
+			OUTCLOCK : in STD_LOGIC := '0';
+			MEMENAB : in STD_LOGIC := '1';
+			Q : out STD_LOGIC_VECTOR(7 downto 0));
+end component;
+
+begin
+
+rom : lpm_rom 
+	generic map
+	(
+		LPM_WIDTH => 8,
+		LPM_WIDTHAD => 8,
+		--LPM_ADDRESS_CONTROL => "UNREGISTERED",
+		--LPM_OUTDATA => "UNREGISTERED",
+		LPM_FILE => "mips_rom.mif"
+	)
+	port map 
+	(
+		ADDRESS 	=> ADDRESS,
+		MEMENAB 	=> MEMENAB,
+		INCLOCK 	=> clk,
+		OUTCLOCK => clk,
+		Q => Q
+	);
+
+
+end rtl;

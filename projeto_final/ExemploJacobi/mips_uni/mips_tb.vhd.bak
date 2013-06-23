@@ -1,0 +1,24 @@
+-- Quartus II VHDL Template
+-- Basic Shift Register
+
+library ieee;
+use ieee.std_logic_1164.all;
+use work.mips_uni_pkg.all;
+
+entity mips_tb is
+end entity;
+
+architecture tb of mips_tb is
+
+signal clk : std_logic := '0';
+signal clk_rom : std_logic := '0';
+
+
+begin
+
+genclk: 	process (clk) begin
+				clk <= not clk after 10 ps;
+			end process;
+		  
+mips_inst: mips_uni
+			port map ()

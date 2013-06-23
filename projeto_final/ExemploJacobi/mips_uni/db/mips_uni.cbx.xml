@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="mips_uni">
+		<CBX_INST_ENTRY INSTANCE_NAME="|mips_uni|data_mem:mem_d|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_j4d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mips_uni|inst_mem:imem|LPM_ROM:rom|altrom:srom|altsyncram:rom_block" CBX_FILE_NAME="altsyncram_q801.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

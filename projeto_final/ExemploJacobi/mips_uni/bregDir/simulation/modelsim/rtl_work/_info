@@ -1,0 +1,83 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Ricardo\Documents\Altera\mips_uni\bregDir\simulation\modelsim
+Ebreg
+Z1 w1364180192
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\Ricardo\Documents\Altera\mips_uni\bregDir\simulation\modelsim
+Z7 8C:/Users/Ricardo/Documents/Altera/mips_uni/bregDir/breg.vhd
+Z8 FC:/Users/Ricardo/Documents/Altera/mips_uni/bregDir/breg.vhd
+l0
+L10
+V_S7FV`0:CD8nLUToB8Fdm2
+Z9 OV;C;10.1b;51
+31
+Z10 !s108 1364180242.376000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/bregDir/breg.vhd|
+Z12 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/bregDir/breg.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 FPOIdl=E0A9]V<LQU1_z03
+!i10b 1
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 4 breg 0 22 _S7FV`0:CD8nLUToB8Fdm2
+l34
+L28
+VVFB^DO6Xj:fmm>=Y[K<i:2
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 Ac^NYnQGQ@JO:h`;Ieb5K1
+!i10b 1
+Ebreg_tb
+Z15 w1364177582
+R3
+R2
+R4
+R5
+R6
+Z16 8C:/Users/Ricardo/Documents/Altera/mips_uni/bregDir/breg_tb.vhd
+Z17 FC:/Users/Ricardo/Documents/Altera/mips_uni/bregDir/breg_tb.vhd
+l0
+L7
+VRK4@`YH<EmgOg]E;]d?oh3
+!s100 Ao3hkj_H?8MYO=Jl:NA_U0
+R9
+31
+!i10b 1
+Z18 !s108 1364180242.501000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Ricardo/Documents/Altera/mips_uni/bregDir/breg_tb.vhd|
+Z20 !s107 C:/Users/Ricardo/Documents/Altera/mips_uni/bregDir/breg_tb.vhd|
+R13
+R14
+Atb
+R3
+R2
+R4
+R5
+DEx4 work 7 breg_tb 0 22 RK4@`YH<EmgOg]E;]d?oh3
+l40
+L10
+VmaQ`?W;>6g2TbWLLf8ZQH2
+!s100 aEUU86DD8JWEHnJi6F8SQ1
+R9
+31
+!i10b 1
+R18
+R19
+R20
+R13
+R14

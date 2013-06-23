@@ -1,0 +1,32 @@
+
+-- Library Clause(s) (optional)
+-- Use Clause(s) (optional)
+
+package mips_uni_pkg is
+
+	-- Type Declaration (optional)
+	
+	type WORD is std_logic_vector(31 downto 0);
+
+end mips_uni_pkg;
+
+
+
+
+package body <package_name> is
+
+	-- Type Declaration (optional)
+
+	-- Subtype Declaration (optional)
+
+	-- Constant Declaration (optional)
+
+	-- Function Declaration (optional)
+
+	-- Function Body (optional)
+
+	-- Procedure Declaration (optional)
+
+	-- Procedure Body (optional)
+
+end <package_name>;

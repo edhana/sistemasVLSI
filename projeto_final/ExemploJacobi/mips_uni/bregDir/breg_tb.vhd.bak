@@ -1,0 +1,38 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+--use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use work.mips_uni_pkg.all;
+
+entity breg_tb is
+end entity;
+
+architecture tb os breg_tb is 
+
+signal clk		: std_logic := '0';
+signal enable	: std_logic;
+signal idxA		: std_logic_vector(4 downto 0);
+signal idxB		: std_logic_vector(4 downto 0);
+signal idxwr	: std_logic_vector(4 downto 0);
+signal data_in	: std_logic_vector(31 downto 0);
+signal regA 	: std_logic_vector(31 downto 0);
+signal regB 	: std_logic_vector(31 downto 0);
+
+begin
+
+clkgen: process (clk)
+		  begin
+		    clk <= not clk after 5 ps; 
+		  end process;
+		  
+uut:	breg
+		port map (	clk=>clk, enable=>enable, idxA=>idxA, idxB=>idxB, 
+						idxwr=>idxwr, data_in=>data_in, regA=>regA, regB=>regB);
+
+drive: 	process
+				enable <= '1'; idxwr <= "00101"; idxA <= "00000"; idxB <= "00000"; data_in<=conv_to_std_logic(44, 32);
+				wait for 20 ps;
+				enable <= '1'; idxwr <= "10101"; idxA <= "00000"; idxB <= "00000";
+				wait for 20 ps;
+				

@@ -1,0 +1,21 @@
+-- Quartus II VHDL Template
+-- Signed Adder
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_signed.all;
+use work.mips_uni_pkg.all;
+
+entity sig_ext is
+	port (
+		imm16	: in std_logic_vector(WORD_SIZE/2 - 1 downto 0);
+		ext32 : out std_logic_vector(WORD_SIZE-1 downto 0)
+		);
+end entity;
+
+architecture rtl of sig_ext is
+signal uhalf : std_logic_vector(WORD_SIZE/2 - 1 downto 0) := (others=>imm16(imm16'high));
+begin
+	ext32 <= uhalf & imm16;
+end architecture;
+	
